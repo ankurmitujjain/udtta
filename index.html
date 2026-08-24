@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UDTTA - 10 Official Apparel Options (Base Blank vs. Custom Printed)</title>
+  <title>UDTTA - 10 Table Tennis Apparel Options (Base Blank vs. Custom Printed)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
       --accent-red: #E63946;
       --accent-green: #10B981;
       --accent-cyan: #06B6D4;
-      --accent-purple: #8B5CF6;
       --bg-dark: #070D18;
       --text-main: #F8FAFC;
       --text-muted: #94A3B8;
@@ -105,7 +104,7 @@
 
     .subtitle {
       color: var(--text-muted);
-      max-width: 860px;
+      max-width: 880px;
       margin: 0 auto;
       font-size: 1.05rem;
     }
@@ -807,12 +806,12 @@
 
   <header>
     <div class="badge-pill badge-dark-tag">
-      <span>🏓</span> 10 Master Apparel Options • Dark Edition
+      <span>🏓</span> 10 Table Tennis Brand-Inspired Options • Dark Edition
     </div>
     <h1>UJJAIN DISTRICT TABLE TENNIS ASSOCIATION</h1>
     <div class="hindi-title">उज्जैन जिला टेबल टेनिस संघ (UDTTA)</div>
     <p class="subtitle">
-      Master apparel catalog featuring <strong>Base Blank Sourcing Garments</strong> alongside <strong>Finished Custom Printed Uniforms</strong> across 10 distinct options for Players (Synthetic) and Officials (100% Cotton Collared Polos).
+      Professional table tennis apparel collection inspired by international brands (Donic, Butterfly, Tibhar, Xiom, Stiga) — featuring <strong>Collared Performance Jerseys</strong>, <strong>100% Cotton Official Polos</strong>, and <strong>Base Blank vs. Custom Print</strong> pairs.
     </p>
   </header>
 
@@ -823,16 +822,16 @@
       <div class="rule-box">
         <div class="rule-icon">👔</div>
         <div class="rule-content">
-          <strong>All Official T-Shirts: 100% Cotton Collared Polos</strong>
-          <p>Every Official option features a structured collar with button placket in 100% heavyweight pique cotton.</p>
+          <strong>Officials: 100% Cotton Collared Polos</strong>
+          <p>Every Official option is a 100% Heavyweight Pique Cotton Collared Polo with a <strong>100% Clean Blank Back</strong>.</p>
         </div>
       </div>
 
       <div class="rule-box">
-        <div class="rule-icon">🛡️</div>
+        <div class="rule-icon">⚡</div>
         <div class="rule-content">
-          <strong>Officials: 100% Clean Blank Back</strong>
-          <p>Back is completely solid blank cotton with zero text, zero numbers, and zero logos for referees and officials.</p>
+          <strong>Players: Collared & V-Neck Performance</strong>
+          <p>Features Table Tennis specific Aero-Wave, Hex-Matrix & Speed-Block styles matching the logo's board and paddles.</p>
         </div>
       </div>
 
@@ -848,7 +847,7 @@
         <div class="rule-icon">🎨</div>
         <div class="rule-content">
           <strong>Strictly Dark Sports Colors</strong>
-          <p>Deep Navy Blue, Midnight Stealth Black, Slate Charcoal, Crimson Burgundy & Royal Blue. No white or light shades.</p>
+          <p>Deep Navy Blue, Midnight Stealth Black, Slate Charcoal, Crimson Burgundy & Royal Blue. Zero light shades.</p>
         </div>
       </div>
     </div>
@@ -946,16 +945,16 @@
 
           <!-- Option selector strip -->
           <div class="option-strip">
-            <button class="option-pill-btn active" onclick="selectPlayerOption(1, this)">P1: Navy & Gold</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(2, this)">P2: Carbon Black</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(3, this)">P3: Crimson Speed</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(4, this)">P4: Royal Blue</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(5, this)">P5: Dark Slate</button>
+            <button class="option-pill-btn active" onclick="selectPlayerOption(1, this)">P1: Aero-Wave Polo</button>
+            <button class="option-pill-btn" onclick="selectPlayerOption(2, this)">P2: Hex-Matrix Polo</button>
+            <button class="option-pill-btn" onclick="selectPlayerOption(3, this)">P3: Speed-Block Polo</button>
+            <button class="option-pill-btn" onclick="selectPlayerOption(4, this)">P4: Cyber-Stream V-Neck</button>
+            <button class="option-pill-btn" onclick="selectPlayerOption(5, this)">P5: Prism-Grid V-Neck</button>
           </div>
 
-          <h3 class="card-title" id="playerMainTitle">Option P1: Solar Flare Navy & Gold V-Neck</h3>
+          <h3 class="card-title" id="playerMainTitle">Option P1: Donic Aero-Wave Collared Polo</h3>
           <p class="card-desc" id="playerMainDesc">
-            100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, and custom back player name & number.
+            100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, aerodynamic spin trajectory waves & custom back name/number.
           </p>
 
           <table class="specs-table">
@@ -965,7 +964,7 @@
             </tr>
             <tr>
               <td>Collar / Cut</td>
-              <td>Athletic Ribbed V-Neck with Gold Trim</td>
+              <td id="playerCollarSpec">Structured Athletic Sports Polo Collar with Gold Tipping</td>
             </tr>
             <tr>
               <td>Left Chest</td>
@@ -1078,11 +1077,11 @@
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>Option P1: Solar Flare Navy & Gold</h4>
-          <p>Deep navy body with gold V-collar, sublimated flame graphics, right sleeve badge & back #07.</p>
+          <h4>Option P1: Donic Aero-Wave Collared Polo</h4>
+          <p>Deep navy body with sports collar, ball trajectory speed waves, right sleeve badge & back #07.</p>
           <div class="catalog-tags">
-            <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Sublimation</span>
+            <span class="pill-tag pill-poly">Collared Polo</span>
+            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Wave Trajectory</span>
           </div>
         </div>
 
@@ -1098,11 +1097,11 @@
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>Option P2: Carbon Black & Gold Flame</h4>
-          <p>Stealth carbon black base with golden flame rise, right sleeve badge & back #07.</p>
+          <h4>Option P2: Butterfly Hex-Matrix Collared Polo</h4>
+          <p>Stealth carbon black base with royal blue honeycomb micro-mesh side matrix, right sleeve badge & back #10.</p>
           <div class="catalog-tags">
-            <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Sublimation</span>
+            <span class="pill-tag pill-poly">Collared Polo</span>
+            <span class="pill-tag" style="background: rgba(59,130,246,0.15); color: #93C5FD;">Hex Matrix</span>
           </div>
         </div>
 
@@ -1118,11 +1117,11 @@
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>Option P3: Crimson Red & Royal Speed</h4>
-          <p>Crimson body with royal blue raglan sleeves, aerodynamic motion lines & back #10.</p>
+          <h4>Option P3: Tibhar Speed-Block Collared Polo</h4>
+          <p>Deep navy with crimson red & royal blue diagonal speed blocks (matching paddles), right sleeve badge & back #18.</p>
           <div class="catalog-tags">
-            <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">Speed Raglan</span>
+            <span class="pill-tag pill-poly">Collared Polo</span>
+            <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">Speed Block</span>
           </div>
         </div>
 
@@ -1138,11 +1137,11 @@
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>Option P4: Royal Blue & Navy Motion</h4>
-          <p>Dynamic royal blue and deep navy kinetic gradient with right sleeve badge & back #07.</p>
+          <h4>Option P4: Xiom Cyber-Stream Athletic V-Neck</h4>
+          <p>Dynamic royal blue and deep navy kinetic streamline gradient with right sleeve badge & back #21.</p>
           <div class="catalog-tags">
-            <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(59,130,246,0.2); color: #93C5FD;">Kinetic Blue</span>
+            <span class="pill-tag pill-poly">Athletic V-Neck</span>
+            <span class="pill-tag" style="background: rgba(59,130,246,0.2); color: #93C5FD;">Cyber Stream</span>
           </div>
         </div>
 
@@ -1158,11 +1157,11 @@
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>Option P5: Dark Slate Charcoal & Gold</h4>
-          <p>Muted dark slate charcoal with metallic gold vector graphics & back #07.</p>
+          <h4>Option P5: Stiga Prism-Grid Athletic V-Neck</h4>
+          <p>Muted dark slate charcoal with refined golden geometric crystal prism lines & back #23.</p>
           <div class="catalog-tags">
-            <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(148,163,184,0.2); color: #CBD5E1;">Dark Slate</span>
+            <span class="pill-tag pill-poly">Athletic V-Neck</span>
+            <span class="pill-tag" style="background: rgba(148,163,184,0.2); color: #CBD5E1;">Prism Facets</span>
           </div>
         </div>
 
@@ -1187,7 +1186,7 @@
               <span class="label-printed">2. Custom Embroidered</span>
             </div>
           </div>
-          <h4>Option O1: Signature Deep Navy Polo</h4>
+          <h4>Option O1: Executive Signature Navy Polo</h4>
           <p>100% Pique Cotton • Tipped Polo Collar • Left Chest Crest • Right Sleeve Logo • <strong>Clean Blank Back</strong>.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-cotton">220 GSM Cotton</span>
@@ -1208,7 +1207,7 @@
             </div>
           </div>
           <h4>Option O2: Stealth Midnight Black Polo</h4>
-          <p>100% Pique Cotton • Gold Tipped Collar • Left Chest Crest • Right Sleeve Logo • <strong>Clean Blank Back</strong>.</p>
+          <p>100% Pique Cotton • Gold Tipping • Left Chest Crest • Right Sleeve Logo • <strong>Clean Blank Back</strong>.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-cotton">220 GSM Cotton</span>
             <span class="pill-tag pill-clean-back">Clean Back</span>
@@ -1227,7 +1226,7 @@
               <span class="label-printed">2. Custom Embroidered</span>
             </div>
           </div>
-          <h4>Option O3: Deep Royal Blue Polo</h4>
+          <h4>Option O3: Deep Royal Blue & Navy Polo</h4>
           <p>100% Pique Cotton • Royal Body & Navy Collar • Left Chest Crest • Right Sleeve Logo • <strong>Clean Blank Back</strong>.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-cotton">220 GSM Cotton</span>
@@ -1267,7 +1266,7 @@
               <span class="label-printed">2. Custom Embroidered</span>
             </div>
           </div>
-          <h4>Option O5: Deep Burgundy / Crimson Polo</h4>
+          <h4>Option O5: Ceremonial Burgundy / Crimson Polo</h4>
           <p>100% Pique Cotton • Tipped Collar • Left Chest Crest • Right Sleeve Logo • <strong>Clean Blank Back</strong>.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-cotton">220 GSM Cotton</span>
@@ -1304,7 +1303,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <strong>1. Player Synthetic Jersey</strong><br/>
+                    <strong>1. Player Synthetic Performance Jersey</strong><br/>
                     <small style="color: var(--text-muted);">Chest Crest + Right Sleeve + Back Name/Number</small>
                   </td>
                   <td>
@@ -1441,7 +1440,7 @@
 
   <footer>
     <p>© 2026 Ujjain District Table Tennis Association (UDTTA). All rights reserved.</p>
-    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">10 Master Options • All Officials 100% Cotton Collared Polos with Clean Blank Backs</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">10 Master Options • Table Tennis Brand-Inspired • Base Blank vs. Custom Print</p>
   </footer>
 
   <script>
@@ -1453,37 +1452,42 @@
 
     const playerOptions = {
       1: {
-        name: "Option P1: Solar Flare Navy & Gold V-Neck",
-        desc: "100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, and dynamic flame rise.",
+        name: "Option P1: Donic Aero-Wave Collared Polo",
+        desc: "100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, aerodynamic spin trajectory waves & custom back name/number.",
+        collar: "Structured Athletic Sports Polo Collar with Gold Tipping",
         back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
         printedImg: "UDTTA_Player_P1_Navy_Gold.jpg",
         blankImg: "UDTTA_Blank_Player_P1_Navy_Gold.jpg"
       },
       2: {
-        name: "Option P2: Carbon Black & Gold Flame",
-        desc: "Stealth matte carbon black polyester with golden flame rise, right sleeve badge & back #07.",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        name: "Option P2: Butterfly Hex-Matrix Collared Polo",
+        desc: "Stealth matte carbon black polyester with royal blue hexagonal micro-mesh side matrix, right sleeve badge & back #10.",
+        collar: "Jet Black Sports Polo Collar with Gold Tipping",
+        back: "UJJAIN arch + Player Name (VERMA) + Number (10)",
         printedImg: "UDTTA_Player_P2_Carbon_Gold.jpg",
         blankImg: "UDTTA_Blank_Player_P2_Carbon_Gold.jpg"
       },
       3: {
-        name: "Option P3: Crimson Red & Royal Speed Raglan",
-        desc: "Crimson body with royal blue raglan sleeves, aerodynamic motion speed lines & back #10.",
-        back: "UJJAIN arch + Player Name (VERMA) + Number (10)",
+        name: "Option P3: Tibhar Speed-Block Collared Polo",
+        desc: "Deep navy with crimson red & royal blue diagonal speed blocks (matching paddles), right sleeve badge & back #18.",
+        collar: "Navy Sports Polo Collar with Gold Tipping",
+        back: "UJJAIN arch + Player Name (GUPTA) + Number (18)",
         printedImg: "UDTTA_Player_P3_Crimson_Royal.jpg",
         blankImg: "UDTTA_Blank_Player_P3_Crimson_Royal.jpg"
       },
       4: {
-        name: "Option P4: Royal Blue & Navy Kinetic Motion",
-        desc: "Deep royal blue with navy kinetic gradient speed lines, right sleeve badge & back #07.",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        name: "Option P4: Xiom Cyber-Stream Athletic V-Neck",
+        desc: "Dynamic royal blue and deep navy kinetic streamline gradient with right sleeve badge & back #21.",
+        collar: "Athletic Ribbed V-Neck with Gold Accent Trim",
+        back: "UJJAIN arch + Player Name (JOSHI) + Number (21)",
         printedImg: "UDTTA_Player_P4_Royal_Navy.jpg",
         blankImg: "UDTTA_Blank_Player_P4_Royal_Navy.jpg"
       },
       5: {
-        name: "Option P5: Dark Slate Charcoal & Gold",
-        desc: "Muted dark slate charcoal dry-fit jersey with gold vector accents & back #07.",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        name: "Option P5: Stiga Prism-Grid Athletic V-Neck",
+        desc: "Muted dark slate charcoal with refined golden geometric crystal prism lines & back #23.",
+        collar: "Dark Slate Athletic V-Neck Collar",
+        back: "UJJAIN arch + Player Name (PATEL) + Number (23)",
         printedImg: "UDTTA_Player_P5_Slate_Gold.jpg",
         blankImg: "UDTTA_Blank_Player_P5_Slate_Gold.jpg"
       }
@@ -1491,21 +1495,21 @@
 
     const officialOptions = {
       1: {
-        name: "Option O1: Executive Deep Navy Pique Polo",
+        name: "Option O1: Executive Signature Navy Polo",
         desc: "100% Heavyweight Pique Cotton with Left Chest Embroidery, Right Sleeve Logo, and 100% clean solid blank back.",
         collar: "Structured Polo Collar with Gold Tipping & 2-Button Placket",
         printedImg: "UDTTA_Official_O1_Navy_Polo.jpg",
         blankImg: "UDTTA_Blank_Official_O1_Navy_Polo.jpg"
       },
       2: {
-        name: "Option O2: Stealth Midnight Black Pique Polo",
+        name: "Option O2: Stealth Midnight Black Polo",
         desc: "100% Heavyweight Pique Cotton in Jet Black with gold collar tipping, left chest crest, right sleeve logo, and solid blank back.",
         collar: "Jet Black Collar with Gold Tipping & 2-Button Placket",
         printedImg: "UDTTA_Official_O2_Black_Polo.jpg",
         blankImg: "UDTTA_Blank_Official_O2_Black_Polo.jpg"
       },
       3: {
-        name: "Option O3: Deep Royal Blue & Navy Pique Polo",
+        name: "Option O3: Deep Royal Blue & Navy Polo",
         desc: "Rich royal blue pique cotton with solid navy contrast collar, chest embroidery, right sleeve logo, and solid blank back.",
         collar: "Deep Navy Contrast Ribbed Collar with 2-Button Placket",
         printedImg: "UDTTA_Official_O3_Royal_Polo.jpg",
@@ -1519,7 +1523,7 @@
         blankImg: "UDTTA_Blank_Official_O4_Charcoal_Polo.jpg"
       },
       5: {
-        name: "Option O5: Deep Burgundy / Crimson Pique Polo",
+        name: "Option O5: Ceremonial Burgundy / Crimson Polo",
         desc: "100% Pique Cotton in Deep Burgundy with navy tipped collar, chest crest, right sleeve logo, and solid blank back.",
         collar: "Burgundy Collar with Gold Tipping & 2-Button Placket",
         printedImg: "UDTTA_Official_O5_Crimson_Polo.jpg",
@@ -1532,11 +1536,13 @@
       const img = document.getElementById('playerMainImg');
       const title = document.getElementById('playerMainTitle');
       const desc = document.getElementById('playerMainDesc');
+      const collarSpec = document.getElementById('playerCollarSpec');
       const backSpec = document.getElementById('playerBackSpec');
       const modeTag = document.getElementById('playerModeTag');
 
       title.textContent = opt.name;
       desc.textContent = opt.desc;
+      collarSpec.textContent = opt.collar;
       backSpec.innerHTML = opt.back;
 
       if (playerViewMode === 'printed') {
