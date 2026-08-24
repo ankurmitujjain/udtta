@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UDTTA - Official Apparel & Uniform Design Specifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-navy: #0A192F;
+      --navy-card: #112240;
+      --navy-light: #1E3A8A;
+      --accent-gold: #FFB800;
+      --gold-gradient: linear-gradient(135deg, #FFE066 0%, #FFB800 50%, #E68A00 100%);
+      --accent-red: #E63946;
+      --bg-dark: #070D18;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-color: rgba(255, 184, 0, 0.2);
+      --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 184, 0, 0.07) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(30, 58, 138, 0.15) 0%, transparent 45%);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(10, 25, 47, 0.95) 0%, rgba(7, 13, 24, 0.8) 100%);
+      backdrop-filter: blur(12px);
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: rgba(255, 184, 0, 0.12);
+      border: 1px solid rgba(255, 184, 0, 0.3);
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, #FFFFFF 30%, #FFD166 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hindi-title {
+      font-size: 1.5rem;
+      color: #E2E8F0;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    /* Logo Showcase section */
+    .logo-hero {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 3rem;
+      align-items: center;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 184, 0, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .logo-frame {
+      background: radial-gradient(circle, #1E293B, #0F172A);
+      padding: 1.5rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    .logo-frame img {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .logo-frame:hover img {
+      transform: scale(1.06) rotate(2deg);
+    }
+
+    .logo-details h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      color: #FFF;
+    }
+
+    .features-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+    }
+
+    .feature-item strong {
+      display: block;
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-size: 0.95rem;
+    }
+
+    .btn-gold {
+      background: var(--gold-gradient);
+      color: #000;
+      box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 184, 0, 0.45);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFF;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #FFF;
+    }
+
+    /* Section Title */
+    .section-header {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      color: #FFF;
+    }
+
+    /* Uniform Cards Grid */
+    .uniform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .uniform-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .uniform-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+    }
+
+    .card-banner {
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    .banner-player {
+      background: linear-gradient(90deg, #1E3A8A, #D97706);
+      color: #FFF;
+    }
+
+    .banner-official {
+      background: linear-gradient(90deg, #0F172A, #334155);
+      border-bottom: 2px solid var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .card-preview {
+      position: relative;
+      background: #020617;
+      overflow: hidden;
+    }
+
+    .card-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .uniform-card:hover .card-preview img {
+      transform: scale(1.02);
+    }
+
+    .card-body {
+      padding: 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #FFF;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: auto;
+      font-size: 0.9rem;
+    }
+
+    .specs-table tr {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .specs-table td {
+      padding: 0.75rem 0;
+    }
+
+    .specs-table td:first-child {
+      color: var(--text-muted);
+      font-weight: 500;
+      width: 35%;
+    }
+
+    .specs-table td:last-child {
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    .pill-tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .pill-poly {
+      background: rgba(59, 130, 246, 0.2);
+      color: #60A5FA;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .pill-cotton {
+      background: rgba(245, 158, 11, 0.2);
+      color: #FBBF24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    /* Lookbook Banner */
+    .lookbook-section {
+      background: var(--navy-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .lookbook-img {
+      width: 100%;
+      border-radius: 16px;
+      margin-top: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Color Palette */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .color-swatch {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .swatch-box {
+      height: 90px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      padding: 1rem;
+    }
+
+    .swatch-name {
+      font-weight: 700;
+      color: #FFF;
+      font-size: 0.95rem;
+    }
+
+    .swatch-code {
+      font-family: monospace;
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .logo-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .uniform-grid {
+        grid-template-columns: 1fr;
+      }
+      .features-list {
+        text-align: left;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-pill">
+      <span>🏓</span> Official Apparel Kit Specifications
+    </div>
+    <h1>UJJAIN DISTRICT TABLE TENNIS ASSOCIATION</h1>
+    <div class="hindi-title">उज्जैन जिला टेबल टेनिस संघ (UDTTA)</div>
+    <p class="subtitle">Official Design Manual, Production-Ready Assets & Mockups for Sports Players (Synthetic) & Officials (Cotton).</p>
+  </header>
+
+  <div class="container">
+
+    <!-- CROPPED LOGO SECTION -->
+    <section class="logo-hero">
+      <div class="logo-frame">
+        <img src="UDTTA_Logo_Circular.png" alt="Cropped UDTTA Circular Logo" />
+      </div>
+      <div class="logo-details">
+        <div class="badge-pill" style="margin-bottom: 0.5rem;">Crest Asset</div>
+        <h2>Cropped Circular Emblem (300 DPI High-Res)</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Cleanly isolated circular badge with transparent alpha channel, eliminating background artifacts for crisp sublimation and embroidery printing.
+        </p>
+
+        <ul class="features-list">
+          <li class="feature-item">
+            <strong>Dimensions</strong>
+            1231 x 1231 px (Ultra HD)
+          </li>
+          <li class="feature-item">
+            <strong>Format</strong>
+            PNG (32-bit Alpha Transparency)
+          </li>
+          <li class="feature-item">
+            <strong>Application</strong>
+            Left Chest Crest, Jersey Sublimation
+          </li>
+        </ul>
+
+        <div class="btn-group">
+          <a href="UDTTA_Logo_Circular.png" download class="btn btn-gold">
+            ⬇ Download Cropped Logo (PNG)
+          </a>
+          <a href="Logo.jpeg" target="_blank" class="btn btn-outline">
+            View Original Source
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFORM DESIGNS SECTION -->
+    <div class="section-header">
+      <div>
+        <div class="badge-pill">Uniform Lineup</div>
+        <h2>Player & Official T-Shirt Mockups</h2>
+      </div>
+      <p style="color: var(--text-muted); max-width: 450px;">
+        Designed specifically according to tournament athletic regulations and official ceremonial standards.
+      </p>
+    </div>
+
+    <div class="uniform-grid">
+
+      <!-- PLAYER JERSEY CARD -->
+      <div class="uniform-card">
+        <div class="card-banner banner-player">
+          <span>⚡ SPORTS PLAYER EDITION</span>
+          <span>FRONT & BACK</span>
+        </div>
+        <div class="card-preview">
+          <img src="UDTTA_Player_Jersey_Front_Back.jpg" alt="Player Jersey Front and Back" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Athletic Performance Jersey</h3>
+          <p class="card-desc">
+            Engineered for high mobility and thermal regulation during intense table tennis rallies. Features dynamic flame/wave sublimated accents matching the association colors.
+          </p>
+
+          <table class="specs-table">
+            <tr>
+              <td>Fabric Material</td>
+              <td><span class="pill-tag pill-poly">100% Quick-Dry Synthetic Polyester</span> (160 GSM)</td>
+            </tr>
+            <tr>
+              <td>Neck / Collar</td>
+              <td>Sporty Ribbed V-Neck with Golden Yellow Trim</td>
+            </tr>
+            <tr>
+              <td>Front Chest</td>
+              <td>Full-color UDTTA Crest on Left Chest</td>
+            </tr>
+            <tr>
+              <td>Back Layout</td>
+              <td><strong>UJJAIN</strong> arch + Player Name (<strong>SHARMA</strong>) + Athletic Varsity Number (<strong>07</strong>)</td>
+            </tr>
+            <tr>
+              <td>Printing Method</td>
+              <td>Full Digital Sublimation (Fade-Proof, Breathable)</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- OFFICIAL T-SHIRT CARD -->
+      <div class="uniform-card">
+        <div class="card-banner banner-official">
+          <span>👔 OFFICIAL & REFEREE EDITION</span>
+          <span>FRONT & BACK</span>
+        </div>
+        <div class="card-preview">
+          <img src="UDTTA_Official_TShirt_Front_Back.jpg" alt="Official Polo Front and Back" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Executive Cotton Polo T-Shirt</h3>
+          <p class="card-desc">
+            Dignified, authoritative, and comfortable for match arbiters, tournament referees, and executive committee members.
+          </p>
+
+          <table class="specs-table">
+            <tr>
+              <td>Fabric Material</td>
+              <td><span class="pill-tag pill-cotton">100% Heavyweight Pique Cotton</span> (220 GSM)</td>
+            </tr>
+            <tr>
+              <td>Neck / Collar</td>
+              <td>Structured Polo Collar with 2-Button Placket & Gold Tipping</td>
+            </tr>
+            <tr>
+              <td>Front Layout</td>
+              <td>UDTTA Crest on Left Chest + "OFFICIAL" on Right Chest</td>
+            </tr>
+            <tr>
+              <td>Back Layout</td>
+              <td>Clean "<strong>UDTTA OFFICIAL</strong>" Header. <em>(No Player Names, No Numbers)</em></td>
+            </tr>
+            <tr>
+              <td>Printing Method</td>
+              <td>High-Density Computerized Embroidery & Screen Printing</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- LOOKBOOK COLLECTION BANNER -->
+    <section class="lookbook-section">
+      <div class="badge-pill">Collection Overview</div>
+      <h2>UDTTA Complete Official Lookbook</h2>
+      <p style="color: var(--text-muted);">Side-by-side presentation of the tournament athlete kit and match officials executive polo.</p>
+      <img src="UDTTA_Uniform_Collection_Lookbook.jpg" alt="UDTTA Uniform Collection Lookbook" class="lookbook-img" />
+    </section>
+
+    <!-- COLOR PALETTE SECTION -->
+    <section class="lookbook-section">
+      <div class="badge-pill">Brand Guidelines</div>
+      <h2>Official Color Palette & Print Codes</h2>
+      <p style="color: var(--text-muted);">Standardized color swatches for sportswear manufacturers and dye sublimation labs.</p>
+
+      <div class="palette-grid">
+        <div class="color-swatch">
+          <div class="swatch-box" style="background: #0A192F;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Deep Navy Blue</div>
+            <div class="swatch-code">#0A192F | Pantone 289 C</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-box" style="background: #FFB800;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Ujjain Gold / Yellow</div>
+            <div class="swatch-code">#FFB800 | Pantone 123 C</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-box" style="background: #E63946;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Sport Red Accent</div>
+            <div class="swatch-code">#E63946 | Pantone 1795 C</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-box" style="background: #1E3A8A;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Table Tennis Royal Blue</div>
+            <div class="swatch-code">#1E3A8A | Pantone 2935 C</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-box" style="background: #FFFFFF; border-bottom: 1px solid #334155;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Crisp White</div>
+            <div class="swatch-code">#FFFFFF | Pure White</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Ujjain District Table Tennis Association (UDTTA). All rights reserved.</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">Generated for sports apparel manufacturing & vendor specifications.</p>
+  </footer>
+
+</body>
+</html>
