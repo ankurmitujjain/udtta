@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UDTTA - Official Apparel Specs & Custom Printing Quotation Guide</title>
+  <title>UDTTA - Official Dark Apparel Specs & Printing Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
       --bg-dark: #070D18;
       --text-main: #F8FAFC;
       --text-muted: #94A3B8;
-      --border-color: rgba(255, 184, 0, 0.2);
+      --border-color: rgba(255, 184, 0, 0.25);
       --card-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.75);
     }
 
@@ -78,6 +78,12 @@
       color: var(--accent-green);
     }
 
+    .badge-dark-tag {
+      background: rgba(230, 57, 70, 0.15);
+      border-color: rgba(230, 57, 70, 0.4);
+      color: #FF6B6B;
+    }
+
     h1 {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(2rem, 5vw, 3.4rem);
@@ -98,7 +104,7 @@
 
     .subtitle {
       color: var(--text-muted);
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
       font-size: 1.05rem;
     }
@@ -123,6 +129,45 @@
       font-family: 'Outfit', sans-serif;
       font-size: 2.2rem;
       color: #FFF;
+    }
+
+    /* Key Rules Callout Banner */
+    .rules-banner {
+      background: linear-gradient(90deg, rgba(30, 58, 138, 0.4) 0%, rgba(17, 34, 64, 0.8) 100%);
+      border: 1px solid rgba(255, 184, 0, 0.4);
+      border-radius: 18px;
+      padding: 1.4rem 1.8rem;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .rule-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .rule-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+      background: rgba(255, 184, 0, 0.15);
+      padding: 0.5rem;
+      border-radius: 10px;
+      color: var(--accent-gold);
+    }
+
+    .rule-content strong {
+      display: block;
+      color: #FFF;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .rule-content p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
     }
 
     /* Logo Showcase section */
@@ -238,37 +283,33 @@
       border-color: #FFF;
     }
 
-    /* Comparison Control Bar */
-    .view-control-bar {
+    /* Option Variant Selector Bar */
+    .variant-selector {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      gap: 0.6rem;
+      background: rgba(15, 23, 42, 0.9);
       padding: 0.4rem;
       border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
     }
 
-    .view-tab {
+    .variant-btn {
       background: transparent;
       border: none;
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 0.88rem;
-      padding: 0.55rem 1rem;
+      font-size: 0.85rem;
+      padding: 0.55rem 0.9rem;
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
     }
 
-    .view-tab.active {
+    .variant-btn.active {
       background: var(--accent-gold);
       color: #000;
       font-weight: 700;
-      box-shadow: 0 2px 10px rgba(255, 184, 0, 0.3);
     }
 
     /* Uniform Cards Grid */
@@ -306,12 +347,12 @@
     }
 
     .banner-player {
-      background: linear-gradient(90deg, #1E3A8A, #D97706);
+      background: linear-gradient(90deg, #1E3A8A, #B45309);
       color: #FFF;
     }
 
     .banner-official {
-      background: linear-gradient(90deg, #0F172A, #334155);
+      background: linear-gradient(90deg, #0F172A, #1E293B);
       border-bottom: 2px solid var(--accent-gold);
       color: var(--accent-gold);
     }
@@ -321,20 +362,6 @@
       background: #020617;
       overflow: hidden;
       min-height: 280px;
-    }
-
-    .preview-view {
-      display: none;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .preview-view.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.98); }
-      to { opacity: 1; transform: scale(1); }
     }
 
     .card-preview img {
@@ -360,18 +387,9 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       backdrop-filter: blur(8px);
-    }
-
-    .badge-printed-status {
-      background: rgba(255, 184, 0, 0.9);
+      background: rgba(255, 184, 0, 0.95);
       color: #000;
       box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-
-    .badge-blank-status {
-      background: rgba(30, 58, 138, 0.85);
-      color: #93C5FD;
-      border: 1px solid rgba(147, 197, 253, 0.3);
     }
 
     .card-body {
@@ -392,47 +410,6 @@
       color: var(--text-muted);
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
-    }
-
-    /* Sub-tabs inside card for quick switching */
-    .card-toggle-group {
-      display: flex;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 0.3rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      gap: 0.3rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .card-toggle-btn {
-      flex: 1;
-      padding: 0.6rem;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      font-weight: 600;
-      font-size: 0.85rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
-
-    .card-toggle-btn.active {
-      background: rgba(255, 255, 255, 0.1);
-      color: #FFF;
-      font-weight: 700;
-    }
-
-    .card-toggle-btn.active.printed-active {
-      background: var(--accent-gold);
-      color: #000;
-    }
-
-    .card-toggle-btn.active.blank-active {
-      background: #1E3A8A;
-      color: #FFF;
     }
 
     .specs-table {
@@ -481,8 +458,14 @@
       border: 1px solid rgba(245, 158, 11, 0.3);
     }
 
-    /* Side-by-side Dual Comparison Showcase */
-    .dual-showcase-section {
+    .pill-clean-back {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    /* Multi-Option Showcase Gallery */
+    .gallery-section {
       background: var(--navy-card);
       border: 1px solid var(--border-color);
       border-radius: 24px;
@@ -491,39 +474,44 @@
       box-shadow: var(--card-shadow);
     }
 
-    .dual-grid {
+    .gallery-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 2rem;
       margin-top: 1.5rem;
     }
 
-    .dual-item {
+    .gallery-card {
       background: rgba(10, 25, 47, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       padding: 1.5rem;
-      text-align: center;
+      transition: all 0.3s ease;
     }
 
-    .dual-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #FFF;
+    .gallery-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-4px);
     }
 
-    .dual-item p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .dual-item img {
+    .gallery-card img {
       width: 100%;
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       display: block;
       margin-bottom: 1rem;
+    }
+
+    .gallery-card h4 {
+      font-size: 1.15rem;
+      color: #FFF;
+      margin-bottom: 0.3rem;
+    }
+
+    .gallery-card p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
     }
 
     /* ESTIMATION & QUOTATION BREAKDOWN SECTION */
@@ -647,65 +635,6 @@
       margin: 0.3rem 0;
     }
 
-    /* Print Locations Specs Box */
-    .print-matrix-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .matrix-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 1.4rem;
-    }
-
-    .matrix-card h4 {
-      color: var(--accent-gold);
-      font-size: 1.05rem;
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .matrix-card ul {
-      list-style: none;
-      font-size: 0.88rem;
-    }
-
-    .matrix-card li {
-      padding: 0.4rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      display: flex;
-      justify-content: space-between;
-      color: var(--text-muted);
-    }
-
-    .matrix-card li span:last-child {
-      color: #FFF;
-      font-weight: 600;
-    }
-
-    /* Lookbook Banner */
-    .lookbook-section {
-      background: var(--navy-card);
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      padding: 2.5rem;
-      margin-bottom: 4rem;
-      box-shadow: var(--card-shadow);
-    }
-
-    .lookbook-img {
-      width: 100%;
-      border-radius: 16px;
-      margin-top: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
     /* Color Palette */
     .palette-grid {
       display: grid;
@@ -755,7 +684,7 @@
         grid-template-columns: 1fr;
         text-align: center;
       }
-      .uniform-grid, .dual-grid, .rfq-grid {
+      .uniform-grid, .rfq-grid {
         grid-template-columns: 1fr;
       }
       .features-list {
@@ -774,17 +703,44 @@
 <body>
 
   <header>
-    <div class="badge-pill">
-      <span>🏓</span> Apparel Kit & Custom Printing Specifications
+    <div class="badge-pill badge-dark-tag">
+      <span>🏓</span> Dark Apparel Edition • Zero Light Colors
     </div>
     <h1>UJJAIN DISTRICT TABLE TENNIS ASSOCIATION</h1>
     <div class="hindi-title">उज्जैन जिला टेबल टेनिस संघ (UDTTA)</div>
     <p class="subtitle">
-      Comprehensive manufacturing manual separating <strong>Base Blank Garments</strong> from <strong>Custom Printing & Branding</strong> for accurate vendor estimation and RFQ quotation.
+      Official Design System: <strong>Sleeve Logo Placement</strong> • <strong>Officials 100% Clean Blank Back</strong> • <strong>Multi-Option Dark Palette</strong> for Sport Players (Synthetic) & Officials (Cotton).
     </p>
   </header>
 
   <div class="container">
+
+    <!-- KEY RULES CALLOUT -->
+    <div class="rules-banner">
+      <div class="rule-box">
+        <div class="rule-icon">🛡️</div>
+        <div class="rule-content">
+          <strong>Official T-Shirt: 100% Clean Back</strong>
+          <p>Back is completely solid blank cotton with zero text, zero numbers, and zero logos for referees and officials.</p>
+        </div>
+      </div>
+
+      <div class="rule-box">
+        <div class="rule-icon">🏷️</div>
+        <div class="rule-content">
+          <strong>Right Sleeve Printed Crest</strong>
+          <p>Full-color circular UDTTA badge printed / embroidered on the right sleeve on all player and official jerseys.</p>
+        </div>
+      </div>
+
+      <div class="rule-box">
+        <div class="rule-icon">🎨</div>
+        <div class="rule-content">
+          <strong>Strictly Dark Sports Colors</strong>
+          <p>Deep Navy Blue, Midnight Stealth Black, and Crimson Red & Royal Blue. No white or light shades.</p>
+        </div>
+      </div>
+    </div>
 
     <!-- CROPPED LOGO SECTION -->
     <section class="logo-hero">
@@ -792,10 +748,10 @@
         <img src="UDTTA_Logo_Circular.png" alt="Cropped UDTTA Circular Logo" />
       </div>
       <div class="logo-details">
-        <div class="badge-pill" style="margin-bottom: 0.5rem;">Print-Ready Emblem</div>
+        <div class="badge-pill" style="margin-bottom: 0.5rem;">Isolated Asset</div>
         <h2>Cropped Circular Emblem (300 DPI High-Res)</h2>
         <p style="color: var(--text-muted); font-size: 0.95rem;">
-          Cleanly isolated circular badge with transparent alpha channel, eliminating background artifacts for crisp sublimation, DTF printing, and high-density computerized embroidery.
+          Cleanly isolated circular badge with transparent alpha channel, ready for chest embroidery, right sleeve transfer, and dye sublimation.
         </p>
 
         <ul class="features-list">
@@ -804,12 +760,12 @@
             1231 x 1231 px (Ultra HD)
           </li>
           <li class="feature-item">
-            <strong>Color Profile</strong>
-            CMYK / RGB Vector Clean
+            <strong>Placement 1</strong>
+            Left Chest (3.5" × 3.5")
           </li>
           <li class="feature-item">
-            <strong>Application</strong>
-            Left Chest Crest (3.5" × 3.5")
+            <strong>Placement 2</strong>
+            Right Sleeve (3.0" × 3.0")
           </li>
         </ul>
 
@@ -824,151 +780,109 @@
       </div>
     </section>
 
-    <!-- UNIFORM DESIGNS SECTION WITH INTERACTIVE BLANK / PRINTED TOGGLES -->
+    <!-- INTERACTIVE MAIN DUAL DISPLAY -->
     <div class="section-header">
       <div>
-        <div class="badge-pill badge-cyan">Interactive Garment Switcher</div>
-        <h2>Base Blank Garment vs. Custom Printed T-Shirt</h2>
-      </div>
-      
-      <!-- Global Toggle Control -->
-      <div class="view-control-bar">
-        <button class="view-tab active" onclick="switchAllViews('printed')">
-          <span>✨</span> Custom Printed
-        </button>
-        <button class="view-tab" onclick="switchAllViews('blank')">
-          <span>👕</span> Base Garment (Blank)
-        </button>
+        <div class="badge-pill badge-cyan">Featured Production Models</div>
+        <h2>Primary Uniform Models (Front & Back)</h2>
       </div>
     </div>
 
     <div class="uniform-grid">
 
       <!-- PLAYER JERSEY CARD -->
-      <div class="uniform-card" id="playerCard">
+      <div class="uniform-card">
         <div class="card-banner banner-player">
-          <span>⚡ ATHLETIC PLAYER EDITION</span>
-          <span id="playerBannerTag">CUSTOM PRINTED</span>
+          <span>⚡ SPORTS PLAYER SYNTHETIC JERSEY</span>
+          <span>NAVY & GOLD FLAME</span>
         </div>
 
         <div class="card-preview">
-          <span class="status-indicator-badge badge-printed-status" id="playerBadge">Custom Printed</span>
-          
-          <!-- View A: Custom Printed -->
-          <div class="preview-view active" id="playerViewPrinted">
-            <img src="UDTTA_Player_Jersey_Front_Back.jpg" alt="Player Jersey Printed Front and Back" />
-          </div>
-
-          <!-- View B: Base Blank -->
-          <div class="preview-view" id="playerViewBlank">
-            <img src="UDTTA_Blank_Player_Jersey_Front_Back.jpg" alt="Player Jersey Blank Base Garment Front and Back" />
-          </div>
+          <span class="status-indicator-badge">Player Kit</span>
+          <img id="playerMainImg" src="UDTTA_Player_Jersey_Navy_Gold.jpg" alt="Player Jersey Front and Back" />
         </div>
 
         <div class="card-body">
-          <div class="card-toggle-group">
-            <button class="card-toggle-btn active printed-active" id="btnPlayerPrinted" onclick="setCardView('player', 'printed')">
-              ✨ Printed Jersey (Finished)
-            </button>
-            <button class="card-toggle-btn" id="btnPlayerBlank" onclick="setCardView('player', 'blank')">
-              👕 Base Blank Garment
-            </button>
+          <div class="variant-selector" style="margin-bottom: 1.2rem;">
+            <button class="variant-btn active" onclick="switchPlayerMain('navy', this)">1. Navy & Gold Flame</button>
+            <button class="variant-btn" onclick="switchPlayerMain('carbon', this)">2. Carbon Black & Gold</button>
+            <button class="variant-btn" onclick="switchPlayerMain('crimson', this)">3. Crimson & Royal Blue</button>
           </div>
 
-          <h3 class="card-title" id="playerTitle">Athletic Performance Jersey (Full Sublimation)</h3>
-          <p class="card-desc" id="playerDesc">
-            High mobility sports jersey with association flame graphics, chest emblem, and custom player name/number back printing.
+          <h3 class="card-title" id="playerMainTitle">Signature Navy & Gold Player Jersey</h3>
+          <p class="card-desc">
+            100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, and custom back player name & number.
           </p>
 
           <table class="specs-table">
             <tr>
-              <td>Base Fabric</td>
-              <td><span class="pill-tag pill-poly">100% Quick-Dry Synthetic Polyester</span> (160 GSM)</td>
+              <td>Fabric Type</td>
+              <td><span class="pill-tag pill-poly">100% Micro-Mesh Polyester</span> (160 GSM)</td>
             </tr>
             <tr>
-              <td>Collar / Trim</td>
-              <td>Sporty Ribbed V-Neck with Golden Yellow Trim</td>
+              <td>Left Chest</td>
+              <td>Circular UDTTA Crest (Sublimated)</td>
             </tr>
             <tr>
-              <td>Base Solid Color</td>
-              <td>Deep Navy Blue (Pantone 289 C / #0A192F)</td>
+              <td>Right Sleeve</td>
+              <td><strong>Circular UDTTA Logo (Printed on Sleeve)</strong></td>
             </tr>
             <tr>
-              <td>Front Customization</td>
-              <td>Full-color UDTTA Crest on Left Chest (Sublimated / DTF)</td>
-            </tr>
-            <tr>
-              <td>Back Customization</td>
-              <td><strong>UJJAIN</strong> arch + Player Name (<strong>SHARMA</strong>) + Varsity Number (<strong>07</strong>)</td>
+              <td>Back Print</td>
+              <td><strong>UJJAIN</strong> arch + Player Name (<strong>SHARMA</strong>) + Number (<strong>07</strong>)</td>
             </tr>
             <tr>
               <td>Printing Technique</td>
-              <td><strong>Full Digital Sublimation</strong> (Fade-proof, lightweight)</td>
+              <td>Full Digital Sublimation (Fade-Proof & Breathable)</td>
             </tr>
           </table>
         </div>
       </div>
 
       <!-- OFFICIAL POLO CARD -->
-      <div class="uniform-card" id="officialCard">
+      <div class="uniform-card">
         <div class="card-banner banner-official">
-          <span>👔 OFFICIAL & REFEREE EDITION</span>
-          <span id="officialBannerTag">CUSTOM PRINTED</span>
+          <span>👔 OFFICIAL & REFEREE COTTON POLO</span>
+          <span>CLEAN BLANK BACK</span>
         </div>
 
         <div class="card-preview">
-          <span class="status-indicator-badge badge-printed-status" id="officialBadge">Custom Printed</span>
-          
-          <!-- View A: Custom Printed -->
-          <div class="preview-view active" id="officialViewPrinted">
-            <img src="UDTTA_Official_TShirt_Front_Back.jpg" alt="Official Polo Printed Front and Back" />
-          </div>
-
-          <!-- View B: Base Blank -->
-          <div class="preview-view" id="officialViewBlank">
-            <img src="UDTTA_Blank_Official_Polo_Front_Back.jpg" alt="Official Polo Blank Base Garment Front and Back" />
-          </div>
+          <span class="status-indicator-badge" style="background: #10B981; color: #FFF;">Clean Blank Back</span>
+          <img id="officialMainImg" src="UDTTA_Official_Polo_Navy_CleanBack.jpg" alt="Official Polo Front and Back" />
         </div>
 
         <div class="card-body">
-          <div class="card-toggle-group">
-            <button class="card-toggle-btn active printed-active" id="btnOfficialPrinted" onclick="setCardView('official', 'printed')">
-              ✨ Printed Polo (Finished)
-            </button>
-            <button class="card-toggle-btn" id="btnOfficialBlank" onclick="setCardView('official', 'blank')">
-              👕 Base Blank Polo
-            </button>
+          <div class="variant-selector" style="margin-bottom: 1.2rem;">
+            <button class="variant-btn active" onclick="switchOfficialMain('navy', this)">1. Signature Navy Polo</button>
+            <button class="variant-btn" onclick="switchOfficialMain('black', this)">2. Midnight Black Polo</button>
+            <button class="variant-btn" onclick="switchOfficialMain('crew', this)">3. Navy Crewneck T-Shirt</button>
           </div>
 
-          <h3 class="card-title" id="officialTitle">Executive Cotton Polo (Embroidery & Print)</h3>
-          <p class="card-desc" id="officialDesc">
-            Dignified polo for arbiters and executives with computerized chest embroidery and bold back official designation.
+          <h3 class="card-title" id="officialMainTitle">Executive Deep Navy Cotton Polo</h3>
+          <p class="card-desc">
+            100% Heavyweight Pique Cotton with Left Chest Embroidery, Right Sleeve Logo, and 100% clean solid blank back.
           </p>
 
           <table class="specs-table">
             <tr>
-              <td>Base Fabric</td>
-              <td><span class="pill-tag pill-cotton">100% Heavyweight Pique Cotton</span> (220 GSM)</td>
+              <td>Fabric Type</td>
+              <td><span class="pill-tag pill-cotton">100% Heavy Pique Cotton</span> (220 GSM)</td>
             </tr>
             <tr>
-              <td>Collar / Placket</td>
-              <td>Structured Polo Collar, 2-Button Placket & Gold Tipping</td>
+              <td>Left Chest</td>
+              <td>Circular UDTTA Crest (High-Density Embroidery)</td>
             </tr>
             <tr>
-              <td>Base Solid Color</td>
-              <td>Deep Navy Blue (Pantone 289 C / #0A192F)</td>
+              <td>Right Sleeve</td>
+              <td><strong>Circular UDTTA Logo (Printed / Embroidered)</strong></td>
             </tr>
             <tr>
-              <td>Front Customization</td>
-              <td>UDTTA Crest (Left Chest) + "OFFICIAL" (Right Chest)</td>
+              <td>Back Side</td>
+              <td><span class="pill-tag pill-clean-back">100% Clean Blank Back (No Print / No Number)</span></td>
             </tr>
             <tr>
-              <td>Back Customization</td>
-              <td>Clean "<strong>UDTTA OFFICIAL</strong>" Header <em>(No player names/numbers)</em></td>
-            </tr>
-            <tr>
-              <td>Printing Technique</td>
-              <td><strong>High-Density Computerized Embroidery + Screen/DTF</strong></td>
+              <td>Collar / Trim</td>
+              <td>Structured Polo Collar with Gold Tipping & 2-Button Placket</td>
             </tr>
           </table>
         </div>
@@ -976,55 +890,71 @@
 
     </div>
 
-    <!-- DUAL SIDE-BY-SIDE VISUAL COMPARISON FOR PRINTER -->
-    <section class="dual-showcase-section">
-      <div class="badge-pill badge-green">Vendor Inspection Matrix</div>
-      <h2>Side-by-Side Blueprint: Blank Base vs. Custom Branding</h2>
-      <p style="color: var(--text-muted); margin-top: 0.3rem;">
-        Direct visual reference for sportswear suppliers and printing dye labs.
-      </p>
+    <!-- ALL OPTIONS SHOWCASE GALLERY -->
+    <section class="gallery-section">
+      <div class="section-header" style="margin-bottom: 1rem;">
+        <div>
+          <div class="badge-pill badge-green">Comprehensive Lineup</div>
+          <h2>All Dark Color Options & Variants</h2>
+        </div>
+        <p style="color: var(--text-muted); max-width: 450px;">
+          Choose from 3 dark player performance models and 3 official cotton styles.
+        </p>
+      </div>
 
-      <div class="dual-grid">
-        <!-- Player Comparison -->
-        <div class="dual-item">
-          <h3>⚡ Athlete Sports Jersey Blueprint</h3>
-          <p>Plain Blank Polyester V-Neck (Left) ➔ Full Digital Sublimated Graphic (Right)</p>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
-            <div>
-              <img src="UDTTA_Blank_Player_Jersey_Front_Back.jpg" alt="Blank Player Jersey" />
-              <strong style="font-size: 0.8rem; color: #93C5FD;">1. Base Garment (Blank)</strong>
-            </div>
-            <div>
-              <img src="UDTTA_Player_Jersey_Front_Back.jpg" alt="Finished Printed Player Jersey" />
-              <strong style="font-size: 0.8rem; color: var(--accent-gold);">2. Custom Printed</strong>
-            </div>
-          </div>
+      <div class="gallery-grid">
+
+        <!-- Card 1: Official Navy Polo -->
+        <div class="gallery-card">
+          <img src="UDTTA_Official_Polo_Navy_CleanBack.jpg" alt="Official Navy Polo" />
+          <h4>👔 Official Option A: Signature Deep Navy Polo</h4>
+          <p>100% Pique Cotton • Left Chest Crest • Right Sleeve Logo • <strong>100% Solid Blank Back</strong></p>
         </div>
 
-        <!-- Official Polo Comparison -->
-        <div class="dual-item">
-          <h3>👔 Official Executive Polo Blueprint</h3>
-          <p>Plain Pique Cotton Polo (Left) ➔ Left Chest Crest Embroidery + Back Stamp (Right)</p>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
-            <div>
-              <img src="UDTTA_Blank_Official_Polo_Front_Back.jpg" alt="Blank Official Polo" />
-              <strong style="font-size: 0.8rem; color: #93C5FD;">1. Base Garment (Blank)</strong>
-            </div>
-            <div>
-              <img src="UDTTA_Official_TShirt_Front_Back.jpg" alt="Finished Printed Official Polo" />
-              <strong style="font-size: 0.8rem; color: var(--accent-gold);">2. Custom Embroidered</strong>
-            </div>
-          </div>
+        <!-- Card 2: Official Black Polo -->
+        <div class="gallery-card">
+          <img src="UDTTA_Official_Polo_Black_CleanBack.jpg" alt="Official Black Polo" />
+          <h4>👔 Official Option B: Stealth Midnight Black Polo</h4>
+          <p>100% Pique Cotton • Gold Tipped Collar • Right Sleeve Logo • <strong>100% Solid Blank Back</strong></p>
         </div>
+
+        <!-- Card 3: Official Navy Crewneck -->
+        <div class="gallery-card">
+          <img src="UDTTA_Official_Crewneck_Navy_CleanBack.jpg" alt="Official Navy Crewneck" />
+          <h4>👔 Official Option C: Premium Cotton Crewneck</h4>
+          <p>100% Ringspun Cotton • Round Neck • Right Sleeve Logo • <strong>100% Solid Blank Back</strong></p>
+        </div>
+
+        <!-- Card 4: Player Navy & Gold -->
+        <div class="gallery-card">
+          <img src="UDTTA_Player_Jersey_Navy_Gold.jpg" alt="Player Navy Gold Jersey" />
+          <h4>⚡ Player Option 1: Navy & Gold Flame Jersey</h4>
+          <p>Performance Polyester • Sleeve Logo • Back UJJAIN + Player Name & Varsity Number</p>
+        </div>
+
+        <!-- Card 5: Player Carbon Black & Gold -->
+        <div class="gallery-card">
+          <img src="UDTTA_Player_Jersey_Carbon_Gold.jpg" alt="Player Carbon Gold Jersey" />
+          <h4>⚡ Player Option 2: Carbon Black & Gold Jersey</h4>
+          <p>Performance Polyester • Sleeve Logo • Back UJJAIN + Player Name & Varsity Number</p>
+        </div>
+
+        <!-- Card 6: Player Crimson & Royal Blue -->
+        <div class="gallery-card">
+          <img src="UDTTA_Player_Jersey_Crimson_Royal.jpg" alt="Player Crimson Royal Jersey" />
+          <h4>⚡ Player Option 3: Crimson Red & Royal Blue Cyber</h4>
+          <p>Aerodynamic Speedlines • Sleeve Logo • Back UJJAIN + Player Name & Varsity Number</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- ESTIMATION & RFQ CALCULATOR SECTION FOR PRINTER GUY -->
+    <!-- ESTIMATION & RFQ CALCULATOR -->
     <section class="rfq-section" id="rfqEstimator">
       <div class="badge-pill">Cost Estimation Tool</div>
       <h2>🖨️ Vendor Custom Printing & Quotation Calculator</h2>
       <p style="color: #E2E8F0; margin-top: 0.4rem;">
-        Enter the base blank garment cost and custom printing charges to calculate accurate unit costs and total project estimates.
+        Calculate base garment costs + chest branding + right sleeve logo printing.
       </p>
 
       <div class="rfq-grid">
@@ -1035,10 +965,10 @@
             <table class="rfq-table">
               <thead>
                 <tr>
-                  <th>Garment Category</th>
-                  <th>Estimated Qty</th>
-                  <th>Base Blank (₹)</th>
-                  <th>Print/Embroidery (₹)</th>
+                  <th>Garment & Printing Specs</th>
+                  <th>Quantity</th>
+                  <th>Base (₹)</th>
+                  <th>Print/Emb (₹)</th>
                   <th>Unit Total</th>
                 </tr>
               </thead>
@@ -1046,7 +976,7 @@
                 <tr>
                   <td>
                     <strong>1. Player Synthetic Jersey</strong><br/>
-                    <small style="color: var(--text-muted);">160 GSM Poly + Full Sublimation</small>
+                    <small style="color: var(--text-muted);">Chest Crest + Right Sleeve + Back Name/Number</small>
                   </td>
                   <td>
                     <input type="number" id="playerQty" class="cost-input-box" value="40" style="width: 65px;" oninput="calculateEstimates()" /> pcs
@@ -1065,7 +995,7 @@
                 <tr>
                   <td>
                     <strong>2. Official Cotton Polo</strong><br/>
-                    <small style="color: var(--text-muted);">220 GSM Cotton + Crest Embroidery</small>
+                    <small style="color: var(--text-muted);">Chest Embroidery + Right Sleeve Logo (Clean Back)</small>
                   </td>
                   <td>
                     <input type="number" id="officialQty" class="cost-input-box" value="15" style="width: 65px;" oninput="calculateEstimates()" /> pcs
@@ -1074,39 +1004,15 @@
                     ₹ <input type="number" id="officialBaseCost" class="cost-input-box" value="280" oninput="calculateEstimates()" />
                   </td>
                   <td>
-                    ₹ <input type="number" id="officialPrintCost" class="cost-input-box" value="120" oninput="calculateEstimates()" />
+                    ₹ <input type="number" id="officialPrintCost" class="cost-input-box" value="90" oninput="calculateEstimates()" />
                   </td>
                   <td id="officialUnitTotal" style="font-weight: 700; color: var(--accent-gold);">
-                    ₹ 400
+                    ₹ 370
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-
-          <!-- Print Position Dimensions Table -->
-          <div class="print-matrix-grid">
-            <div class="matrix-card">
-              <h4>🎯 Player Kit Customization</h4>
-              <ul>
-                <li><span>Left Chest Emblem</span> <span>3.5" × 3.5" (Sublimated)</span></li>
-                <li><span>Back "UJJAIN" Header</span> <span>10.5" Width Arc</span></li>
-                <li><span>Player Name</span> <span>2.0" Height Bold</span></li>
-                <li><span>Player Number</span> <span>8.0" Height Varsity</span></li>
-              </ul>
-            </div>
-
-            <div class="matrix-card">
-              <h4>👔 Official Kit Customization</h4>
-              <ul>
-                <li><span>Left Chest Emblem</span> <span>3.2" × 3.2" (Embroidery)</span></li>
-                <li><span>Right Chest Wordmark</span> <span>"OFFICIAL" (Gold Thread)</span></li>
-                <li><span>Back Wordmark</span> <span>"UDTTA OFFICIAL" (9" Width)</span></li>
-                <li><span>Individual Names</span> <span>None (Standardized)</span></li>
-              </ul>
-            </div>
-          </div>
-
         </div>
 
         <!-- Real-Time Quotation Summary Widget -->
@@ -1128,20 +1034,20 @@
 
             <div class="calc-row">
               <span>Custom Printing Total:</span>
-              <strong id="totalPrintDisplay">₹ 7,400</strong>
+              <strong id="totalPrintDisplay">₹ 6,950</strong>
             </div>
 
             <div class="calc-row" style="border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 0.6rem;">
               <span>Estimated Avg. Cost / Piece:</span>
-              <strong id="avgUnitCostDisplay" style="color: var(--accent-gold);">₹ 341.82</strong>
+              <strong id="avgUnitCostDisplay" style="color: var(--accent-gold);">₹ 333.64</strong>
             </div>
           </div>
 
           <div>
             <div class="total-cost-box">
               <div class="total-cost-label">Total Estimated Project Quote</div>
-              <div class="total-cost-val" id="grandTotalDisplay">₹ 18,800</div>
-              <small style="color: var(--text-muted);">*Excludes local taxes & delivery freight</small>
+              <div class="total-cost-val" id="grandTotalDisplay">₹ 18,350</div>
+              <small style="color: var(--text-muted);">*Excludes local taxes & delivery</small>
             </div>
 
             <button class="btn btn-gold" onclick="window.print()" style="width: 100%; margin-top: 1rem; justify-content: center;">
@@ -1153,58 +1059,50 @@
       </div>
     </section>
 
-    <!-- LOOKBOOK COLLECTION BANNER -->
-    <section class="lookbook-section">
-      <div class="badge-pill">Collection Overview</div>
-      <h2>UDTTA Complete Official Lookbook</h2>
-      <p style="color: var(--text-muted);">Side-by-side presentation of the tournament athlete kit and match officials executive polo.</p>
-      <img src="UDTTA_Uniform_Collection_Lookbook.jpg" alt="UDTTA Uniform Collection Lookbook" class="lookbook-img" />
-    </section>
-
     <!-- COLOR PALETTE SECTION -->
-    <section class="lookbook-section">
-      <div class="badge-pill">Brand Guidelines</div>
-      <h2>Official Color Palette & Print Codes</h2>
-      <p style="color: var(--text-muted);">Standardized color swatches for sportswear manufacturers and dye sublimation labs.</p>
+    <section class="gallery-section">
+      <div class="badge-pill">Dark Palette Reference</div>
+      <h2>Approved Association Dark Colors</h2>
+      <p style="color: var(--text-muted);">Strict dark colorway specifications for vendor fabric dyes and embroidery thread matching.</p>
 
       <div class="palette-grid">
         <div class="color-swatch">
           <div class="swatch-box" style="background: #0A192F;"></div>
           <div class="swatch-info">
             <div class="swatch-name">Deep Navy Blue</div>
-            <div class="swatch-code">#0A192F | Pantone 289 C</div>
+            <div class="swatch-code">#0A192F | PMS 289 C</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-box" style="background: #111115;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Stealth Midnight Black</div>
+            <div class="swatch-code">#111115 | PMS Black C</div>
           </div>
         </div>
 
         <div class="color-swatch">
           <div class="swatch-box" style="background: #FFB800;"></div>
           <div class="swatch-info">
-            <div class="swatch-name">Ujjain Gold / Yellow</div>
-            <div class="swatch-code">#FFB800 | Pantone 123 C</div>
+            <div class="swatch-name">Ujjain Gold Accent</div>
+            <div class="swatch-code">#FFB800 | PMS 123 C</div>
           </div>
         </div>
 
         <div class="color-swatch">
           <div class="swatch-box" style="background: #E63946;"></div>
           <div class="swatch-info">
-            <div class="swatch-name">Sport Red Accent</div>
-            <div class="swatch-code">#E63946 | Pantone 1795 C</div>
+            <div class="swatch-name">Crimson Sport Red</div>
+            <div class="swatch-code">#E63946 | PMS 1795 C</div>
           </div>
         </div>
 
         <div class="color-swatch">
           <div class="swatch-box" style="background: #1E3A8A;"></div>
           <div class="swatch-info">
-            <div class="swatch-name">Table Tennis Royal Blue</div>
-            <div class="swatch-code">#1E3A8A | Pantone 2935 C</div>
-          </div>
-        </div>
-
-        <div class="color-swatch">
-          <div class="swatch-box" style="background: #FFFFFF; border-bottom: 1px solid #334155;"></div>
-          <div class="swatch-info">
-            <div class="swatch-name">Crisp White</div>
-            <div class="swatch-code">#FFFFFF | Pure White</div>
+            <div class="swatch-name">Royal Athletic Blue</div>
+            <div class="swatch-code">#1E3A8A | PMS 2935 C</div>
           </div>
         </div>
       </div>
@@ -1214,54 +1112,44 @@
 
   <footer>
     <p>© 2026 Ujjain District Table Tennis Association (UDTTA). All rights reserved.</p>
-    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">Generated for sports apparel manufacturing, blank garment sourcing & printing vendor RFQ.</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">Official Dark Apparel Manual • Clean Back Officials • Sleeve Printed Crest</p>
   </footer>
 
   <script>
-    // Card Individual View Switcher
-    function setCardView(cardType, viewType) {
-      const isPlayer = cardType === 'player';
-      const printedView = document.getElementById(isPlayer ? 'playerViewPrinted' : 'officialViewPrinted');
-      const blankView = document.getElementById(isPlayer ? 'playerViewBlank' : 'officialViewBlank');
-      const btnPrinted = document.getElementById(isPlayer ? 'btnPlayerPrinted' : 'btnOfficialPrinted');
-      const btnBlank = document.getElementById(isPlayer ? 'btnPlayerBlank' : 'btnOfficialBlank');
-      const badge = document.getElementById(isPlayer ? 'playerBadge' : 'officialBadge');
-      const bannerTag = document.getElementById(isPlayer ? 'playerBannerTag' : 'officialBannerTag');
-
-      if (viewType === 'printed') {
-        printedView.classList.add('active');
-        blankView.classList.remove('active');
-        btnPrinted.className = 'card-toggle-btn active printed-active';
-        btnBlank.className = 'card-toggle-btn';
-        badge.className = 'status-indicator-badge badge-printed-status';
-        badge.textContent = 'Custom Printed';
-        bannerTag.textContent = 'CUSTOM PRINTED';
-      } else {
-        printedView.classList.remove('active');
-        blankView.classList.add('active');
-        btnBlank.className = 'card-toggle-btn active blank-active';
-        btnPrinted.className = 'card-toggle-btn';
-        badge.className = 'status-indicator-badge badge-blank-status';
-        badge.textContent = 'Base Blank Garment';
-        bannerTag.textContent = 'BASE BLANK';
+    function switchPlayerMain(variant, btn) {
+      document.querySelectorAll('#playerCard .variant-btn, .variant-selector .variant-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('playerMainImg');
+      const title = document.getElementById('playerMainTitle');
+      if (variant === 'navy') {
+        img.src = 'UDTTA_Player_Jersey_Navy_Gold.jpg';
+        title.textContent = 'Signature Navy & Gold Player Jersey';
+      } else if (variant === 'carbon') {
+        img.src = 'UDTTA_Player_Jersey_Carbon_Gold.jpg';
+        title.textContent = 'Carbon Black & Gold Player Jersey';
+      } else if (variant === 'crimson') {
+        img.src = 'UDTTA_Player_Jersey_Crimson_Royal.jpg';
+        title.textContent = 'Crimson Red & Royal Blue Cyber Jersey';
       }
     }
 
-    // Global switcher
-    function switchAllViews(viewType) {
-      const tabs = document.querySelectorAll('.view-tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      if (viewType === 'printed') {
-        tabs[0].classList.add('active');
-      } else {
-        tabs[1].classList.add('active');
+    function switchOfficialMain(variant, btn) {
+      btn.parentElement.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('officialMainImg');
+      const title = document.getElementById('officialMainTitle');
+      if (variant === 'navy') {
+        img.src = 'UDTTA_Official_Polo_Navy_CleanBack.jpg';
+        title.textContent = 'Executive Deep Navy Cotton Polo';
+      } else if (variant === 'black') {
+        img.src = 'UDTTA_Official_Polo_Black_CleanBack.jpg';
+        title.textContent = 'Stealth Midnight Black Cotton Polo';
+      } else if (variant === 'crew') {
+        img.src = 'UDTTA_Official_Crewneck_Navy_CleanBack.jpg';
+        title.textContent = 'Premium Deep Navy Cotton Crewneck';
       }
-
-      setCardView('player', viewType);
-      setCardView('official', viewType);
     }
 
-    // Cost Estimator Calculator logic
     function calculateEstimates() {
       const playerQty = Math.max(0, parseFloat(document.getElementById('playerQty').value) || 0);
       const playerBase = Math.max(0, parseFloat(document.getElementById('playerBaseCost').value) || 0);
@@ -1271,14 +1159,12 @@
       const officialBase = Math.max(0, parseFloat(document.getElementById('officialBaseCost').value) || 0);
       const officialPrint = Math.max(0, parseFloat(document.getElementById('officialPrintCost').value) || 0);
 
-      // Units
       const playerUnit = playerBase + playerPrint;
       const officialUnit = officialBase + officialPrint;
 
       document.getElementById('playerUnitTotal').textContent = '₹ ' + playerUnit.toLocaleString('en-IN');
       document.getElementById('officialUnitTotal').textContent = '₹ ' + officialUnit.toLocaleString('en-IN');
 
-      // Totals
       const totalQty = playerQty + officialQty;
       const totalBase = (playerQty * playerBase) + (officialQty * officialBase);
       const totalPrint = (playerQty * playerPrint) + (officialQty * officialPrint);
@@ -1292,7 +1178,6 @@
       document.getElementById('grandTotalDisplay').textContent = '₹ ' + grandTotal.toLocaleString('en-IN');
     }
 
-    // Initialize calculator
     calculateEstimates();
   </script>
 </body>

@@ -1,77 +1,67 @@
 # Ujjain District Table Tennis Association (UDTTA) 🏓
-### Official Apparel Specs & Custom Printing Quotation Guide
+### Official Apparel & Uniform Specifications (Dark Edition)
 
 > **उज्जैन जिला टेबल टेनिस संघ (UDTTA)**  
-> Comprehensive manufacturing manual separating **Base Blank Garments** from **Custom Printing & Branding** for accurate vendor estimation and RFQ quotation.
+> Official design manual, production-ready assets, and digital mockups for Sports Players (Synthetic Performance Kit) and Tournament Officials / Referees (Executive 100% Cotton Polo / Crewneck).
 
 ---
 
-## 🌐 Live Web Showcase & Quotation Calculator
-View the interactive design showcase, toggle between Blank Base & Custom Printed views, and use the real-time RFQ estimation tool:  
-👉 **[https://ankurmitujjain.github.io/udtta/](https://ankurmitujjain.github.io/udtta/)**
+## 📌 Core Design & Production Rules
+
+1. **Officials & Referees (100% Cotton):**
+   - **Front:** Full-color circular UDTTA badge crest on the left chest (high-density embroidery or DTF).
+   - **Sleeve:** Full-color circular UDTTA logo printed on **one sleeve** (Right Sleeve).
+   - **Back:** **100% CLEAN AND BLANK BACK** — absolutely no names, no numbers, and no text.
+   - **Fabric:** 100% Heavyweight Pique Cotton (~220 GSM) or Ringspun Combed Cotton.
+
+2. **Sports Players (100% Synthetic / Polyester):**
+   - **Front:** Full-color circular UDTTA crest on the left chest.
+   - **Sleeve:** Full-color circular UDTTA logo printed on **one sleeve** (Right Sleeve).
+   - **Back:** Arched **"UJJAIN"** district header + Player Name + Bold Athletic Varsity Number.
+   - **Fabric:** 100% Quick-Dry Moisture-Wicking Interlock Polyester (~160 GSM).
+
+3. **Color Palette:**
+   - **Strictly Dark Athletic & Executive Colors:** Deep Navy Blue (`#0A192F`), Stealth Midnight Black (`#111115`), Crimson Sport Red (`#E63946`), Table Tennis Royal Blue (`#1E3A8A`), and Ujjain Gold Accents (`#FFB800`).
+   - **Zero Light Colors.**
 
 ---
 
-## 📁 Repository Contents
+## 🎨 Available Uniform Options & Mockups
 
-| File | Description | Specs |
+### 👔 Officials / Referees (100% Cotton • Clean Blank Back • Sleeve Logo)
+* **Option A: Signature Deep Navy Polo** — `UDTTA_Official_Polo_Navy_CleanBack.jpg`
+  * 100% Pique Cotton in Deep Navy with gold collar tipping, chest crest, right sleeve logo, and solid blank back.
+* **Option B: Stealth Midnight Black Polo** — `UDTTA_Official_Polo_Black_CleanBack.jpg`
+  * 100% Pique Cotton in Matte Jet Black with gold collar tipping, chest crest, right sleeve logo, and solid blank back.
+* **Option C: Premium Deep Navy Crewneck T-Shirt** — `UDTTA_Official_Crewneck_Navy_CleanBack.jpg`
+  * 100% Ringspun Cotton round-neck in Deep Navy with chest crest, right sleeve logo, and solid blank back.
+
+### ⚡ Sports Players (100% Synthetic Polyester • Sleeve Logo • Custom Back)
+* **Option 1: Navy & Gold Flame Jersey** — `UDTTA_Player_Jersey_Navy_Gold.jpg`
+  * Performance polyester in deep navy with dynamic flame sublimation, right sleeve logo, and back name/number.
+* **Option 2: Carbon Black & Gold Flame Jersey** — `UDTTA_Player_Jersey_Carbon_Gold.jpg`
+  * Sleek carbon black base with golden flame sublimation, right sleeve logo, and back name/number.
+* **Option 3: Crimson Red & Royal Blue Cyber Jersey** — `UDTTA_Player_Jersey_Crimson_Royal.jpg`
+  * High-energy tournament aerodynamic speed lines, right sleeve logo, and back name/number.
+
+---
+
+## 📦 Master Production Assets
+
+| Asset File | Format | Description |
 | :--- | :--- | :--- |
-| [`index.html`](index.html) | Interactive Web Showcase & RFQ Calculator | Responsive Dark/Gold Theme |
-| [`udtta_uniform_showcase.html`](udtta_uniform_showcase.html) | Full Design & Printing Specs Page | Standalone HTML |
-| [`UDTTA_Blank_Player_Jersey_Front_Back.jpg`](UDTTA_Blank_Player_Jersey_Front_Back.jpg) | **Blank Base** Player Jersey (Front & Back) | Plain 100% Poly V-Neck (160 GSM) |
-| [`UDTTA_Player_Jersey_Front_Back.jpg`](UDTTA_Player_Jersey_Front_Back.jpg) | **Custom Printed** Player Jersey (Front & Back) | Sublimated Flame & Wave Graphic |
-| [`UDTTA_Blank_Official_Polo_Front_Back.jpg`](UDTTA_Blank_Official_Polo_Front_Back.jpg) | **Blank Base** Executive Official Polo (Front & Back) | Plain Pique Cotton Polo (220 GSM) |
-| [`UDTTA_Official_TShirt_Front_Back.jpg`](UDTTA_Official_TShirt_Front_Back.jpg) | **Custom Printed** Official Polo (Front & Back) | Left Chest Crest + Back Header |
-| [`UDTTA_Logo_Circular.png`](UDTTA_Logo_Circular.png) | High-Resolution Circular Crest Emblem | 1231x1231 px, Transparent PNG (300 DPI) |
-| [`UDTTA_Uniform_Collection_Lookbook.jpg`](UDTTA_Uniform_Collection_Lookbook.jpg) | Complete Uniform Lookbook Banner | High-Res Visual Presentation |
-| [`Logo.jpeg`](Logo.jpeg) | Original Crest Reference Image | Source Reference |
+| **`UDTTA_Logo_Circular.png`** | PNG (1231×1231, Alpha) | Isolated 300 DPI circular crest with transparent background |
+| **`UDTTA_Official_Polo_Navy_CleanBack.jpg`** | JPG (Ultra HD) | Navy Official Polo (Front + Clean Back + Sleeve Logo) |
+| **`UDTTA_Official_Polo_Black_CleanBack.jpg`** | JPG (Ultra HD) | Black Official Polo (Front + Clean Back + Sleeve Logo) |
+| **`UDTTA_Official_Crewneck_Navy_CleanBack.jpg`** | JPG (Ultra HD) | Navy Official Crewneck (Front + Clean Back + Sleeve Logo) |
+| **`UDTTA_Player_Jersey_Navy_Gold.jpg`** | JPG (Ultra HD) | Navy & Gold Flame Player Jersey (Front + Back) |
+| **`UDTTA_Player_Jersey_Carbon_Gold.jpg`** | JPG (Ultra HD) | Carbon Black & Gold Flame Player Jersey (Front + Back) |
+| **`UDTTA_Player_Jersey_Crimson_Royal.jpg`** | JPG (Ultra HD) | Crimson & Royal Blue Player Jersey (Front + Back) |
+| **`UDTTA_Blank_Official_Polo_Front_Back.jpg`** | JPG (Ultra HD) | Base blank navy cotton polo for RFQ |
+| **`UDTTA_Blank_Official_Polo_Black_Front_Back.jpg`** | JPG (Ultra HD) | Base blank black cotton polo for RFQ |
+| **`index.html`** / **`udtta_uniform_showcase.html`** | HTML5 / CSS3 / JS | Interactive showcase with RFQ pricing calculator |
 
 ---
 
-## 👕 1. Base Blank Garment Specifications (Component A)
-
-### Athlete Jersey Base
-- **Base Fabric:** 100% Quick-Dry Synthetic Polyester Micro-mesh (160 GSM)
-- **Base Color:** Solid Deep Navy Blue (`#0A192F` / Pantone 289 C)
-- **Collar:** Ribbed V-Neck with Contrast Golden Yellow Edge Trim
-- **Sleeves:** Short set-in sleeves with double-needle hem
-
-### Official Polo Base
-- **Base Fabric:** 100% Heavyweight Pique Knit Cotton (220 GSM)
-- **Base Color:** Solid Deep Navy Blue (`#0A192F` / Pantone 289 C)
-- **Collar:** Structured Polo Knit Collar with Gold Tipping & 2-Button Placket
-- **Sleeves:** Ribbed cuffs with matching gold contrast tipping
-
----
-
-## 🖨️ 2. Custom Printing & Customization Specifications (Component B)
-
-### Athlete Player Kit Printing
-- **Front Crest:** Full-Color UDTTA Logo on Left Chest ($3.5" \times 3.5"$)
-- **Back Header:** Arch text **"UJJAIN"** ($10.5"$ arc width)
-- **Back Name:** Variable Player Surname ($2.0"$ height, bold athletic font)
-- **Back Number:** Variable 2-Digit Varsity Number ($8.0"$ height)
-- **Printing Technique:** Digital Dye Sublimation (Full breathability, zero cracking)
-
-### Official & Arbiter Kit Printing
-- **Front Crest:** Computerized High-Density Embroidery on Left Chest ($3.2" \times 3.2"$, approx. 8,000 stitches)
-- **Front Right Chest:** "OFFICIAL" embroidered in metallic gold thread ($0.8"$ height)
-- **Back Header:** "UDTTA OFFICIAL" high-density rubberized screen print / DTF ($9.0"$ width)
-- **Player Names / Numbers:** *None (Standardized uniform for all arbiters)*
-
----
-
-## 🎨 Official Color Palette
-
-| Color Name | Hex Code | Pantone Equivalent | Usage |
-| :--- | :--- | :--- | :--- |
-| **Deep Navy Blue** | `#0A192F` | Pantone 289 C | Primary Jersey & Polo Base |
-| **Ujjain Gold** | `#FFB800` | Pantone 123 C | Accent Trim, Collars & Highlights |
-| **Sport Red Accent** | `#E63946` | Pantone 1795 C | Flame & Speed Wave Graphics |
-| **Royal Blue** | `#1E3A8A` | Pantone 2935 C | Gradient Shadows & Secondary Details |
-| **Crisp White** | `#FFFFFF` | Pure White | Typography & Numbering |
-
----
-
-## 📜 License & Copyright
-© 2026 Ujjain District Table Tennis Association (UDTTA). All rights reserved.
+## 🌐 Interactive Web Showcase & Quotation Calculator
+Open `index.html` or `udtta_uniform_showcase.html` in any browser to interactively view all options, toggle variants, download high-res logos, and calculate vendor custom printing quotations.
