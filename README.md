@@ -1,13 +1,13 @@
 # Ujjain District Table Tennis Association (UDTTA) 🏓
-### Official Apparel & Uniform Design Specifications
+### Official Apparel Specs & Custom Printing Quotation Guide
 
 > **उज्जैन जिला टेबल टेनिस संघ (UDTTA)**  
-> Official design manual, production-ready assets, and digital mockups for Sports Players (Synthetic Performance Kit) and Tournament Officials / Referees (Executive Cotton Polo).
+> Comprehensive manufacturing manual separating **Base Blank Garments** from **Custom Printing & Branding** for accurate vendor estimation and RFQ quotation.
 
 ---
 
-## 🌐 Live Web Showcase
-View the interactive design showcase and 3D visual specifications live:  
+## 🌐 Live Web Showcase & Quotation Calculator
+View the interactive design showcase, toggle between Blank Base & Custom Printed views, and use the real-time RFQ estimation tool:  
 👉 **[https://ankurmitujjain.github.io/udtta/](https://ankurmitujjain.github.io/udtta/)**
 
 ---
@@ -16,31 +16,48 @@ View the interactive design showcase and 3D visual specifications live:
 
 | File | Description | Specs |
 | :--- | :--- | :--- |
-| [`index.html`](index.html) | Interactive Web Showcase Page | Responsive Dark/Gold Theme |
-| [`udtta_uniform_showcase.html`](udtta_uniform_showcase.html) | Full Design Specification Page | Standalone HTML |
+| [`index.html`](index.html) | Interactive Web Showcase & RFQ Calculator | Responsive Dark/Gold Theme |
+| [`udtta_uniform_showcase.html`](udtta_uniform_showcase.html) | Full Design & Printing Specs Page | Standalone HTML |
+| [`UDTTA_Blank_Player_Jersey_Front_Back.jpg`](UDTTA_Blank_Player_Jersey_Front_Back.jpg) | **Blank Base** Player Jersey (Front & Back) | Plain 100% Poly V-Neck (160 GSM) |
+| [`UDTTA_Player_Jersey_Front_Back.jpg`](UDTTA_Player_Jersey_Front_Back.jpg) | **Custom Printed** Player Jersey (Front & Back) | Sublimated Flame & Wave Graphic |
+| [`UDTTA_Blank_Official_Polo_Front_Back.jpg`](UDTTA_Blank_Official_Polo_Front_Back.jpg) | **Blank Base** Executive Official Polo (Front & Back) | Plain Pique Cotton Polo (220 GSM) |
+| [`UDTTA_Official_TShirt_Front_Back.jpg`](UDTTA_Official_TShirt_Front_Back.jpg) | **Custom Printed** Official Polo (Front & Back) | Left Chest Crest + Back Header |
 | [`UDTTA_Logo_Circular.png`](UDTTA_Logo_Circular.png) | High-Resolution Circular Crest Emblem | 1231x1231 px, Transparent PNG (300 DPI) |
-| [`UDTTA_Player_Jersey_Front_Back.jpg`](UDTTA_Player_Jersey_Front_Back.jpg) | Athlete Sports Jersey (Front & Back Mockup) | Sublimation Design Layout |
-| [`UDTTA_Official_TShirt_Front_Back.jpg`](UDTTA_Official_TShirt_Front_Back.jpg) | Executive Official Polo (Front & Back Mockup) | Embroidery & Screen Print Layout |
 | [`UDTTA_Uniform_Collection_Lookbook.jpg`](UDTTA_Uniform_Collection_Lookbook.jpg) | Complete Uniform Lookbook Banner | High-Res Visual Presentation |
 | [`Logo.jpeg`](Logo.jpeg) | Original Crest Reference Image | Source Reference |
 
 ---
 
-## 🎽 Uniform Specifications
+## 👕 1. Base Blank Garment Specifications (Component A)
 
-### 1. ⚡ Sports Player Edition (Athletic Performance Jersey)
-- **Fabric:** 100% Quick-Dry Synthetic Polyester (160 GSM)
-- **Neck / Collar:** Sporty Ribbed V-Neck with Golden Yellow Trim
-- **Front Layout:** Full-color UDTTA Crest on Left Chest
-- **Back Layout:** **UJJAIN** arch + Player Name (e.g., **SHARMA**) + Athletic Varsity Number (e.g., **07**)
-- **Printing Technique:** Full Digital Sublimation (Fade-Proof, Lightweight, Breathable)
+### Athlete Jersey Base
+- **Base Fabric:** 100% Quick-Dry Synthetic Polyester Micro-mesh (160 GSM)
+- **Base Color:** Solid Deep Navy Blue (`#0A192F` / Pantone 289 C)
+- **Collar:** Ribbed V-Neck with Contrast Golden Yellow Edge Trim
+- **Sleeves:** Short set-in sleeves with double-needle hem
 
-### 2. 👔 Official & Referee Edition (Executive Polo)
-- **Fabric:** 100% Heavyweight Pique Cotton (220 GSM)
-- **Neck / Collar:** Structured Polo Collar with 2-Button Placket & Gold Tipping
-- **Front Layout:** UDTTA Crest on Left Chest + "OFFICIAL" embroidered on Right Chest
-- **Back Layout:** Clean "**UDTTA OFFICIAL**" Header *(No Player Names, No Numbers)*
-- **Printing Technique:** High-Density Computerized Embroidery & Screen Printing
+### Official Polo Base
+- **Base Fabric:** 100% Heavyweight Pique Knit Cotton (220 GSM)
+- **Base Color:** Solid Deep Navy Blue (`#0A192F` / Pantone 289 C)
+- **Collar:** Structured Polo Knit Collar with Gold Tipping & 2-Button Placket
+- **Sleeves:** Ribbed cuffs with matching gold contrast tipping
+
+---
+
+## 🖨️ 2. Custom Printing & Customization Specifications (Component B)
+
+### Athlete Player Kit Printing
+- **Front Crest:** Full-Color UDTTA Logo on Left Chest ($3.5" \times 3.5"$)
+- **Back Header:** Arch text **"UJJAIN"** ($10.5"$ arc width)
+- **Back Name:** Variable Player Surname ($2.0"$ height, bold athletic font)
+- **Back Number:** Variable 2-Digit Varsity Number ($8.0"$ height)
+- **Printing Technique:** Digital Dye Sublimation (Full breathability, zero cracking)
+
+### Official & Arbiter Kit Printing
+- **Front Crest:** Computerized High-Density Embroidery on Left Chest ($3.2" \times 3.2"$, approx. 8,000 stitches)
+- **Front Right Chest:** "OFFICIAL" embroidered in metallic gold thread ($0.8"$ height)
+- **Back Header:** "UDTTA OFFICIAL" high-density rubberized screen print / DTF ($9.0"$ width)
+- **Player Names / Numbers:** *None (Standardized uniform for all arbiters)*
 
 ---
 
