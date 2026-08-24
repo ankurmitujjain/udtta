@@ -2,7 +2,14 @@
 ### Official Table Tennis Apparel Collection: 10 Master Options (Dark Edition)
 
 > **उज्जैन जिला टेबल टेनिस संघ (UDTTA)**  
+> **Live Web Application:** [https://ankurmitujjain.github.io/udtta/](https://ankurmitujjain.github.io/udtta/)  
 > Master apparel collection and interactive RFQ quotation guide for **Sports Players (Synthetic Performance V-Necks & Collared Polos)** and **Tournament Officials / Referees (Executive 100% Cotton Collared Polos)**.
+
+---
+
+## 🌐 Live GitHub Pages Showcase
+Access the fully interactive live catalog and quotation estimator online at:  
+👉 **[https://ankurmitujjain.github.io/udtta/](https://ankurmitujjain.github.io/udtta/)**
 
 ---
 
@@ -54,5 +61,5 @@
 
 ---
 
-## 🌐 Interactive Web Application & Quotation Tool
-Launch [index.html](file:///c:/Users/ankur/OneDrive%20-%20Yash%20Technologies%20Pvt%20Ltd/Desktop/Customer/Portfolio/tt/UDTTA/index.html) to interactively inspect all 10 options, toggle between **Base Blank Sourcing Garments** and **Finished Custom Printed Uniforms**, and calculate batch quotation estimates.
+## 🌐 Local Inspection
+Open [index.html](file:///c:/Users/ankur/OneDrive%20-%20Yash%20Technologies%20Pvt%20Ltd/Desktop/Customer/Portfolio/tt/UDTTA/index.html) to interactively view the full catalog locally.
