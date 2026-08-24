@@ -313,6 +313,65 @@
       background: rgba(255, 255, 255, 0.05);
     }
 
+    /* Collar Filter Pill Control Component */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .collar-filter-chip {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      padding: 0.35rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .collar-filter-chip:hover {
+      border-color: var(--accent-gold);
+      color: #FFF;
+    }
+
+    .collar-filter-chip.active {
+      background: var(--accent-gold);
+      color: #000;
+      border-color: var(--accent-gold);
+      box-shadow: 0 2px 10px rgba(255, 184, 0, 0.35);
+    }
+
+    .collar-filter-chip .chip-count {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+    }
+
+    .collar-filter-chip.active .chip-count {
+      background: rgba(0, 0, 0, 0.4);
+      color: #FFF;
+    }
+
     .option-strip {
       display: flex;
       gap: 0.5rem;
@@ -527,9 +586,11 @@
       margin: 1.5rem 0 1rem;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.75rem;
     }
 
     .catalog-grid {
@@ -553,6 +614,10 @@
       border-color: var(--accent-gold);
       transform: translateY(-4px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .catalog-card.hidden {
+      display: none !important;
     }
 
     .pair-images-box {
@@ -801,7 +866,7 @@
     <h1>UJJAIN DISTRICT TABLE TENNIS ASSOCIATION</h1>
     <div class="hindi-title">उज्जैन जिला टेबल टेनिस संघ (UDTTA)</div>
     <p class="subtitle">
-      Master apparel collection offering <strong>10 Distinct Synthetic Player Kits (V-Necks & Performance Polos)</strong> and <strong>10 Executive 100% Cotton Official Polos</strong> — complete with <strong>Base Blank Sourcing Garments</strong> and <strong>Custom Printed Uniforms</strong>.
+      Master apparel collection offering <strong>10 Distinct Synthetic Player Kits (Collared Performance Polos & Athletic V-Necks)</strong> and <strong>10 Executive 100% Cotton Official Polos</strong> — complete with <strong>Base Blank Sourcing Garments</strong> and <strong>Custom Printed Uniforms</strong>.
     </p>
   </header>
 
@@ -821,7 +886,7 @@
         <div class="rule-icon">⚡</div>
         <div class="rule-content">
           <strong>Players: 10 100% Synthetic Polyester Kits</strong>
-          <p>Features Flame V-Necks, Collared Polos, Speed Slashes, Spin Waves, Hex Matrix & Prism with custom back #.</p>
+          <p>Features Collared Performance Polos & V-Necks with Flame, Wave, Hex & Speed designs and custom back #.</p>
         </div>
       </div>
 
@@ -904,13 +969,13 @@
         <h2>Select Any of the 20 Master Options (10 Players & 10 Officials)</h2>
       </div>
       <p style="color: var(--text-muted); max-width: 480px;">
-        Toggle between Base Blank Garment and Custom Printed View for each option.
+        Use collar filters & toggle between Base Blank Garment and Custom Printed View.
       </p>
     </div>
 
     <div class="uniform-grid">
 
-      <!-- PLAYER CARD (P1 to P10) -->
+      <!-- PLAYER CARD (P1 to P10 with Collar Filter) -->
       <div class="uniform-card" id="playerCard">
         <div class="card-banner banner-player">
           <span id="playerBannerTag">⚡ SPORTS PLAYER (SYNTHETIC)</span>
@@ -932,18 +997,32 @@
             </button>
           </div>
 
+          <!-- COLLAR FILTER BAR FOR PLAYERS -->
+          <div class="filter-bar">
+            <span class="filter-label">👔 Collar Filter:</span>
+            <button class="collar-filter-chip active" id="chipAll" onclick="filterPlayerCollar('all', this)">
+              All Styles <span class="chip-count">10</span>
+            </button>
+            <button class="collar-filter-chip" id="chipPolo" onclick="filterPlayerCollar('polo', this)">
+              👔 Collared Polos <span class="chip-count">5</span>
+            </button>
+            <button class="collar-filter-chip" id="chipVneck" onclick="filterPlayerCollar('vneck', this)">
+              ⚡ Athletic V-Neck <span class="chip-count">5</span>
+            </button>
+          </div>
+
           <!-- Option selector strip (P1 to P10) -->
-          <div class="option-strip">
-            <button class="option-pill-btn active" onclick="selectPlayerOption(1, this)">P1: Flare Navy</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(2, this)">P2: Carbon Flame</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(3, this)">P3: Crimson Speed</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(4, this)">P4: Flare Polo</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(5, this)">P5: Carbon Polo</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(6, this)">P6: Wave Polo</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(7, this)">P7: Hex Polo</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(8, this)">P8: Speed-Block</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(9, this)">P9: Cyber Stream</button>
-            <button class="option-pill-btn" onclick="selectPlayerOption(10, this)">P10: Prism Grid</button>
+          <div class="option-strip" id="playerOptionStrip">
+            <button class="option-pill-btn active" data-type="vneck" onclick="selectPlayerOption(1, this)">P1: Flare Navy (V-Neck)</button>
+            <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(2, this)">P2: Carbon Flame (V-Neck)</button>
+            <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(3, this)">P3: Crimson Speed (V-Neck)</button>
+            <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(4, this)">P4: Flare Polo (Collar)</button>
+            <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(5, this)">P5: Carbon Polo (Collar)</button>
+            <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(6, this)">P6: Wave Polo (Collar)</button>
+            <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(7, this)">P7: Hex Polo (Collar)</button>
+            <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(8, this)">P8: Speed-Block (Collar)</button>
+            <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(9, this)">P9: Cyber Stream (V-Neck)</button>
+            <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(10, this)">P10: Prism Grid (V-Neck)</button>
           </div>
 
           <h3 class="card-title" id="playerMainTitle">Option P1: Solar Flare Navy & Gold Flame V-Neck</h3>
@@ -1056,15 +1135,30 @@
         </p>
       </div>
 
-      <!-- PLAYERS 10 OPTIONS -->
+      <!-- PLAYERS 10 OPTIONS WITH COLLAR FILTER -->
       <div class="catalog-group-title">
-        <span>⚡</span> Category A: Sports Players 100% Synthetic Performance Jerseys (10 Options)
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span>⚡</span> Category A: Sports Players 100% Synthetic Performance Jerseys (10 Options)
+        </div>
+
+        <!-- Grid Collar Filter Chips -->
+        <div class="filter-bar" style="margin-bottom: 0;">
+          <button class="collar-filter-chip active" id="gridChipAll" onclick="filterGridCollar('all', this)">
+            All (10)
+          </button>
+          <button class="collar-filter-chip" id="gridChipPolo" onclick="filterGridCollar('polo', this)">
+            👔 Collared Polos (5)
+          </button>
+          <button class="collar-filter-chip" id="gridChipVneck" onclick="filterGridCollar('vneck', this)">
+            ⚡ Athletic V-Necks (5)
+          </button>
+        </div>
       </div>
 
-      <div class="catalog-grid">
+      <div class="catalog-grid" id="playerCatalogGrid">
         
-        <!-- P1 -->
-        <div class="catalog-card">
+        <!-- P1: V-Neck -->
+        <div class="catalog-card" data-collar="vneck">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P1_Navy_Gold.jpg" alt="P1 Blank" />
@@ -1079,12 +1173,12 @@
           <p>100% Poly • Deep navy with gold V-collar, rising solar flames, right sleeve badge & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Flame V-Neck</span>
+            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">⚡ V-Neck Cut</span>
           </div>
         </div>
 
-        <!-- P2 -->
-        <div class="catalog-card">
+        <!-- P2: V-Neck -->
+        <div class="catalog-card" data-collar="vneck">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P2_Carbon_Gold.jpg" alt="P2 Blank" />
@@ -1099,12 +1193,12 @@
           <p>100% Poly • Stealth carbon black with golden flame rise, right sleeve badge & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Flame V-Neck</span>
+            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">⚡ V-Neck Cut</span>
           </div>
         </div>
 
-        <!-- P3 -->
-        <div class="catalog-card">
+        <!-- P3: V-Neck Raglan -->
+        <div class="catalog-card" data-collar="vneck">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P3_Crimson_Royal.jpg" alt="P3 Blank" />
@@ -1119,12 +1213,12 @@
           <p>100% Poly • Crimson with royal blue raglan sleeves, aerodynamic motion speed lines & back #10.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">160 GSM Poly</span>
-            <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">Speed Raglan</span>
+            <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">⚡ Speed Raglan</span>
           </div>
         </div>
 
-        <!-- P4 -->
-        <div class="catalog-card">
+        <!-- P4: Collared Polo -->
+        <div class="catalog-card" data-collar="polo">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P4_Navy_Polo.jpg" alt="P4 Blank" />
@@ -1139,12 +1233,12 @@
           <p>100% Poly • Performance polo with gold tipped collar, rising solar flames & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
-            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Collared Flame</span>
+            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">👔 Collared Polo</span>
           </div>
         </div>
 
-        <!-- P5 -->
-        <div class="catalog-card">
+        <!-- P5: Collared Polo -->
+        <div class="catalog-card" data-collar="polo">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P5_Black_Polo.jpg" alt="P5 Blank" />
@@ -1159,12 +1253,12 @@
           <p>100% Poly • Jet black polo with gold tipped collar, rising golden flames & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
-            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Collared Flame</span>
+            <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">👔 Collared Polo</span>
           </div>
         </div>
 
-        <!-- P6 -->
-        <div class="catalog-card">
+        <!-- P6: Collared Polo -->
+        <div class="catalog-card" data-collar="polo">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P6_Wave_Polo.jpg" alt="P6 Blank" />
@@ -1179,12 +1273,12 @@
           <p>100% Poly • Deep navy with table tennis ball spin trajectory speed waves & back #11.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
-            <span class="pill-tag" style="background: rgba(59,130,246,0.15); color: #93C5FD;">Wave Trajectory</span>
+            <span class="pill-tag" style="background: rgba(59,130,246,0.15); color: #93C5FD;">👔 Collared Polo</span>
           </div>
         </div>
 
-        <!-- P7 -->
-        <div class="catalog-card">
+        <!-- P7: Collared Polo -->
+        <div class="catalog-card" data-collar="polo">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P7_Hex_Polo.jpg" alt="P7 Blank" />
@@ -1199,12 +1293,12 @@
           <p>100% Poly • Carbon black with royal blue honeycomb micro-mesh side matrix & back #14.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
-            <span class="pill-tag" style="background: rgba(59,130,246,0.15); color: #93C5FD;">Hex Matrix</span>
+            <span class="pill-tag" style="background: rgba(59,130,246,0.15); color: #93C5FD;">👔 Collared Polo</span>
           </div>
         </div>
 
-        <!-- P8 -->
-        <div class="catalog-card">
+        <!-- P8: Collared Polo -->
+        <div class="catalog-card" data-collar="polo">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P8_Block_Polo.jpg" alt="P8 Blank" />
@@ -1219,12 +1313,12 @@
           <p>100% Poly • Deep navy with crimson & royal diagonal speed blocks (matching paddles) & back #18.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
-            <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">Speed Block</span>
+            <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">👔 Collared Polo</span>
           </div>
         </div>
 
-        <!-- P9 -->
-        <div class="catalog-card">
+        <!-- P9: V-Neck -->
+        <div class="catalog-card" data-collar="vneck">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P9_Stream_VNeck.jpg" alt="P9 Blank" />
@@ -1239,12 +1333,12 @@
           <p>100% Poly • Royal blue & navy kinetic motion streamline gradient & back #21.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Athletic V-Neck</span>
-            <span class="pill-tag" style="background: rgba(59,130,246,0.2); color: #93C5FD;">Cyber Stream</span>
+            <span class="pill-tag" style="background: rgba(59,130,246,0.2); color: #93C5FD;">⚡ V-Neck Cut</span>
           </div>
         </div>
 
-        <!-- P10 -->
-        <div class="catalog-card">
+        <!-- P10: V-Neck -->
+        <div class="catalog-card" data-collar="vneck">
           <div class="pair-images-box">
             <div class="pair-img-item">
               <img src="UDTTA_Blank_Player_P10_Prism_VNeck.jpg" alt="P10 Blank" />
@@ -1259,7 +1353,7 @@
           <p>100% Poly • Dark slate charcoal with refined golden geometric prism lines & back #23.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Athletic V-Neck</span>
-            <span class="pill-tag" style="background: rgba(148,163,184,0.2); color: #CBD5E1;">Prism Facets</span>
+            <span class="pill-tag" style="background: rgba(148,163,184,0.2); color: #CBD5E1;">⚡ V-Neck Cut</span>
           </div>
         </div>
 
@@ -1636,7 +1730,7 @@
 
   <footer>
     <p>© 2026 Ujjain District Table Tennis Association (UDTTA). All rights reserved.</p>
-    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">20 Master Options (10 Players & 10 Officials) • Base Blank vs. Custom Print</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">20 Master Options (10 Players & 10 Officials) • Collar Filter Active</p>
   </footer>
 
   <script>
@@ -1644,9 +1738,11 @@
     let currentOfficialOption = 1;
     let playerViewMode = 'printed';
     let officialViewMode = 'printed';
+    let playerCollarFilter = 'all'; // 'all', 'polo', 'vneck'
 
     const playerOptions = {
       1: {
+        type: "vneck",
         name: "Option P1: Solar Flare Navy & Gold Flame V-Neck",
         desc: "100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, dynamic rising flame graphics & custom back player name & number.",
         collar: "Athletic Ribbed V-Neck with Gold Trim",
@@ -1655,6 +1751,7 @@
         blankImg: "UDTTA_Blank_Player_P1_Navy_Gold.jpg"
       },
       2: {
+        type: "vneck",
         name: "Option P2: Carbon Black & Gold Flame V-Neck",
         desc: "100% Quick-Dry Polyester in Stealth Carbon Black with golden flame rise, right sleeve badge & custom back name/number.",
         collar: "Carbon Black Athletic V-Neck with Gold Trim",
@@ -1663,6 +1760,7 @@
         blankImg: "UDTTA_Blank_Player_P2_Carbon_Gold.jpg"
       },
       3: {
+        type: "vneck",
         name: "Option P3: Crimson Red & Royal Speed Raglan",
         desc: "100% Quick-Dry Polyester in Crimson with royal blue raglan sleeves, aerodynamic motion speed lines & custom back.",
         collar: "Royal Blue Athletic Ribbed V-Neck",
@@ -1671,6 +1769,7 @@
         blankImg: "UDTTA_Blank_Player_P3_Crimson_Royal.jpg"
       },
       4: {
+        type: "polo",
         name: "Option P4: Solar Flare Collared Polo (Navy & Gold)",
         desc: "100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising solar flames, right sleeve badge & back #07.",
         collar: "Performance Polo Collar with Gold Tipping & 2-Button Placket",
@@ -1679,6 +1778,7 @@
         blankImg: "UDTTA_Blank_Player_P4_Navy_Polo.jpg"
       },
       5: {
+        type: "polo",
         name: "Option P5: Carbon Flame Collared Polo (Stealth Black)",
         desc: "100% Quick-Dry Polyester Performance Polo in jet black with gold tipped collar, rising golden flames, right sleeve badge & back #07.",
         collar: "Performance Polo Collar with Gold Tipping & 2-Button Placket",
@@ -1687,6 +1787,7 @@
         blankImg: "UDTTA_Blank_Player_P5_Black_Polo.jpg"
       },
       6: {
+        type: "polo",
         name: "Option P6: Donic Aero-Wave Collared Polo",
         desc: "100% Quick-Dry Polyester with Table Tennis ball spin trajectory speed waves in gold & cyan/blue across lower torso & back #11.",
         collar: "Navy Sports Polo Collar with Gold Tipping",
@@ -1695,6 +1796,7 @@
         blankImg: "UDTTA_Blank_Player_P6_Wave_Polo.jpg"
       },
       7: {
+        type: "polo",
         name: "Option P7: Butterfly Hex-Matrix Collared Polo",
         desc: "100% Quick-Dry Polyester in Carbon Black with royal blue honeycomb micro-mesh side flank matrix & back #14.",
         collar: "Black Sports Polo Collar with Gold Tipping",
@@ -1703,6 +1805,7 @@
         blankImg: "UDTTA_Blank_Player_P7_Hex_Polo.jpg"
       },
       8: {
+        type: "polo",
         name: "Option P8: Tibhar Speed-Block Collared Polo",
         desc: "100% Quick-Dry Polyester with diagonal tournament speed blocks in Crimson Red & Royal Blue (matching paddles) & back #18.",
         collar: "Navy Sports Polo Collar with Gold Tipping",
@@ -1711,6 +1814,7 @@
         blankImg: "UDTTA_Blank_Player_P8_Block_Polo.jpg"
       },
       9: {
+        type: "vneck",
         name: "Option P9: Xiom Cyber-Stream Athletic V-Neck",
         desc: "100% Quick-Dry Polyester in Royal Blue & Navy with kinetic speed streamlines & back #21.",
         collar: "Athletic Ribbed V-Neck with Gold Accent Trim",
@@ -1719,8 +1823,9 @@
         blankImg: "UDTTA_Blank_Player_P9_Stream_VNeck.jpg"
       },
       10: {
+        type: "vneck",
         name: "Option P10: Stiga Prism-Grid Athletic V-Neck",
-        desc: "100% Quick-Dry Polyester in Dark Slate Charcoal with refined golden geometric crystal prism lines & back #23.",
+        desc: "100% Quick-Dry Polyester in Dark Slate Charcoal with refined golden geometric prism lines & back #23.",
         collar: "Dark Slate Athletic V-Neck Collar",
         back: "UJJAIN arch + Player Name (PATEL) + Number (23)",
         printedImg: "UDTTA_Player_P10_Prism_VNeck.jpg",
@@ -1851,8 +1956,8 @@
 
     function selectPlayerOption(idx, btn) {
       currentPlayerOption = idx;
-      btn.parentElement.querySelectorAll('.option-pill-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      document.querySelectorAll('#playerOptionStrip .option-pill-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
       updatePlayerDisplay();
     }
 
@@ -1861,6 +1966,51 @@
       btn.parentElement.querySelectorAll('.option-pill-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       updateOfficialDisplay();
+    }
+
+    // Collar Filter for Workbench Player Strip
+    function filterPlayerCollar(filterType, chipBtn) {
+      playerCollarFilter = filterType;
+      
+      // Update chip active states
+      document.querySelectorAll('.filter-bar #chipAll, .filter-bar #chipPolo, .filter-bar #chipVneck').forEach(c => c.classList.remove('active'));
+      if (chipBtn) chipBtn.classList.add('active');
+
+      const buttons = document.querySelectorAll('#playerOptionStrip .option-pill-btn');
+      let firstVisibleIdx = null;
+
+      buttons.forEach((btn, idx) => {
+        const optType = playerOptions[idx + 1].type;
+        if (filterType === 'all' || optType === filterType) {
+          btn.style.display = 'inline-block';
+          if (firstVisibleIdx === null) firstVisibleIdx = idx + 1;
+        } else {
+          btn.style.display = 'none';
+        }
+      });
+
+      // If current option is hidden by filter, select the first visible option
+      const curType = playerOptions[currentPlayerOption].type;
+      if (filterType !== 'all' && curType !== filterType && firstVisibleIdx !== null) {
+        const targetBtn = buttons[firstVisibleIdx - 1];
+        selectPlayerOption(firstVisibleIdx, targetBtn);
+      }
+    }
+
+    // Collar Filter for Production Matrix Grid
+    function filterGridCollar(filterType, chipBtn) {
+      document.querySelectorAll('#gridChipAll, #gridChipPolo, #gridChipVneck').forEach(c => c.classList.remove('active'));
+      if (chipBtn) chipBtn.classList.add('active');
+
+      const cards = document.querySelectorAll('#playerCatalogGrid .catalog-card');
+      cards.forEach(card => {
+        const collarType = card.getAttribute('data-collar');
+        if (filterType === 'all' || collarType === filterType) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     }
 
     function setPlayerView(mode) {
