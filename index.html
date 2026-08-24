@@ -115,7 +115,6 @@
       padding: 2.5rem 1.5rem 5rem;
     }
 
-    /* Global Section Title */
     .section-header {
       margin-bottom: 2rem;
       display: flex;
@@ -131,7 +130,6 @@
       color: #FFF;
     }
 
-    /* Key Rules Callout Banner */
     .rules-banner {
       background: linear-gradient(90deg, rgba(30, 58, 138, 0.4) 0%, rgba(17, 34, 64, 0.8) 100%);
       border: 1px solid rgba(255, 184, 0, 0.4);
@@ -170,7 +168,6 @@
       font-size: 0.85rem;
     }
 
-    /* Master Global Switcher Bar */
     .global-view-bar {
       display: flex;
       justify-content: space-between;
@@ -220,7 +217,6 @@
       box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
     }
 
-    /* Logo Showcase section */
     .logo-hero {
       background: var(--navy-card);
       border: 1px solid var(--border-color);
@@ -317,7 +313,6 @@
       background: rgba(255, 255, 255, 0.05);
     }
 
-    /* Option Pill Selector Strip */
     .option-strip {
       display: flex;
       gap: 0.5rem;
@@ -351,7 +346,6 @@
       box-shadow: 0 3px 12px rgba(255, 184, 0, 0.3);
     }
 
-    /* Primary Interactive Workbench Cards */
     .uniform-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -517,7 +511,6 @@
       border: 1px solid rgba(16, 185, 129, 0.4);
     }
 
-    /* 20-Option Master Matrix Section */
     .master-catalog-section {
       background: var(--navy-card);
       border: 1px solid var(--border-color);
@@ -616,7 +609,6 @@
       margin-top: auto;
     }
 
-    /* ESTIMATION & RFQ CALCULATOR SECTION */
     .rfq-section {
       background: linear-gradient(145deg, #112240 0%, #0A192F 100%);
       border: 2px solid var(--accent-gold);
@@ -677,7 +669,6 @@
       text-align: right;
     }
 
-    /* Calculator Widget */
     .calculator-card {
       background: rgba(7, 13, 24, 0.9);
       border: 1px solid rgba(255, 184, 0, 0.3);
@@ -737,7 +728,6 @@
       margin: 0.3rem 0;
     }
 
-    /* Color Palette */
     .palette-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -831,7 +821,7 @@
         <div class="rule-icon">⚡</div>
         <div class="rule-content">
           <strong>Players: 10 100% Synthetic Polyester Kits</strong>
-          <p>Features Flame V-Necks, Collared Polos, Speed Slashes, Spin Waves, Hex Matrix & Prism with custom player back #.</p>
+          <p>Features Flame V-Necks, Collared Polos, Speed Slashes, Spin Waves, Hex Matrix & Prism with custom back #.</p>
         </div>
       </div>
 
@@ -933,7 +923,6 @@
 
         <div class="card-body">
           
-          <!-- Individual Card Blank / Printed Toggle -->
           <div class="card-toggle-group">
             <button class="card-toggle-btn active printed-active" id="btnPlayerPrinted" onclick="setPlayerView('printed')">
               ✨ Custom Printed
@@ -1000,7 +989,6 @@
 
         <div class="card-body">
           
-          <!-- Individual Card Blank / Printed Toggle -->
           <div class="card-toggle-group">
             <button class="card-toggle-btn active printed-active" id="btnOfficialPrinted" onclick="setOfficialView('printed')">
               ✨ Custom Printed
@@ -1087,8 +1075,8 @@
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>P1: Solar Flare Navy & Gold V-Neck</h4>
-          <p>100% Poly • Deep navy with gold V-collar, sublimated flame rise, right sleeve badge & back #07.</p>
+          <h4>P1: Solar Flare Navy & Gold Flame V-Neck</h4>
+          <p>100% Poly • Deep navy with gold V-collar, rising solar flames, right sleeve badge & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">160 GSM Poly</span>
             <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Flame V-Neck</span>
@@ -1148,7 +1136,7 @@
             </div>
           </div>
           <h4>P4: Solar Flare Collared Polo (Navy)</h4>
-          <p>100% Poly • Performance polo with gold tipped collar, rising flame graphics & back #07.</p>
+          <p>100% Poly • Performance polo with gold tipped collar, rising solar flames & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
             <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Collared Flame</span>
@@ -1168,7 +1156,7 @@
             </div>
           </div>
           <h4>P5: Carbon Flame Collared Polo (Black)</h4>
-          <p>100% Poly • Jet black polo with gold tipped collar, rising flame graphics & back #07.</p>
+          <p>100% Poly • Jet black polo with gold tipped collar, rising golden flames & back #07.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
             <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">Collared Flame</span>
@@ -1497,7 +1485,6 @@
 
       <div class="rfq-grid">
         
-        <!-- Estimation Tables -->
         <div>
           <div class="pricing-table-container">
             <table class="rfq-table">
@@ -1553,7 +1540,6 @@
           </div>
         </div>
 
-        <!-- Real-Time Quotation Summary Widget -->
         <div class="calculator-card">
           <div>
             <div class="calc-title">
@@ -1654,10 +1640,9 @@
   </footer>
 
   <script>
-    // State
     let currentPlayerOption = 1;
     let currentOfficialOption = 1;
-    let playerViewMode = 'printed'; // 'printed' or 'blank'
+    let playerViewMode = 'printed';
     let officialViewMode = 'printed';
 
     const playerOptions = {
@@ -1687,7 +1672,7 @@
       },
       4: {
         name: "Option P4: Solar Flare Collared Polo (Navy & Gold)",
-        desc: "100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising flame graphics, right sleeve badge & back #07.",
+        desc: "100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising solar flames, right sleeve badge & back #07.",
         collar: "Performance Polo Collar with Gold Tipping & 2-Button Placket",
         back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
         printedImg: "UDTTA_Player_P4_Navy_Polo.jpg",
@@ -1695,7 +1680,7 @@
       },
       5: {
         name: "Option P5: Carbon Flame Collared Polo (Stealth Black)",
-        desc: "100% Quick-Dry Polyester Performance Polo in jet black with gold tipped collar, rising flame graphics, right sleeve badge & back #07.",
+        desc: "100% Quick-Dry Polyester Performance Polo in jet black with gold tipped collar, rising golden flames, right sleeve badge & back #07.",
         collar: "Performance Polo Collar with Gold Tipping & 2-Button Placket",
         back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
         printedImg: "UDTTA_Player_P5_Black_Polo.jpg",
@@ -1945,7 +1930,6 @@
       document.getElementById('grandTotalDisplay').textContent = '₹ ' + grandTotal.toLocaleString('en-IN');
     }
 
-    // Init
     updatePlayerDisplay();
     updateOfficialDisplay();
     calculateEstimates();
