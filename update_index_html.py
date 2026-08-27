@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+# Build modern updated index.html for UDTTA with high-res graphics download center
+html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -2649,3 +2650,10 @@
   </script>
 </body>
 </html>
+'''
+
+import os
+target_path = r"c:\Users\ankur\OneDrive - Yash Technologies Pvt Ltd\Desktop\Customer\Portfolio\tt\UDTTA\index.html"
+with open(target_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+print("Updated index.html successfully with High-Res Graphics Download Hub!")

@@ -1,15 +1,32 @@
 # Ujjain District Table Tennis Association (UDTTA) 🏓
-### Master Table Tennis Apparel Collection: 20 Options (10 Players & 10 Officials)
+### Master Table Tennis Apparel Collection & High-Res Print Graphics Hub (10 Players & 10 Officials)
 
 > **उज्जैन जिला टेबल टेनिस संघ (UDTTA)**  
 > **Live Web Application:** [https://ankurmitujjain.github.io/udtta/](https://ankurmitujjain.github.io/udtta/)  
-> Master apparel collection and interactive RFQ quotation guide for **Sports Players (100% Synthetic Polyester Performance V-Necks & Collared Polos)** and **Tournament Officials / Referees (Executive 100% Cotton Collared Polos)**.
+> Master apparel collection, interactive RFQ quotation guide, and **High-Resolution 300 DPI Print Graphics Download Center** for **Sports Players (100% Synthetic Polyester Performance V-Necks & Collared Polos)** and **Tournament Officials / Referees (Executive 100% Cotton Collared Polos)**.
 
 ---
 
 ## 🌐 Live GitHub Pages Showcase
-Access the interactive live catalog and quotation estimator online at:  
+Access the interactive live catalog, 300 DPI graphics downloader, and quotation estimator online at:  
 👉 **[https://ankurmitujjain.github.io/udtta/](https://ankurmitujjain.github.io/udtta/)**
+
+---
+
+## 🎨 High-Resolution 300 DPI Print Graphics Assets
+Vendors and garment manufacturers can directly download isolated transparent PNG artwork, back typography layouts, and complete print specification sheets from the `graphics/` directory:
+
+| Uniform Option | Style / Colorway | Front Sublimation Art (PNG) | Back Name/No Print (PNG) | Complete Print Spec Pack |
+| :--- | :--- | :--- | :--- | :--- |
+| **Option P4** | Solar Flare Navy & Gold Polo | `graphics/P4_Solar_Flare_Front_Artwork_300DPI.png` | `graphics/P4_Back_Print_SHARMA_07_300DPI.png` | `graphics/P4_Full_Print_Bundle_300DPI.png` |
+| **Option P5** | Carbon Flame Black Polo | `graphics/P5_Carbon_Flame_Front_Artwork_300DPI.png` | `graphics/P5_Back_Print_SHARMA_07_300DPI.png` | `graphics/P5_Full_Print_Bundle_300DPI.png` |
+| **Option P6** | Donic Aero-Wave Navy Polo | `graphics/P6_Aero_Wave_Front_Artwork_300DPI.png` | `graphics/P6_Back_Print_SINGH_11_300DPI.png` | `graphics/P6_Full_Print_Bundle_300DPI.png` |
+| **Option P7** | Butterfly Hex-Matrix Black Polo | `graphics/P7_Hex_Matrix_Front_Artwork_300DPI.png` | `graphics/P7_Back_Print_MEHTA_14_300DPI.png` | `graphics/P7_Full_Print_Bundle_300DPI.png` |
+| **Option P8** | Tibhar Speed-Block Navy Polo | `graphics/P8_Speed_Block_Front_Artwork_300DPI.png` | `graphics/P8_Back_Print_GUPTA_18_300DPI.png` | `graphics/P8_Full_Print_Bundle_300DPI.png` |
+| **Option P9** | Xiom Cyber-Stream Royal V-Neck | `graphics/P9_Cyber_Stream_Front_Artwork_300DPI.png` | `graphics/P9_Back_Print_JOSHI_21_300DPI.png` | `graphics/P9_Full_Print_Bundle_300DPI.png` |
+| **Option P10** | Stiga Prism-Grid Slate V-Neck | `graphics/P10_Prism_Grid_Front_Artwork_300DPI.png` | `graphics/P10_Back_Print_PATEL_23_300DPI.png` | `graphics/P10_Full_Print_Bundle_300DPI.png` |
+| **Chest Badge** | Circular Emblem (3.5" × 3.5") | `graphics/UDTTA_Chest_Emblem_300DPI.png` | — | `UDTTA_Logo_Circular.png` |
+| **Sleeve Badge** | Circular Emblem (3.0" × 3.0") | `graphics/UDTTA_Sleeve_Emblem_300DPI.png` | — | `UDTTA_Logo_Circular.png` |
 
 ---
 
@@ -17,9 +34,9 @@ Access the interactive live catalog and quotation estimator online at:
 
 1. **Sports Players (100% Synthetic / Dry-Fit Performance Polyester):**
    * **Material:** 100% Micro-Mesh Polyester (160 GSM) quick-dry performance fabric for both V-Necks and Collared Polos.
-   * **Design Elements:** Dynamic rising flame graphics, spin trajectories, hex matrix, and speed blocks across the torso.
-   * **Front:** Full-color circular UDTTA badge on Left Chest.
-   * **Sleeve:** Full-color circular UDTTA badge on **one sleeve** (Right Sleeve).
+   * **Design Elements:** Dynamic rising flame graphics, aerodynamic spin waves, hex matrix, and speed blocks across the torso.
+   * **Front:** Full-color circular UDTTA badge on Left Chest (3.5").
+   * **Sleeve:** Full-color circular UDTTA badge on **one sleeve** (Right Sleeve 3.0").
    * **Back:** Arched **"UJJAIN"** + Player Name + Number.
 
 2. **Officials & Referees (100% Cotton Collared Polos):**
@@ -75,4 +92,4 @@ Access the interactive live catalog and quotation estimator online at:
 ---
 
 ## 🌐 Local Inspection
-Open [index.html](file:///c:/Users/ankur/OneDrive%20-%20Yash%20Technologies%20Pvt%20Ltd/Desktop/Customer/Portfolio/tt/UDTTA/index.html) in any browser to inspect the full interactive catalog locally.
+Open [index.html](file:///c:/Users/ankur/OneDrive%20-%20Yash%20Technologies%20Pvt%20Ltd/Desktop/Customer/Portfolio/tt/UDTTA/index.html) in any browser to inspect the full interactive catalog and download hub locally.
