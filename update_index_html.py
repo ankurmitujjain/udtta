@@ -1,4 +1,4 @@
-# Build modern updated index.html for UDTTA with high-res graphics download center
+# Script to regenerate index.html with all 10 Player Graphics + Official Master Pack + P4 AARAV 07
 html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -833,6 +833,10 @@ html_content = '''<!DOCTYPE html>
       box-shadow: 0 18px 35px rgba(255, 184, 0, 0.15);
     }
 
+    .graphics-hub-card.hidden {
+      display: none !important;
+    }
+
     .graphics-hub-preview {
       background: #020617;
       border-radius: 12px;
@@ -1052,13 +1056,13 @@ html_content = '''<!DOCTYPE html>
     <h1>UJJAIN DISTRICT TABLE TENNIS ASSOCIATION</h1>
     <div class="hindi-title">उज्जैन जिला टेबल टेनिस संघ (UDTTA)</div>
     <p class="subtitle">
-      Master apparel collection offering <strong>10 Distinct Synthetic Player Kits (Collared Performance Polos & Athletic V-Necks)</strong> and <strong>10 Executive 100% Cotton Official Polos</strong> — complete with <strong>Base Blank Sourcing Garments</strong>, <strong>Custom Printed Uniforms</strong>, and <strong>High-Resolution Print-Ready Graphics Download Hub (300 DPI)</strong>.
+      Master apparel collection offering <strong>10 Distinct Synthetic Player Kits (Collared Performance Polos & Athletic V-Necks)</strong> and <strong>10 Executive 100% Cotton Official Polos</strong> — complete with <strong>Base Blank Sourcing Garments</strong>, <strong>Custom Printed Uniforms</strong>, and <strong>High-Resolution Print-Ready Graphics Download Hub (300 DPI)</strong> for every shirt.
     </p>
 
     <!-- Navigation Shortcuts -->
     <div class="nav-shortcuts">
       <a href="#workbenchSection" class="nav-link-btn">👔 Interactive Workbench</a>
-      <a href="#graphicsDownloadSection" class="nav-link-btn" style="border-color: var(--accent-gold); color: var(--accent-gold);">🎨 High-Res Print Graphics Hub</a>
+      <a href="#graphicsDownloadSection" class="nav-link-btn" style="border-color: var(--accent-gold); color: var(--accent-gold);">🎨 High-Res Print Graphics Hub (All T-Shirts)</a>
       <a href="#productionMatrixSection" class="nav-link-btn">🖼️ All 20 Master Options Matrix</a>
       <a href="#rfqEstimator" class="nav-link-btn">🖨️ Quotation Calculator</a>
     </div>
@@ -1095,8 +1099,8 @@ html_content = '''<!DOCTYPE html>
       <div class="rule-box">
         <div class="rule-icon">🖨️</div>
         <div class="rule-content">
-          <strong>300 DPI Print Graphics Download</strong>
-          <p>Download isolated front sublimation vectors, back name/numbers, and chest/sleeve badges for direct base shirt printing.</p>
+          <strong>300 DPI Graphics Generated for ALL T-Shirts</strong>
+          <p>Download isolated front sublimation vectors, back name/numbers (including <strong>AARAV #07</strong>), and official master spec packs.</p>
         </div>
       </div>
     </div>
@@ -1213,7 +1217,7 @@ html_content = '''<!DOCTYPE html>
             <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(1, this)">P1: Flare Navy (V-Neck)</button>
             <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(2, this)">P2: Carbon Flame (V-Neck)</button>
             <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(3, this)">P3: Crimson Speed (V-Neck)</button>
-            <button class="option-pill-btn active" data-type="polo" onclick="selectPlayerOption(4, this)">P4: Flare Polo (Collar)</button>
+            <button class="option-pill-btn active" data-type="polo" onclick="selectPlayerOption(4, this)">P4: Flare Polo (AARAV #07)</button>
             <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(5, this)">P5: Carbon Polo (Collar)</button>
             <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(6, this)">P6: Wave Polo (Collar)</button>
             <button class="option-pill-btn" data-type="polo" onclick="selectPlayerOption(7, this)">P7: Hex Polo (Collar)</button>
@@ -1222,9 +1226,9 @@ html_content = '''<!DOCTYPE html>
             <button class="option-pill-btn" data-type="vneck" onclick="selectPlayerOption(10, this)">P10: Prism Grid (V-Neck)</button>
           </div>
 
-          <h3 class="card-title" id="playerMainTitle">Option P4: Solar Flare Collared Polo (Navy & Gold)</h3>
+          <h3 class="card-title" id="playerMainTitle">Option P4: Solar Flare Collared Polo (Navy & Gold - AARAV #07)</h3>
           <p class="card-desc" id="playerMainDesc">
-            100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising solar flames, right sleeve badge & back #07.
+            100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising solar flames, right sleeve badge & back UJJAIN AARAV #07.
           </p>
 
           <table class="specs-table">
@@ -1246,7 +1250,7 @@ html_content = '''<!DOCTYPE html>
             </tr>
             <tr>
               <td>Back Print</td>
-              <td id="playerBackSpec"><strong>UJJAIN</strong> arch + Player Name (<strong>SHARMA</strong>) + Number (<strong>07</strong>)</td>
+              <td id="playerBackSpec"><strong>UJJAIN</strong> arch + Player Name (<strong>AARAV</strong>) + Number (<strong>07</strong>)</td>
             </tr>
           </table>
 
@@ -1264,7 +1268,7 @@ html_content = '''<!DOCTYPE html>
               <a id="dlFrontArtBtn" href="graphics/P4_Solar_Flare_Front_Artwork_300DPI.png" download class="dl-btn">
                 🎨 Front Torso Sublimation Art
               </a>
-              <a id="dlBackArtBtn" href="graphics/P4_Back_Print_SHARMA_07_300DPI.png" download class="dl-btn">
+              <a id="dlBackArtBtn" href="graphics/P4_Back_Print_AARAV_07_300DPI.png" download class="dl-btn">
                 🔤 Back Name & # Layout
               </a>
               <a id="dlBundleBtn" href="graphics/P4_Full_Print_Bundle_300DPI.png" download class="dl-btn">
@@ -1360,6 +1364,9 @@ html_content = '''<!DOCTYPE html>
               <a href="graphics/UDTTA_Sleeve_Emblem_300DPI.png" download class="dl-btn">
                 🏷️ Right Sleeve Badge
               </a>
+              <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="dl-btn">
+                📋 Official Master Spec Pack
+              </a>
               <a id="dlOfficialBlankBtn" href="UDTTA_Blank_Official_O1_Navy_Polo.jpg" download class="dl-btn">
                 👕 Plain Cotton Base Blank Sourcing
               </a>
@@ -1371,28 +1378,45 @@ html_content = '''<!DOCTYPE html>
 
     </div>
 
-    <!-- DEDICATED PRODUCTION PRINT GRAPHICS DOWNLOAD CENTER -->
+    <!-- DEDICATED PRODUCTION PRINT GRAPHICS DOWNLOAD CENTER FOR ALL T-SHIRTS -->
     <section class="master-catalog-section" id="graphicsDownloadSection">
       <div class="section-header" style="margin-bottom: 1rem;">
         <div>
           <div class="badge-pill" style="background: rgba(255, 184, 0, 0.15); color: #FFB800;">Vendor Artwork Hub</div>
-          <h2>🎨 Master Print-Ready Graphics & Sublimation Artwork Downloads</h2>
+          <h2>🎨 Master Print-Ready Graphics & Sublimation Artwork Downloads (All T-Shirts)</h2>
         </div>
         <p style="color: var(--text-muted); max-width: 500px;">
           High-resolution (300 DPI) transparent PNG sublimation artworks, back name/numbers, and complete vendor specification sheets ready for garment printers.
         </p>
       </div>
 
-      <div class="graphics-hub-grid">
+      <!-- Category Filter Chips for Graphics Hub -->
+      <div class="filter-bar" style="margin-bottom: 1.5rem;">
+        <span class="filter-label">🎨 Filter Graphics:</span>
+        <button class="collar-filter-chip active" id="gFilterAll" onclick="filterGraphicsHub('all', this)">
+          🌟 All T-Shirts (11)
+        </button>
+        <button class="collar-filter-chip" id="gFilterPolo" onclick="filterGraphicsHub('polo', this)">
+          👔 Player Collared Polos (5)
+        </button>
+        <button class="collar-filter-chip" id="gFilterVneck" onclick="filterGraphicsHub('vneck', this)">
+          ⚡ Player Athletic V-Necks (5)
+        </button>
+        <button class="collar-filter-chip" id="gFilterOfficial" onclick="filterGraphicsHub('official', this)">
+          👔 Official Cotton Polos (1)
+        </button>
+      </div>
 
-        <!-- Card P4: Solar Flare (Collar Polo) -->
-        <div class="graphics-hub-card">
+      <div class="graphics-hub-grid" id="graphicsHubContainer">
+
+        <!-- Card P1: Solar Flare (V-Neck) -->
+        <div class="graphics-hub-card" data-category="vneck">
           <div class="graphics-hub-preview">
-            <img src="graphics/P4_Full_Print_Bundle_300DPI.png" alt="P4 Full Print Pack" />
+            <img src="graphics/P1_Full_Print_Bundle_300DPI.png" alt="P1 Full Print Pack" />
           </div>
           <div>
-            <div class="pill-tag pill-poly" style="margin-bottom: 0.5rem;">Option P4 • Collared Polo</div>
-            <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.3rem;">P4: Solar Flare (Navy & Gold)</h3>
+            <div class="pill-tag pill-poly" style="margin-bottom: 0.5rem;">Option P1 • Athletic V-Neck</div>
+            <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.3rem;">P1: Solar Flare (Navy & Gold)</h3>
             <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.8rem;">
               Rising solar flare flames in Gold & Crimson Red with arched UJJAIN + SHARMA #07 back layout.
             </p>
@@ -1403,14 +1427,86 @@ html_content = '''<!DOCTYPE html>
             </ul>
           </div>
           <div class="card-dl-row">
+            <a href="graphics/P1_Solar_Flare_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Flame Art (PNG)</a>
+            <a href="graphics/P1_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back SHARMA #07 (PNG)</a>
+            <a href="graphics/P1_Full_Print_Bundle_300DPI.png" download class="card-dl-link" style="background: var(--gold-gradient); color: #000; font-weight: 700;">📦 Full Print Pack (300 DPI)</a>
+          </div>
+        </div>
+
+        <!-- Card P2: Carbon Flame (V-Neck) -->
+        <div class="graphics-hub-card" data-category="vneck">
+          <div class="graphics-hub-preview">
+            <img src="graphics/P2_Full_Print_Bundle_300DPI.png" alt="P2 Full Print Pack" />
+          </div>
+          <div>
+            <div class="pill-tag pill-poly" style="margin-bottom: 0.5rem;">Option P2 • Athletic V-Neck</div>
+            <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.3rem;">P2: Carbon Flame (Stealth Black)</h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+              Golden solar flame tongues for jet black V-neck with arched UJJAIN + SHARMA #07 back layout.
+            </p>
+            <ul class="graphics-meta-list">
+              <li>• <strong>Front Art Size:</strong> 14" × 18" Full Lower Hem Sublimation Wrap</li>
+              <li>• <strong>Back Typography:</strong> 12" × 16" Center Upper Back</li>
+              <li>• <strong>Badges:</strong> Left Chest (3.5") + Right Sleeve (3.0")</li>
+            </ul>
+          </div>
+          <div class="card-dl-row">
+            <a href="graphics/P2_Carbon_Flame_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Flame Art (PNG)</a>
+            <a href="graphics/P2_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back SHARMA #07 (PNG)</a>
+            <a href="graphics/P2_Full_Print_Bundle_300DPI.png" download class="card-dl-link" style="background: var(--gold-gradient); color: #000; font-weight: 700;">📦 Full Print Pack (300 DPI)</a>
+          </div>
+        </div>
+
+        <!-- Card P3: Speed Raglan (V-Neck) -->
+        <div class="graphics-hub-card" data-category="vneck">
+          <div class="graphics-hub-preview">
+            <img src="graphics/P3_Full_Print_Bundle_300DPI.png" alt="P3 Full Print Pack" />
+          </div>
+          <div>
+            <div class="pill-tag pill-poly" style="margin-bottom: 0.5rem;">Option P3 • Athletic V-Neck</div>
+            <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.3rem;">P3: Crimson & Royal Speed Raglan</h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+              Dynamic aerodynamic speed streamlines with arched UJJAIN + VERMA #10 back layout.
+            </p>
+            <ul class="graphics-meta-list">
+              <li>• <strong>Front Art Size:</strong> 14" × 18" Kinetic Aerodynamic Speed Lines</li>
+              <li>• <strong>Back Typography:</strong> 12" × 16" Center Upper Back</li>
+              <li>• <strong>Badges:</strong> Left Chest (3.5") + Right Sleeve (3.0")</li>
+            </ul>
+          </div>
+          <div class="card-dl-row">
+            <a href="graphics/P3_Speed_Raglan_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Speed Art (PNG)</a>
+            <a href="graphics/P3_Back_Print_VERMA_10_300DPI.png" download class="card-dl-link">🔤 Back VERMA #10 (PNG)</a>
+            <a href="graphics/P3_Full_Print_Bundle_300DPI.png" download class="card-dl-link" style="background: var(--gold-gradient); color: #000; font-weight: 700;">📦 Full Print Pack (300 DPI)</a>
+          </div>
+        </div>
+
+        <!-- Card P4: Solar Flare (Collar Polo - AARAV) -->
+        <div class="graphics-hub-card" data-category="polo">
+          <div class="graphics-hub-preview">
+            <img src="graphics/P4_Full_Print_Bundle_300DPI.png" alt="P4 Full Print Pack - AARAV" />
+          </div>
+          <div>
+            <div class="pill-tag pill-poly" style="margin-bottom: 0.5rem;">Option P4 • Collared Polo</div>
+            <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.3rem;">P4: Solar Flare (Navy & Gold - AARAV #07)</h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+              Rising solar flare flames in Gold & Crimson Red with arched UJJAIN + <strong>AARAV #07</strong> back layout.
+            </p>
+            <ul class="graphics-meta-list">
+              <li>• <strong>Front Art Size:</strong> 14" × 18" Full Lower Hem Sublimation Wrap</li>
+              <li>• <strong>Back Typography:</strong> 12" × 16" (UJJAIN + <strong>AARAV #07</strong>)</li>
+              <li>• <strong>Badges:</strong> Left Chest (3.5") + Right Sleeve (3.0")</li>
+            </ul>
+          </div>
+          <div class="card-dl-row">
             <a href="graphics/P4_Solar_Flare_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Flame Art (PNG)</a>
-            <a href="graphics/P4_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back SHARMA #07 (PNG)</a>
+            <a href="graphics/P4_Back_Print_AARAV_07_300DPI.png" download class="card-dl-link">🔤 Back AARAV #07 (PNG)</a>
             <a href="graphics/P4_Full_Print_Bundle_300DPI.png" download class="card-dl-link" style="background: var(--gold-gradient); color: #000; font-weight: 700;">📦 Full Print Pack (300 DPI)</a>
           </div>
         </div>
 
         <!-- Card P5: Carbon Flame (Collar Polo) -->
-        <div class="graphics-hub-card">
+        <div class="graphics-hub-card" data-category="polo">
           <div class="graphics-hub-preview">
             <img src="graphics/P5_Full_Print_Bundle_300DPI.png" alt="P5 Full Print Pack" />
           </div>
@@ -1434,7 +1530,7 @@ html_content = '''<!DOCTYPE html>
         </div>
 
         <!-- Card P6: Aero-Wave (Collar Polo) -->
-        <div class="graphics-hub-card">
+        <div class="graphics-hub-card" data-category="polo">
           <div class="graphics-hub-preview">
             <img src="graphics/P6_Full_Print_Bundle_300DPI.png" alt="P6 Full Print Pack" />
           </div>
@@ -1458,7 +1554,7 @@ html_content = '''<!DOCTYPE html>
         </div>
 
         <!-- Card P7: Hex-Matrix (Collar Polo) -->
-        <div class="graphics-hub-card">
+        <div class="graphics-hub-card" data-category="polo">
           <div class="graphics-hub-preview">
             <img src="graphics/P7_Full_Print_Bundle_300DPI.png" alt="P7 Full Print Pack" />
           </div>
@@ -1482,7 +1578,7 @@ html_content = '''<!DOCTYPE html>
         </div>
 
         <!-- Card P8: Speed-Block (Collar Polo) -->
-        <div class="graphics-hub-card">
+        <div class="graphics-hub-card" data-category="polo">
           <div class="graphics-hub-preview">
             <img src="graphics/P8_Full_Print_Bundle_300DPI.png" alt="P8 Full Print Pack" />
           </div>
@@ -1506,7 +1602,7 @@ html_content = '''<!DOCTYPE html>
         </div>
 
         <!-- Card P9: Cyber Stream (V-Neck) -->
-        <div class="graphics-hub-card">
+        <div class="graphics-hub-card" data-category="vneck">
           <div class="graphics-hub-preview">
             <img src="graphics/P9_Full_Print_Bundle_300DPI.png" alt="P9 Full Print Pack" />
           </div>
@@ -1530,7 +1626,7 @@ html_content = '''<!DOCTYPE html>
         </div>
 
         <!-- Card P10: Prism Grid (V-Neck) -->
-        <div class="graphics-hub-card">
+        <div class="graphics-hub-card" data-category="vneck">
           <div class="graphics-hub-preview">
             <img src="graphics/P10_Full_Print_Bundle_300DPI.png" alt="P10 Full Print Pack" />
           </div>
@@ -1550,6 +1646,30 @@ html_content = '''<!DOCTYPE html>
             <a href="graphics/P10_Prism_Grid_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Prism Art (PNG)</a>
             <a href="graphics/P10_Back_Print_PATEL_23_300DPI.png" download class="card-dl-link">🔤 Back PATEL #23 (PNG)</a>
             <a href="graphics/P10_Full_Print_Bundle_300DPI.png" download class="card-dl-link" style="background: var(--gold-gradient); color: #000; font-weight: 700;">📦 Full Print Pack (300 DPI)</a>
+          </div>
+        </div>
+
+        <!-- Card Official Master Spec Pack -->
+        <div class="graphics-hub-card" data-category="official">
+          <div class="graphics-hub-preview">
+            <img src="graphics/Official_Master_Spec_Pack_300DPI.png" alt="Official Master Spec Pack" />
+          </div>
+          <div>
+            <div class="pill-tag pill-cotton" style="margin-bottom: 0.5rem;">Officials (O1 - O10) • 100% Cotton Polos</div>
+            <h3 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.3rem;">Officials Master Spec & Embroidery Pack</h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+              Complete factory specification sheet for 100% Pique Cotton Polos with Left Chest Embroidery, Right Sleeve Crest, and 100% Clean Blank Back.
+            </p>
+            <ul class="graphics-meta-list">
+              <li>• <strong>Left Chest:</strong> 3.5" High-Density Embroidery (14,500 stitches)</li>
+              <li>• <strong>Right Sleeve:</strong> 3.0" Emblem Badge Placement</li>
+              <li>• <strong>Back Side:</strong> 100% Mandatory Clean Blank Back</li>
+            </ul>
+          </div>
+          <div class="card-dl-row">
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Chest Crest (3.5")</a>
+            <a href="graphics/UDTTA_Sleeve_Emblem_300DPI.png" download class="card-dl-link">🏷️ Sleeve Badge (3.0")</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link" style="background: var(--gold-gradient); color: #000; font-weight: 700;">📦 Full Official Spec Pack</a>
           </div>
         </div>
 
@@ -1610,8 +1730,9 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P1_Navy_Gold.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/P4_Solar_Flare_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P4_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back #07</a>
+            <a href="graphics/P1_Solar_Flare_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
+            <a href="graphics/P1_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back #07</a>
+            <a href="graphics/P1_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1635,8 +1756,9 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P2_Carbon_Gold.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/P5_Carbon_Flame_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P5_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back #07</a>
+            <a href="graphics/P2_Carbon_Flame_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
+            <a href="graphics/P2_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back #07</a>
+            <a href="graphics/P2_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1660,12 +1782,13 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P3_Crimson_Royal.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
-            <a href="graphics/UDTTA_Sleeve_Emblem_300DPI.png" download class="card-dl-link">🏷️ Sleeve</a>
+            <a href="graphics/P3_Speed_Raglan_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
+            <a href="graphics/P3_Back_Print_VERMA_10_300DPI.png" download class="card-dl-link">🔤 Back #10</a>
+            <a href="graphics/P3_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
-        <!-- P4: Collared Polo -->
+        <!-- P4: Collared Polo (AARAV #07) -->
         <div class="catalog-card" data-collar="polo">
           <div class="pair-images-box">
             <div class="pair-img-item">
@@ -1673,12 +1796,12 @@ html_content = '''<!DOCTYPE html>
               <span class="label-blank">1. Base Blank</span>
             </div>
             <div class="pair-img-item">
-              <img src="UDTTA_Player_P4_Navy_Polo.jpg" alt="P4 Printed" />
+              <img src="UDTTA_Player_P4_Navy_Polo.jpg" alt="P4 Printed - AARAV" />
               <span class="label-printed">2. Custom Printed</span>
             </div>
           </div>
-          <h4>P4: Solar Flare Collared Polo (Navy)</h4>
-          <p>100% Poly • Performance polo with gold tipped collar, rising solar flames & back #07.</p>
+          <h4>P4: Solar Flare Collared Polo (AARAV #07)</h4>
+          <p>100% Poly • Performance polo with gold tipped collar, rising solar flames & back <strong>AARAV #07</strong>.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
             <span class="pill-tag" style="background: rgba(255,184,0,0.15); color: #FFB800;">👔 Collared Polo</span>
@@ -1686,7 +1809,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P4_Navy_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P4_Solar_Flare_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P4_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P4_Back_Print_AARAV_07_300DPI.png" download class="card-dl-link">🔤 AARAV #07</a>
+            <a href="graphics/P4_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1711,7 +1835,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P5_Black_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P5_Carbon_Flame_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P5_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P5_Back_Print_SHARMA_07_300DPI.png" download class="card-dl-link">🔤 Back #07</a>
+            <a href="graphics/P5_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1736,7 +1861,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P6_Wave_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P6_Aero_Wave_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P6_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P6_Back_Print_SINGH_11_300DPI.png" download class="card-dl-link">🔤 Back #11</a>
+            <a href="graphics/P6_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1761,7 +1887,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P7_Hex_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P7_Hex_Matrix_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P7_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P7_Back_Print_MEHTA_14_300DPI.png" download class="card-dl-link">🔤 Back #14</a>
+            <a href="graphics/P7_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1778,7 +1905,7 @@ html_content = '''<!DOCTYPE html>
             </div>
           </div>
           <h4>P8: Tibhar Speed-Block Collared Polo</h4>
-          <p>100% Poly • Deep navy with crimson & royal diagonal speed blocks (matching paddles) & back #18.</p>
+          <p>100% Poly • Deep navy with crimson & royal diagonal speed blocks & back #18.</p>
           <div class="catalog-tags">
             <span class="pill-tag pill-poly">Collared Poly</span>
             <span class="pill-tag" style="background: rgba(230,57,70,0.2); color: #FF6B6B;">👔 Collared Polo</span>
@@ -1786,7 +1913,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P8_Block_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P8_Speed_Block_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P8_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P8_Back_Print_GUPTA_18_300DPI.png" download class="card-dl-link">🔤 Back #18</a>
+            <a href="graphics/P8_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1811,7 +1939,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P9_Stream_VNeck.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P9_Cyber_Stream_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P9_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P9_Back_Print_JOSHI_21_300DPI.png" download class="card-dl-link">🔤 Back #21</a>
+            <a href="graphics/P9_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1836,7 +1965,8 @@ html_content = '''<!DOCTYPE html>
           <div class="card-dl-row">
             <a href="UDTTA_Player_P10_Prism_VNeck.jpg" download class="card-dl-link">🖼️ Mockup</a>
             <a href="graphics/P10_Prism_Grid_Front_Artwork_300DPI.png" download class="card-dl-link">🎨 Front Art</a>
-            <a href="graphics/P10_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Print Pack</a>
+            <a href="graphics/P10_Back_Print_PATEL_23_300DPI.png" download class="card-dl-link">🔤 Back #23</a>
+            <a href="graphics/P10_Full_Print_Bundle_300DPI.png" download class="card-dl-link">📦 Spec Pack</a>
           </div>
         </div>
 
@@ -1872,7 +2002,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O1_Navy_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -1896,7 +2027,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O2_Black_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -1920,7 +2052,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O3_Royal_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -1944,7 +2077,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O4_Charcoal_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -1968,7 +2102,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O5_Crimson_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -1992,7 +2127,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O6_DualTip_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -2016,7 +2152,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O7_Monochrome_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -2040,7 +2177,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O8_SteelBlue_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -2064,7 +2202,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O9_Pine_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -2088,7 +2227,8 @@ html_content = '''<!DOCTYPE html>
           </div>
           <div class="card-dl-row">
             <a href="UDTTA_Official_O10_CarbonContrast_Polo.jpg" download class="card-dl-link">🖼️ Mockup</a>
-            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest Badge</a>
+            <a href="graphics/UDTTA_Chest_Emblem_300DPI.png" download class="card-dl-link">🏷️ Crest</a>
+            <a href="graphics/Official_Master_Spec_Pack_300DPI.png" download class="card-dl-link">📋 Spec Pack</a>
           </div>
         </div>
 
@@ -2256,7 +2396,7 @@ html_content = '''<!DOCTYPE html>
 
   <footer>
     <p>© 2026 Ujjain District Table Tennis Association (UDTTA). All rights reserved.</p>
-    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">20 Master Options (10 Players & 10 Officials) • High-Res Graphics Hub Active</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #64748B;">20 Master Options (10 Players & 10 Officials) • High-Res Graphics Hub Active for All T-Shirts</p>
   </footer>
 
   <script>
@@ -2272,47 +2412,47 @@ html_content = '''<!DOCTYPE html>
         name: "Option P1: Solar Flare Navy & Gold Flame V-Neck",
         desc: "100% Quick-Dry Polyester with Left Chest Crest, Right Sleeve Logo, dynamic rising flame graphics & custom back player name & number.",
         collar: "Athletic Ribbed V-Neck with Gold Trim",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        back: "UJJAIN arch + Player Name (<strong>SHARMA</strong>) + Number (<strong>07</strong>)",
         printedImg: "UDTTA_Player_P1_Navy_Gold.jpg",
         blankImg: "UDTTA_Blank_Player_P1_Navy_Gold.jpg",
-        frontArt: "graphics/P4_Solar_Flare_Front_Artwork_300DPI.png",
-        backArt: "graphics/P4_Back_Print_SHARMA_07_300DPI.png",
-        bundle: "graphics/P4_Full_Print_Bundle_300DPI.png"
+        frontArt: "graphics/P1_Solar_Flare_Front_Artwork_300DPI.png",
+        backArt: "graphics/P1_Back_Print_SHARMA_07_300DPI.png",
+        bundle: "graphics/P1_Full_Print_Bundle_300DPI.png"
       },
       2: {
         type: "vneck",
         name: "Option P2: Carbon Black & Gold Flame V-Neck",
         desc: "100% Quick-Dry Polyester in Stealth Carbon Black with golden flame rise, right sleeve badge & custom back name/number.",
         collar: "Carbon Black Athletic V-Neck with Gold Trim",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        back: "UJJAIN arch + Player Name (<strong>SHARMA</strong>) + Number (<strong>07</strong>)",
         printedImg: "UDTTA_Player_P2_Carbon_Gold.jpg",
         blankImg: "UDTTA_Blank_Player_P2_Carbon_Gold.jpg",
-        frontArt: "graphics/P5_Carbon_Flame_Front_Artwork_300DPI.png",
-        backArt: "graphics/P5_Back_Print_SHARMA_07_300DPI.png",
-        bundle: "graphics/P5_Full_Print_Bundle_300DPI.png"
+        frontArt: "graphics/P2_Carbon_Flame_Front_Artwork_300DPI.png",
+        backArt: "graphics/P2_Back_Print_SHARMA_07_300DPI.png",
+        bundle: "graphics/P2_Full_Print_Bundle_300DPI.png"
       },
       3: {
         type: "vneck",
         name: "Option P3: Crimson Red & Royal Speed Raglan",
         desc: "100% Quick-Dry Polyester in Crimson with royal blue raglan sleeves, aerodynamic motion speed lines & custom back.",
         collar: "Royal Blue Athletic Ribbed V-Neck",
-        back: "UJJAIN arch + Player Name (VERMA) + Number (10)",
+        back: "UJJAIN arch + Player Name (<strong>VERMA</strong>) + Number (<strong>10</strong>)",
         printedImg: "UDTTA_Player_P3_Crimson_Royal.jpg",
         blankImg: "UDTTA_Blank_Player_P3_Crimson_Royal.jpg",
-        frontArt: "graphics/UDTTA_Chest_Emblem_300DPI.png",
-        backArt: "graphics/P4_Back_Print_SHARMA_07_300DPI.png",
-        bundle: "graphics/P4_Full_Print_Bundle_300DPI.png"
+        frontArt: "graphics/P3_Speed_Raglan_Front_Artwork_300DPI.png",
+        backArt: "graphics/P3_Back_Print_VERMA_10_300DPI.png",
+        bundle: "graphics/P3_Full_Print_Bundle_300DPI.png"
       },
       4: {
         type: "polo",
-        name: "Option P4: Solar Flare Collared Polo (Navy & Gold)",
-        desc: "100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising solar flames, right sleeve badge & back #07.",
+        name: "Option P4: Solar Flare Collared Polo (Navy & Gold - AARAV #07)",
+        desc: "100% Quick-Dry Polyester Performance Polo with gold tipped collar, rising solar flames, right sleeve badge & back UJJAIN AARAV #07.",
         collar: "Performance Polo Collar with Gold Tipping & 2-Button Placket",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        back: "UJJAIN arch + Player Name (<strong>AARAV</strong>) + Number (<strong>07</strong>)",
         printedImg: "UDTTA_Player_P4_Navy_Polo.jpg",
         blankImg: "UDTTA_Blank_Player_P4_Navy_Polo.jpg",
         frontArt: "graphics/P4_Solar_Flare_Front_Artwork_300DPI.png",
-        backArt: "graphics/P4_Back_Print_SHARMA_07_300DPI.png",
+        backArt: "graphics/P4_Back_Print_AARAV_07_300DPI.png",
         bundle: "graphics/P4_Full_Print_Bundle_300DPI.png"
       },
       5: {
@@ -2320,7 +2460,7 @@ html_content = '''<!DOCTYPE html>
         name: "Option P5: Carbon Flame Collared Polo (Stealth Black)",
         desc: "100% Quick-Dry Polyester Performance Polo in jet black with gold tipped collar, rising golden flames, right sleeve badge & back #07.",
         collar: "Performance Polo Collar with Gold Tipping & 2-Button Placket",
-        back: "UJJAIN arch + Player Name (SHARMA) + Number (07)",
+        back: "UJJAIN arch + Player Name (<strong>SHARMA</strong>) + Number (<strong>07</strong>)",
         printedImg: "UDTTA_Player_P5_Black_Polo.jpg",
         blankImg: "UDTTA_Blank_Player_P5_Black_Polo.jpg",
         frontArt: "graphics/P5_Carbon_Flame_Front_Artwork_300DPI.png",
@@ -2332,7 +2472,7 @@ html_content = '''<!DOCTYPE html>
         name: "Option P6: Donic Aero-Wave Collared Polo",
         desc: "100% Quick-Dry Polyester with Table Tennis ball spin trajectory speed waves in gold & cyan/blue across lower torso & back #11.",
         collar: "Navy Sports Polo Collar with Gold Tipping",
-        back: "UJJAIN arch + Player Name (SINGH) + Number (11)",
+        back: "UJJAIN arch + Player Name (<strong>SINGH</strong>) + Number (<strong>11</strong>)",
         printedImg: "UDTTA_Player_P6_Wave_Polo.jpg",
         blankImg: "UDTTA_Blank_Player_P6_Wave_Polo.jpg",
         frontArt: "graphics/P6_Aero_Wave_Front_Artwork_300DPI.png",
@@ -2344,7 +2484,7 @@ html_content = '''<!DOCTYPE html>
         name: "Option P7: Butterfly Hex-Matrix Collared Polo",
         desc: "100% Quick-Dry Polyester in Carbon Black with royal blue honeycomb micro-mesh side flank matrix & back #14.",
         collar: "Black Sports Polo Collar with Gold Tipping",
-        back: "UJJAIN arch + Player Name (MEHTA) + Number (14)",
+        back: "UJJAIN arch + Player Name (<strong>MEHTA</strong>) + Number (<strong>14</strong>)",
         printedImg: "UDTTA_Player_P7_Hex_Polo.jpg",
         blankImg: "UDTTA_Blank_Player_P7_Hex_Polo.jpg",
         frontArt: "graphics/P7_Hex_Matrix_Front_Artwork_300DPI.png",
@@ -2356,7 +2496,7 @@ html_content = '''<!DOCTYPE html>
         name: "Option P8: Tibhar Speed-Block Collared Polo",
         desc: "100% Quick-Dry Polyester with diagonal tournament speed blocks in Crimson Red & Royal Blue (matching paddles) & back #18.",
         collar: "Navy Sports Polo Collar with Gold Tipping",
-        back: "UJJAIN arch + Player Name (GUPTA) + Number (18)",
+        back: "UJJAIN arch + Player Name (<strong>GUPTA</strong>) + Number (<strong>18</strong>)",
         printedImg: "UDTTA_Player_P8_Block_Polo.jpg",
         blankImg: "UDTTA_Blank_Player_P8_Block_Polo.jpg",
         frontArt: "graphics/P8_Speed_Block_Front_Artwork_300DPI.png",
@@ -2368,7 +2508,7 @@ html_content = '''<!DOCTYPE html>
         name: "Option P9: Xiom Cyber-Stream Athletic V-Neck",
         desc: "100% Quick-Dry Polyester in Royal Blue & Navy with kinetic speed streamlines & back #21.",
         collar: "Athletic Ribbed V-Neck with Gold Accent Trim",
-        back: "UJJAIN arch + Player Name (JOSHI) + Number (21)",
+        back: "UJJAIN arch + Player Name (<strong>JOSHI</strong>) + Number (<strong>21</strong>)",
         printedImg: "UDTTA_Player_P9_Stream_VNeck.jpg",
         blankImg: "UDTTA_Blank_Player_P9_Stream_VNeck.jpg",
         frontArt: "graphics/P9_Cyber_Stream_Front_Artwork_300DPI.png",
@@ -2380,7 +2520,7 @@ html_content = '''<!DOCTYPE html>
         name: "Option P10: Stiga Prism-Grid Athletic V-Neck",
         desc: "100% Quick-Dry Polyester in Dark Slate Charcoal with refined golden geometric prism lines & back #23.",
         collar: "Dark Slate Athletic V-Neck Collar",
-        back: "UJJAIN arch + Player Name (PATEL) + Number (23)",
+        back: "UJJAIN arch + Player Name (<strong>PATEL</strong>) + Number (<strong>23</strong>)",
         printedImg: "UDTTA_Player_P10_Prism_VNeck.jpg",
         blankImg: "UDTTA_Blank_Player_P10_Prism_VNeck.jpg",
         frontArt: "graphics/P10_Prism_Grid_Front_Artwork_300DPI.png",
@@ -2577,6 +2717,22 @@ html_content = '''<!DOCTYPE html>
       });
     }
 
+    // Filter for Graphics Hub
+    function filterGraphicsHub(category, chipBtn) {
+      document.querySelectorAll('#gFilterAll, #gFilterPolo, #gFilterVneck, #gFilterOfficial').forEach(c => c.classList.remove('active'));
+      if (chipBtn) chipBtn.classList.add('active');
+
+      const cards = document.querySelectorAll('#graphicsHubContainer .graphics-hub-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
     function setPlayerView(mode) {
       playerViewMode = mode;
       const btnP = document.getElementById('btnPlayerPrinted');
@@ -2656,4 +2812,4 @@ import os
 target_path = r"c:\Users\ankur\OneDrive - Yash Technologies Pvt Ltd\Desktop\Customer\Portfolio\tt\UDTTA\index.html"
 with open(target_path, "w", encoding="utf-8") as f:
     f.write(html_content)
-print("Updated index.html successfully with High-Res Graphics Download Hub!")
+print("Updated index.html successfully with ALL T-Shirt graphics and P4 AARAV #07!")
