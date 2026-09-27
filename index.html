@@ -23,7 +23,7 @@
 <h1 class="text-base sm:text-lg font-bold text-white tracking-tight">Table Tennis High-Performance Portal</h1>
 <span class="badge-pill bg-blue-500/15 text-blue-300 border border-blue-500/30">U11 STATE CHAMPION</span>
 </div>
-<p class="text-xs text-slate-400 hidden sm:block">Tactical Video Audit • Frame Direct Launch (-2s Lead) • Second-by-Second Match Commentary</p>
+<p class="text-xs text-slate-400 hidden sm:block">Tactical Video Audit • Popup Modal Playback (-2s Lead) • Stays In Place On Close</p>
 </div>
 </div>
 <div class="flex items-center space-x-3 text-xs">
@@ -35,44 +35,14 @@
 </div>
 </header>
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-1">
-<!-- ============================================================== -->
-<!-- INTEGRATED VIDEO THEATER PLAYER (IN-PAGE LIVE VIEW)             -->
-<!-- ============================================================== -->
-<div class="glass-panel-elevated rounded-2xl p-5 border-cyan-500/40 shadow-2xl space-y-4" id="videoTheaterSection">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-<div class="flex items-center gap-2.5">
-<span class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
-<h2 class="text-sm sm:text-base font-bold text-white tracking-wide" id="theaterTitle">
-            Match Y (Yellow Jersey) - Action Review @ 00:15 (Leads at 00:13)
-          </h2>
-</div>
-<div class="flex items-center gap-2">
-<span class="text-xs font-mono font-bold text-amber-300 bg-slate-950 px-2.5 py-1 rounded border border-amber-500/30" id="theaterTimeBadge">
-            00:13 (-2s Lead)
-          </span>
-<button class="px-3 py-1 rounded-lg bg-red-600 hover:bg-red-500 text-white text-xs font-bold flex items-center gap-1.5 transition" id="theaterLaunchBtn" onclick="launchActiveTheaterVideo()">
-<svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
-            Open on YouTube
-          </button>
-</div>
-</div>
-<!-- Video Player Frame -->
-<div class="relative w-full rounded-xl overflow-hidden bg-black border border-slate-800 shadow-2xl" style="padding-top: 52%;">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute inset-0 w-full h-full border-0" id="theaterIframe" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/3k_UEVPOYPM?start=13&amp;autoplay=0&amp;rel=0&amp;enablejsapi=1">
-</iframe>
-</div>
-<p class="text-[11px] text-slate-400 text-center">
-        Clicking any timestamp card below updates this video player instantly to that exact moment (with -2s pre-roll). If YouTube Error 153 displays due to browser restrictions, click <strong class="text-red-400 font-semibold">"Open on YouTube"</strong> above to launch directly.
-      </p>
-</div>
 <!-- Match Recordings Visual Gallery with Direct YouTube Posters -->
 <div class="space-y-3">
 <div class="flex items-center justify-between">
 <h2 class="text-xs uppercase font-extrabold tracking-wider text-slate-400 flex items-center gap-2">
 <svg class="w-4 h-4 text-red-500" fill="currentColor" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
-          Match Video Records (Verified Timestamps with 2s Pre-roll &amp; Direct Launch)
+          Match Video Records (Instant Modal Playback with -2s Lead Time)
         </h2>
-<span class="text-[11px] text-slate-500">Click any card or timestamp to play in video player</span>
+<span class="text-[11px] text-slate-500">Click any card or timestamp to watch in front of the page without scrolling</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 <!-- Video 1: Match Y -->
@@ -215,7 +185,7 @@
 </div>
 <!-- Modular Tab Content Container -->
     <div id="tab-content-container" class="min-h-[500px]">
-      <!-- Tab 1 default rendered or dynamically injected -->
+      <!-- Tab default rendered or dynamically injected -->
       <div id="tab-loading-spinner" class="hidden py-16 text-center">
         <div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl text-slate-300 text-xs font-semibold">
           <svg class="animate-spin w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24">
@@ -232,6 +202,44 @@
   <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
     <p>High-Performance Table Tennis Technical Analysis • Designed for Under-11 Competitive Pathway</p>
   </footer>
+
+  <!-- ============================================================== -->
+  <!-- MODAL VIDEO SCREEN OVERLAY (FRONT-OF-PAGE, NO TOP SCROLL)       -->
+  <!-- ============================================================== -->
+  <div id="videoModalOverlay" class="video-modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md" onclick="handleModalBackdropClick(event)">
+    <div class="video-modal-card glass-panel-elevated w-full max-w-4xl rounded-2xl border-cyan-500/40 shadow-2xl overflow-hidden flex flex-col space-y-3 p-4 sm:p-5" onclick="event.stopPropagation()">
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between gap-3 border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <span class="w-3 h-3 rounded-full bg-red-500 animate-pulse flex-shrink-0"></span>
+          <h2 id="modalVideoTitle" class="text-sm sm:text-base font-bold text-white tracking-wide truncate">
+            Match Action Video Review
+          </h2>
+        </div>
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <span id="modalVideoTimeBadge" class="text-xs font-mono font-bold text-amber-300 bg-slate-950 px-2.5 py-1 rounded border border-amber-500/30">
+            00:00 (-2s Lead)
+          </span>
+          <button id="modalLaunchExternalBtn" onclick="launchActiveModalVideo()" class="px-2.5 py-1 rounded-lg bg-red-600/90 hover:bg-red-500 text-white text-xs font-bold flex items-center gap-1.5 transition" title="Open directly on YouTube">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            <span class="hidden sm:inline">Open YouTube</span>
+          </button>
+          <button onclick="closeLaunchModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition" title="Close video (Esc)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Modal Video Player Frame -->
+      <div class="relative w-full rounded-xl overflow-hidden bg-black border border-slate-800 shadow-2xl" style="padding-top: 54%;">
+        <iframe id="modalVideoIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute inset-0 w-full h-full border-0" referrerpolicy="strict-origin-when-cross-origin" src=""></iframe>
+      </div>
+      <!-- Modal Footer -->
+      <div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+        <span>Press <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 rounded text-slate-300 font-mono text-[10px]">Esc</kbd> or click anywhere outside to close and resume reading at exact position.</span>
+        <button onclick="closeLaunchModal()" class="text-cyan-400 hover:text-cyan-300 font-semibold underline sm:no-underline">Close Modal ✕</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script>
@@ -273,7 +281,6 @@
       // Check if already cached
       if (tabCache[tabKey]) {
         mount.innerHTML = tabCache[tabKey];
-        // Ensure pane is visible
         const pane = mount.querySelector('.tab-pane');
         if (pane) pane.classList.remove('hidden');
         return;
@@ -361,17 +368,23 @@
       });
     }
 
-    // Integrated Video Theater Player State & Controls
-    let activeTheaterVideoId = '3k_UEVPOYPM';
-    let activeTheaterLeadSeconds = 13;
+    // ==============================================================
+    // MODAL VIDEO CONTROLLER (DOES NOT SCROLL, RESTORES EXACT POSITION)
+    // ==============================================================
+    let activeModalVideoId = '';
+    let activeModalLeadSeconds = 0;
+    let savedScrollPosition = 0;
 
-    function playInTheater(videoId, targetSeconds, titleText) {
-      activeTheaterVideoId = videoId;
-      activeTheaterLeadSeconds = Math.max(0, targetSeconds - 2);
+    function openLaunchModal(videoId, targetSeconds, titleText) {
+      // Remember scroll position before modal opens
+      savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      activeModalVideoId = videoId;
+      activeModalLeadSeconds = Math.max(0, targetSeconds - 2);
 
-      const titleEl = document.getElementById('theaterTitle');
-      const badgeEl = document.getElementById('theaterTimeBadge');
-      const iframe = document.getElementById('theaterIframe');
+      const titleEl = document.getElementById('modalVideoTitle');
+      const badgeEl = document.getElementById('modalVideoTimeBadge');
+      const iframe = document.getElementById('modalVideoIframe');
+      const overlay = document.getElementById('videoModalOverlay');
 
       const formatTime = (s) => {
         const m = Math.floor(s / 60);
@@ -379,25 +392,70 @@
         return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
       };
 
-      if (titleEl) titleEl.innerText = titleText + ` @ ${formatTime(targetSeconds)} (Leads at ${formatTime(activeTheaterLeadSeconds)})`;
-      if (badgeEl) badgeEl.innerText = `${formatTime(activeTheaterLeadSeconds)} (-2s Lead)`;
+      if (titleEl) titleEl.innerText = titleText + ` @ ${formatTime(targetSeconds)} (Leads at ${formatTime(activeModalLeadSeconds)})`;
+      if (badgeEl) badgeEl.innerText = `${formatTime(activeModalLeadSeconds)} (-2s Lead)`;
       
       if (iframe) {
-        iframe.src = `https://www.youtube.com/embed/${videoId}?start=${activeTheaterLeadSeconds}&autoplay=1&rel=0&enablejsapi=1`;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?start=${activeModalLeadSeconds}&autoplay=1&rel=0&enablejsapi=1`;
       }
 
-      const theaterSec = document.getElementById('videoTheaterSection');
-      if (theaterSec) theaterSec.scrollIntoView({ behavior: 'smooth' });
+      if (overlay) {
+        overlay.classList.add('open');
+      }
+
+      // Prevent background scrolling while modal is open
+      document.body.style.overflow = 'hidden';
     }
 
-    function launchActiveTheaterVideo() {
-      if (!activeTheaterVideoId) return;
-      const url = `https://www.youtube.com/watch?v=${activeTheaterVideoId}&t=${activeTheaterLeadSeconds}s`;
+    function closeLaunchModal() {
+      const overlay = document.getElementById('videoModalOverlay');
+      const iframe = document.getElementById('modalVideoIframe');
+
+      if (overlay) {
+        overlay.classList.remove('open');
+      }
+
+      // Stop video playback on close
+      if (iframe) {
+        iframe.src = '';
+      }
+
+      // Restore scroll ability and return user to their exact clicked position
+      document.body.style.overflow = '';
+      window.scrollTo({
+        top: savedScrollPosition,
+        behavior: 'instant'
+      });
+    }
+
+    function handleModalBackdropClick(event) {
+      if (event.target.id === 'videoModalOverlay') {
+        closeLaunchModal();
+      }
+    }
+
+    function launchActiveModalVideo() {
+      if (!activeModalVideoId) return;
+      const url = `https://www.youtube.com/watch?v=${activeModalVideoId}&t=${activeModalLeadSeconds}s`;
       window.open(url, '_blank', 'noopener,noreferrer');
     }
 
-    function openLaunchModal(videoId, targetSeconds, titleText) {
-      playInTheater(videoId, targetSeconds, titleText);
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const overlay = document.getElementById('videoModalOverlay');
+        if (overlay && overlay.classList.contains('open')) {
+          closeLaunchModal();
+        }
+      }
+    });
+
+    // Backward compatibility in case any old handler still calls playInTheater
+    function playInTheater(videoId, targetSeconds, titleText) {
+      openLaunchModal(videoId, targetSeconds, titleText);
+    }
+    function launchActiveTheaterVideo() {
+      launchActiveModalVideo();
     }
 
     // Table filtering
