@@ -1,198 +1,346 @@
 <section class="tab-pane hidden space-y-6" id="pane-serves-matrix">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-<div>
-<h3 class="text-base font-bold text-white">Full Serves Diagnostic Matrix</h3>
-<p class="text-xs text-slate-400">All 4 serve variations evaluated: Competitive Edge vs Vulnerabilities, exact match timestamps (-2s lead), channel tutorials, and drills</p>
-</div>
-<div>
-<input class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500" id="serveFilter" onkeyup="filterTable('servesDetailTable', this.value)" placeholder="Filter serves or flaws..." type="text"/>
-</div>
-</div>
-<div class="table-container">
-<table class="w-full text-left text-xs bg-slate-900/50 divide-y divide-slate-800" id="servesDetailTable">
-<thead class="bg-slate-950 text-slate-400 font-semibold uppercase tracking-wider text-[11px]">
-<tr>
-<th class="p-3.5">Serve Variation</th>
-<th class="p-3.5 min-w-[210px]">Exact YouTube Timestamps (Click to Watch)</th>
-<th class="p-3.5">Strengths &amp; Competitive Edge</th>
-<th class="p-3.5">Vulnerabilities &amp; Issues Across Instances</th>
-<th class="p-3.5">Target Video Tutorials</th>
-<th class="p-3.5 min-w-[190px]">Prescribed Home &amp; Club Drills</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-slate-800/80 text-slate-300">
-<!-- Serve Row 1 -->
-<tr class="hover:bg-slate-800/30 transition">
-<td class="p-3.5 align-top">
-<span class="font-bold text-white text-sm block">FH Pendulum (Sidespin / Under)</span>
-<span class="badge-pill bg-amber-500/20 text-amber-300 mt-1">Confirmed Vivaan Serves (45% Win)</span>
-<p class="text-[11px] text-slate-400 mt-1">Primary tactical weapon</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5">
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH Y (Yellow):</span>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 248, 'Match Y @ 04:08 - Half-Long Pendulum Drift')">04:08</button>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 252, 'Match Y @ 04:12 - Pendulum Serve')">04:12</button>
-<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 421, 'Match Y @ 07:01 - Pendulum Spin Winner')">07:01</button>
-</div>
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH G1 (Green):</span>
-<button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 18, 'Match G1 @ 00:18 - Pendulum Serve Setup Winner')">00:18</button>
-<button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 44, 'Match G1 @ 00:44 - Fast Pendulum Serve')">00:44</button>
-</div>
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH G2 (Green):</span>
-<button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 22, 'Match G2 @ 00:22 - Pendulum Serve Setup Winner')">00:22</button>
-<button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 65, 'Match G2 @ 01:05 - Pendulum Float Drift')">01:05</button>
-<button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 138, 'Match G2 @ 02:18 - Pure Backspin Pendulum')">02:18</button>
-</div>
-</td>
-<td class="p-3.5 align-top space-y-1.5 strength-accent">
-<p><strong class="text-emerald-400">Weaponizing Spin:</strong> Generates crisp sidespin that curves away into receiver's wide backhand. When kept short, forces 50%+ popped returns that he smashes.</p>
-<p class="text-[11px] text-slate-400">Demonstrated at <button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 18, 'Match G1 @ 00:18 - 3rd Ball Kill')">Match G1 @ 00:18 (00:16)</button> and <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 22, 'Match G2 @ 00:22 - 3rd Ball Drive')">Match G2 @ 00:22 (00:20)</button>.</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
-<p><strong class="text-rose-400">Post-Serve Freeze:</strong> Stands upright in follow-through for 0.5s; fails to jump-hop into neutral stance.</p>
-<p><strong class="text-amber-400">Half-Long Depth:</strong> 35% of balls drift off baseline, giving opponents a clean opening loop (<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 248, 'Match Y @ 04:08 - Drift')">04:08</button>, <button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 65, 'Match G2 @ 01:05 - Drift')">01:05</button>).</p>
-</td>
-<td class="p-3.5 align-top space-y-1">
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=J3bLUN2Ydcc" rel="noopener noreferrer" target="_blank">
-<span>Ti Long: 6 Mistakes Pendulum Serve Spin</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=3nASCxKQp34" rel="noopener noreferrer" target="_blank">
-<span>Coach Brad Han (TT SpinMaster): Why Your Feet Feel Glued to the Floor (Hop-Back Fix)</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-slate-200 block text-[11px]" href="https://www.youtube.com/watch?v=kZOufUXEjos" rel="noopener noreferrer" target="_blank">
-Global TT Studio: Aim Forward by Hitting Sideways
-</a>
-</td>
-<td class="p-3.5 align-top space-y-1.5 text-[11px]">
-<p><strong class="text-white">Home Solo:</strong> 150 Serves daily. Rule: Serve + Hop-Stop into low squat before ball hits opposite table. 0 score if standing tall.</p>
-<p><strong class="text-white">Club Feeder:</strong> Partner attacks return immediately into forehand; son must reset and counter in &lt;0.8s.</p>
-</td>
-</tr>
-<!-- Serve Row 2 -->
-<tr class="hover:bg-slate-800/30 transition">
-<td class="p-3.5 align-top">
-<span class="font-bold text-white text-sm block">Short Backspin / Ghost Graze</span>
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 mt-1">Confirmed Vivaan Serves (67% Win)</span>
-<p class="text-[11px] text-slate-400 mt-1">Highest conversion rate</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5">
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 303, 'Match Y @ 05:03 - Ghost Graze Pop')">05:03</button>
-<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 421, 'Match Y @ 07:01 - Ghost Graze')">07:01</button>
-</div>
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
-<button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 54, 'Match G2 @ 00:54 - Short Backspin Winner')">00:54</button>
-<button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 100, 'Match G2 @ 01:40 - Short Underspin Winner')">01:40</button>
-<button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 138, 'Match G2 @ 02:18 - Ghost Serve Winner')">02:18</button>
-</div>
-</td>
-<td class="p-3.5 align-top space-y-1.5 strength-accent">
-<p><strong class="text-emerald-400">Touch &amp; Suppression:</strong> Ball stays low and double-bounces. Eliminates opponent's opening loop, forcing a predictable push to his forehand.</p>
-<p class="text-[11px] text-slate-400">Clean execution at <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 54, 'Match G2 @ 00:54 - Short Backspin Winner')">Match G2 @ 00:54</button> and <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 138, 'Match G2 @ 02:18 - Ghost')">Match G2 @ 02:18</button>.</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
-<p><strong class="text-rose-400">Thick Contact Error:</strong> Under match stress, blade impacts ball too squarely. Ball pops 4 inches high over net tape (<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 303, 'Match Y @ 05:03 - Pop Error')">Match Y @ 05:03 [05:01]</button>) and gets flick-killed.</p>
-</td>
-<td class="p-3.5 align-top space-y-1">
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=K4Z5aWO6Efs" rel="noopener noreferrer" target="_blank">
-<span>Ti Long: 3 Mistakes That Kill Backspin Serve</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=qLndWvxcC4k" rel="noopener noreferrer" target="_blank">
-<span>Natural TT: Extremely High Spin Serve Secrets</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-slate-200 block text-[11px]" href="https://www.youtube.com/watch?v=e9bBO6fd3w8" rel="noopener noreferrer" target="_blank">
-Global TT Studio: Chop Stomach Trick for Insane Serve Spin
-</a>
-</td>
-<td class="p-3.5 align-top space-y-1.5 text-[11px]">
-<p><strong class="text-white">Paper Target Drill:</strong> Place A4 paper 4 inches from net on own side. Ball must hit paper on bounce 1 to guarantee 2nd bounce remains short.</p>
-<p><strong class="text-white">Nova S Pro:</strong> Serve short backspin, Nova fires long backspin return on 3rd second.</p>
-</td>
-</tr>
-<!-- Serve Row 3 -->
-<tr class="hover:bg-slate-800/30 transition">
-<td class="p-3.5 align-top">
-<span class="font-bold text-white text-sm block">Surprise Fast Long Flat / Topspin</span>
-<span class="badge-pill bg-amber-500/20 text-amber-300 mt-1">Confirmed Vivaan Serves (50% Win)</span>
-<p class="text-[11px] text-slate-400 mt-1">High-risk changeup</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5">
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 281, 'Match Y @ 04:41 - Fast Long Serve')">04:41</button>
-</div>
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH G1:</span>
-<button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 44, 'Match G1 @ 00:44 - Fast Long Serve Jam')">00:44</button>
-</div>
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
-<button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 125, 'Match G2 @ 02:05 - Fast Long Serve')">02:05</button>
-</div>
-</td>
-<td class="p-3.5 align-top space-y-1.5 strength-accent">
-<p><strong class="text-emerald-400">Jams Opponent:</strong> When aimed directly into the receiver's elbow/crossover, produces immediate mistimed push errors into net.</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
-<p><strong class="text-rose-400">Telegraphed Wind-up:</strong> Drops right shoulder 0.4s early. Opponents anticipate the fast ball and step around for an aggressive forehand counter.</p>
-</td>
-<td class="p-3.5 align-top space-y-1">
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=zbG6Ro5uc_E" rel="noopener noreferrer" target="_blank">
-<span>Coach Brad Han: Forward → Up Fast Kicking Serve</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=bvuHVLfK-2M" rel="noopener noreferrer" target="_blank">
-<span>Global TT Studio: True Secret to Unreturnable Serve</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-slate-200 block text-[11px]" href="https://www.youtube.com/watch?v=AWqor6VadKc" rel="noopener noreferrer" target="_blank">
-Ti Long: Hidden Wrist Secret for Unstoppable Serves
-</a>
-</td>
-<td class="p-3.5 align-top space-y-1.5 text-[11px]">
-<p><strong class="text-white">Identical Windup Drill:</strong> Keep pendulum backswing 100% identical; snap wrist flat at the final millisecond to hit corner targets.</p>
-</td>
-</tr>
-<!-- Serve Row 4 -->
-<tr class="hover:bg-slate-800/30 transition">
-<td class="p-3.5 align-top">
-<span class="font-bold text-white text-sm block">Backhand Short / Reverse Pendulum</span>
-<span class="badge-pill bg-rose-500/20 text-rose-300 mt-1">Confirmed Vivaan Serves (Underdeveloped)</span>
-<p class="text-[11px] text-slate-400 mt-1">Secondary changeup</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5">
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 213, 'Match Y @ 03:33 - Backhand Serve')">03:33</button>
-</div>
-<div><span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
-<button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 110, 'Match G2 @ 01:50 - Backhand Serve')">01:50</button>
-</div>
-</td>
-<td class="p-3.5 align-top space-y-1.5 strength-accent">
-<p><strong class="text-emerald-400">Positioning Edge:</strong> Server stays centered; recovery time to ready position is faster than with the forehand pendulum serve.</p>
-</td>
-<td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
-<p><strong class="text-rose-400">Lack of Spin Disguise:</strong> Contact is loose and floats; lacks bite and spin variation, inviting receiver flicks.</p>
-</td>
-<td class="p-3.5 align-top space-y-1">
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=6ee-v1BbGW8" rel="noopener noreferrer" target="_blank">
-<span>Coach Brad Han: Snap & Brake Insane BH Serve Spin</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=M8LSknt654I" rel="noopener noreferrer" target="_blank">
-<span>Ti Long: Reverse Pendulum Bottle Cap Drill</span>
-<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
-<a class="text-slate-400 hover:text-slate-200 block text-[11px]" href="https://www.youtube.com/watch?v=lN2_RIeQ5LM" rel="noopener noreferrer" target="_blank">
-Natural TT: Backhand Slice Serve Mastery
-</a>
-</td>
-<td class="p-3.5 align-top space-y-1.5 text-[11px]">
-<p><strong class="text-white">Home Solo:</strong> 50 BH serves focusing on thumb leverage against rubber for clean spin.</p>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+
+  <!-- Header Section -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="badge-pill bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">ALL MATCHES AUDIT</span>
+        <span class="text-xs font-mono text-slate-400">Match Y • Match G1 • Match G2</span>
+      </div>
+      <h3 class="text-base font-bold text-white mt-1">Aarav's Comprehensive Serves Diagnostic Matrix</h3>
+      <p class="text-xs text-slate-400">Complete technical analysis of all serves executed by Aarav: Forehand Pendulum, Hook Serve, No-Spin Float, Loose Service Diagnostics, Ghost Graze, and Lollipop Deception.</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <input class="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 w-full sm:w-64" id="serveFilter" onkeyup="filterTable('servesDetailTable', this.value)" placeholder="Filter serves, flaws, or drills..." type="text"/>
+    </div>
+  </div>
+
+  <!-- Executive Serve Arsenal Overview Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 text-xs">
+    
+    <!-- Card 1: FH Pendulum -->
+    <div class="glass-panel rounded-xl p-4 border-cyan-500/40 bg-cyan-950/15 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/30">PRIMARY WEAPON</span>
+        <span class="text-[10px] font-mono text-slate-400">65% Frequency</span>
+      </div>
+      <h4 class="font-bold text-white text-sm">FH Pendulum (Sidespin/Under)</h4>
+      <p class="text-slate-300 text-[11px] leading-relaxed">
+        Disciplined low depth into corners and bodyline. Forces weak pushes for 3rd-ball forehand loop kills.
+      </p>
+      <div class="pt-2 border-t border-slate-800 text-[11px]">
+        <strong class="text-amber-300 block">Watch Out:</strong>
+        <span class="text-slate-400">Upright recovery delays 3rd-ball split-hop.</span>
+      </div>
+    </div>
+
+    <!-- Card 2: Hook Serve -->
+    <div class="glass-panel rounded-xl p-4 border-purple-500/40 bg-purple-950/15 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="badge-pill bg-purple-500/20 text-purple-300 font-bold border border-purple-500/30">SPECIALTY WEAPON</span>
+        <span class="text-[10px] font-mono text-slate-400">Reverse Break</span>
+      </div>
+      <h4 class="font-bold text-white text-sm">Hook / Tomahawk Serve</h4>
+      <p class="text-slate-300 text-[11px] leading-relaxed">
+        Curves violently opposite to pendulum rotation, kicking into the receiver's crossover or wide backhand pocket.
+      </p>
+      <div class="pt-2 border-t border-slate-800 text-[11px]">
+        <strong class="text-purple-300 block">Tactical Advantage:</strong>
+        <span class="text-slate-400">Radical sidespin produces instant unreturned balls.</span>
+      </div>
+    </div>
+
+    <!-- Card 3: No-Spin vs Heavy Spin -->
+    <div class="glass-panel rounded-xl p-4 border-emerald-500/40 bg-emerald-950/15 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="badge-pill bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">TACTICAL DECEPTION</span>
+        <span class="text-[10px] font-mono text-slate-400">Spin-No-Spin Pair</span>
+      </div>
+      <h4 class="font-bold text-white text-sm">No-Spin "Dead Ball" Float</h4>
+      <p class="text-slate-300 text-[11px] leading-relaxed">
+        Mirrors heavy backspin motion but strikes paddle base with flat face. Opponent pushes pop up for easy smashes.
+      </p>
+      <div class="pt-2 border-t border-slate-800 text-[11px]">
+        <strong class="text-emerald-300 block">Key Match Win:</strong>
+        <span class="text-slate-400">Stealth serve at G2 @ 02:04 created clean ace.</span>
+      </div>
+    </div>
+
+    <!-- Card 4: Loose Service Fix -->
+    <div class="glass-panel rounded-xl p-4 border-rose-500/40 bg-rose-950/15 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="badge-pill bg-rose-500/20 text-rose-300 font-bold border border-rose-500/30">CRITICAL FIX AREA</span>
+        <span class="text-[10px] font-mono text-slate-400">Height / Drift Flaw</span>
+      </div>
+      <h4 class="font-bold text-white text-sm">Loose Service &amp; Half-Long Drift</h4>
+      <p class="text-slate-300 text-[11px] leading-relaxed">
+        Thick contact or rushed toss causes ball to sit up half-long without spin, allowing aggressive receivers to flick-kill.
+      </p>
+      <div class="pt-2 border-t border-slate-800 text-[11px]">
+        <strong class="text-rose-300 block">Direct Prescription:</strong>
+        <span class="text-slate-400">Strike lower at net tape height with tangential brush.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Master Serves Diagnostic Matrix Table -->
+  <div class="table-container">
+    <table class="w-full text-left text-xs bg-slate-900/50 divide-y divide-slate-800" id="servesDetailTable">
+      <thead class="bg-slate-950 text-slate-400 font-semibold uppercase tracking-wider text-[11px]">
+        <tr>
+          <th class="p-3.5">Serve Variation</th>
+          <th class="p-3.5 min-w-[210px]">Exact YouTube Timestamps (Click to Watch)</th>
+          <th class="p-3.5">Strengths &amp; Competitive Edge</th>
+          <th class="p-3.5">Vulnerabilities &amp; Issues Across Instances</th>
+          <th class="p-3.5">Target Video Tutorials</th>
+          <th class="p-3.5 min-w-[190px]">Prescribed Home &amp; Club Drills</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800/80 text-slate-300">
+
+        <!-- Serve Row 1: FH Pendulum -->
+        <tr class="hover:bg-slate-800/30 transition">
+          <td class="p-3.5 align-top">
+            <span class="font-bold text-white text-sm block">FH Pendulum (Sidespin / Under)</span>
+            <span class="badge-pill bg-cyan-500/20 text-cyan-300 mt-1">Aarav Primary Weapon (High Win Rate)</span>
+            <p class="text-[11px] text-slate-400 mt-1">Core foundation of Aarav's service game</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5">
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH Y (Yellow):</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 15, 'Match Y @ 00:00 - Aarav Opening Serves')">00:00</button>
+              <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 248, 'Match Y @ 04:08 - Half-Long Drift')">04:08</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 421, 'Match Y @ 07:01 - Pendulum Spin Winner')">07:01</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G1 (Green):</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 0, 'Match G1 @ 00:00 - Aarav Match-Opening Serve')">00:00</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 24, 'Match G1 @ 00:24 - Pendulum Setup Winner')">00:24</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G2 (Green):</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 0, 'Match G2 @ 00:00 - Carried-Over Serve from G1')">00:00</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 40, 'Match G2 @ 00:40 - Aarav 2 Serves Far End')">00:40</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 238, 'Match G2 @ 03:58 - Fast Pendulum')">03:58</button>
+            </div>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 strength-accent">
+            <p><strong class="text-emerald-400">Low Center Depth:</strong> Consistent low bounce prevents receivers from stepping around to banana flick off the bounce. Forces defensive pushes directly into Aarav's 3rd-ball forehand attack zone.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
+            <p><strong class="text-rose-400">Post-Serve Upright Freeze:</strong> Stands upright in follow-through with heels dropping flat (<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 15, 'Match Y @ 00:00')">Match Y @ 00:00</button>, <button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 150, 'Match G2 @ 02:30')">Match G2 @ 02:30</button>), delaying 3rd-ball lateral split-hop.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1">
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=J3bLUN2Ydcc" rel="noopener noreferrer" target="_blank">
+              <span>Ti Long: 6 Mistakes Pendulum Serve Spin</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=3nASCxKQp34" rel="noopener noreferrer" target="_blank">
+              <span>Coach Brad Han: The "Hop-Back" Split-Step Post-Serve Fix</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 text-[11px]">
+            <p><strong class="text-white">Solo Drill:</strong> 100 Serves daily. Rule: Serve + Hop-Stop into a 110° low squat before the ball lands on opponent's table. 0 score if heels stay flat.</p>
+            <p><strong class="text-white">Club Partner:</strong> Partner pushes fast into Aarav's hip crossover; Aarav must hop and loop in &lt;0.8s.</p>
+          </td>
+        </tr>
+
+        <!-- Serve Row 2: Hook Serve -->
+        <tr class="hover:bg-slate-800/30 transition">
+          <td class="p-3.5 align-top">
+            <span class="font-bold text-white text-sm block">Hook / Reverse Hook Serve</span>
+            <span class="badge-pill bg-purple-500/20 text-purple-300 mt-1">Specialty Weapon • Radical Break</span>
+            <p class="text-[11px] text-slate-400 mt-1">Curls violently opposite to standard pendulum</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5">
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 124, 'Match G2 @ 02:04 - Stealth Hook Serve')">02:04 (Stealth Hook)</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 204, 'Match G2 @ 03:24 - Hook Corner Break')">03:24</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 252, 'Match Y @ 04:12 - Inward Hook Curve')">04:12</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G1:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 24, 'Match G1 @ 00:24 - Reverse Spin Break')">00:24</button>
+            </div>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 strength-accent">
+            <p><strong class="text-emerald-400">Radical Side-Under Kick:</strong> By wrapping the paddle face around the outside of the ball with an inward hook motion, the ball breaks sharply into a right-hander's crossover or wide backhand. Produces direct return errors off the sideline.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
+            <p><strong class="text-amber-400">Torso Contortion Recovery:</strong> The hook wind-up twists the upper body; if Aarav does not unwind immediately, he leaves his forehand corner exposed to down-the-line returns.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1">
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=zbG6Ro5uc_E" rel="noopener noreferrer" target="_blank">
+              <span>Coach Brad Han: The Complete Hook &amp; Tomahawk Serve Guide</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=AWqor6VadKc" rel="noopener noreferrer" target="_blank">
+              <span>Ti Long: Hidden Wrist Snap for Deadly Hook Serves</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 text-[11px]">
+            <p><strong class="text-white">Corner Target Drill:</strong> Place water bottle on receiver's wide sideline. Hook serve must curve around and hit bottle before 2nd bounce off side edge.</p>
+            <p><strong class="text-white">Unwind Reset:</strong> Focus on rotating torso back square to net before opponent touches the ball.</p>
+          </td>
+        </tr>
+
+        <!-- Serve Row 3: Loose Service & Half-Long Drift Flaw -->
+        <tr class="hover:bg-slate-800/30 transition">
+          <td class="p-3.5 align-top">
+            <span class="font-bold text-white text-sm block">Loose Service / Half-Long Float</span>
+            <span class="badge-pill bg-rose-500/20 text-rose-300 mt-1">⚠️ Major Flaw Identified</span>
+            <p class="text-[11px] text-slate-400 mt-1">Thick contact &amp; rushed stroke errors</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5">
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
+              <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 85, 'Match Y @ 01:25 - Loose Half-Long Float')">01:25</button>
+              <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 248, 'Match Y @ 04:08 - Half-Long Float Drift')">04:08</button>
+              <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 303, 'Match Y @ 05:03 - Pop Float Error')">05:03</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
+              <button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 65, 'Match G2 @ 01:05 - Half-Long Float Drift')">01:05</button>
+              <button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 150, 'Match G2 @ 02:30 - Loose Serve Breakdown')">02:30</button>
+            </div>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 strength-accent">
+            <p><strong class="text-amber-300">Intended Target:</strong> Intended to land short with side-under spin to lock down the receiver.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
+            <p><strong class="text-rose-400">The "Loose Ball" Breakdown:</strong> When rushed, Aarav contacts the ball too high and too flat against the sponge. The ball emerges with minimal spin, floats 3-4 inches above net height, and drifts off the endline ("half-long"). Aggressive players step around and flick or loop-kill these loose balls directly.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1">
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=K4Z5aWO6Efs" rel="noopener noreferrer" target="_blank">
+              <span>Ti Long: Why Your Serves Go Long (The Graze Fix)</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=e9bBO6fd3w8" rel="noopener noreferrer" target="_blank">
+              <span>Global TT Studio: Tangential Contact vs Flat Slap</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 text-[11px]">
+            <p><strong class="text-white">Net Clearance Ribbon:</strong> Tie ribbon 2 inches above net tape. Every serve must pass underneath the ribbon and bounce twice on receiver table.</p>
+            <p><strong class="text-white">Graze Cue:</strong> "Hear the hiss, not the wood knock" — pure rubber friction rather than blade impact.</p>
+          </td>
+        </tr>
+
+        <!-- Serve Row 4: No-Spin "Dead Ball" Float (Deceptive Weapon) -->
+        <tr class="hover:bg-slate-800/30 transition">
+          <td class="p-3.5 align-top">
+            <span class="font-bold text-white text-sm block">No-Spin "Dead Ball" Float</span>
+            <span class="badge-pill bg-emerald-500/20 text-emerald-300 mt-1">Intentional Deception Weapon</span>
+            <p class="text-[11px] text-slate-400 mt-1">Spin vs. No-Spin optical illusion</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5">
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 124, 'Match G2 @ 02:04 - Stealth Dead Ball')">02:04 (Stealth Ace)</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 40, 'Match G2 @ 00:40 - Dead Ball Float')">00:40</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 55, 'Match Y @ 00:55 - Deceptive Float')">00:55</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 375, 'Match Y @ 06:15 - Dead Ball Setup into Smash')">06:15</button>
+            </div>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 strength-accent">
+            <p><strong class="text-emerald-400">The Optical Trap:</strong> When executed intentionally with a fast, heavy under-spin arm motion but contacting the paddle throat/base with flat blade angle, the ball floats "dead" with zero rotation. Opponents read under-spin, open their racket face, and pop the ball high for an immediate smash kill.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
+            <p><strong class="text-amber-400">Accidental Telegraphing:</strong> If Aarav decelerates his arm too early, good receivers notice the lack of wrist snap and push deep with aggressive placement.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1">
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=bvuHVLfK-2M" rel="noopener noreferrer" target="_blank">
+              <span>Global TT Studio: Spin vs No-Spin Optical Disguise</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=qLndWvxcC4k" rel="noopener noreferrer" target="_blank">
+              <span>Natural TT: Fake Heavy Under-Spin Masterclass</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 text-[11px]">
+            <p><strong class="text-white">A/B Paired Practice:</strong> Serve 1 heavy backspin (contact on paddle tip) followed by 1 no-spin (contact on paddle base). Receiver must call "spin" or "dead" before bouncing.</p>
+          </td>
+        </tr>
+
+        <!-- Serve Row 5: Short Backspin / Ghost Graze -->
+        <tr class="hover:bg-slate-800/30 transition">
+          <td class="p-3.5 align-top">
+            <span class="font-bold text-white text-sm block">Short Backspin / Ghost Graze</span>
+            <span class="badge-pill bg-emerald-500/20 text-emerald-300 mt-1">High Suppression Weapon</span>
+            <p class="text-[11px] text-slate-400 mt-1">Pure touch &amp; table suppression</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5">
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 54, 'Match G2 @ 00:54 - Short Backspin Winner')">00:54</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 100, 'Match G2 @ 01:40 - Short Underspin Winner')">01:40</button>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 138, 'Match G2 @ 02:18 - Ghost Serve Winner')">02:18</button>
+            </div>
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH Y:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 421, 'Match Y @ 07:01 - Ghost Graze Winner')">07:01</button>
+            </div>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 strength-accent">
+            <p><strong class="text-emerald-400">Complete Spin Suppression:</strong> Ball stays low and double-bounces right behind the net. Eliminates receiver opening loop options entirely, forcing a passive push.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
+            <p><strong class="text-rose-400">Thick Sponge Impact:</strong> Under match stress, paddle face angles too open; ball pops up 4 inches high and gets punished by quick flicks.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1">
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=K4Z5aWO6Efs" rel="noopener noreferrer" target="_blank">
+              <span>Ti Long: 3 Mistakes That Kill Backspin Serve</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 text-[11px]">
+            <p><strong class="text-white">Paper Sheet Target:</strong> Place paper 4 inches from net on server's side; ball must strike paper on bounce 1 to guarantee 2nd bounce remains short.</p>
+          </td>
+        </tr>
+
+        <!-- Serve Row 6: Lollipop Serve (High-Toss Float Deception) -->
+        <tr class="hover:bg-slate-800/30 transition">
+          <td class="p-3.5 align-top">
+            <span class="font-bold text-white text-sm block">Lollipop / High-Toss Float Serve</span>
+            <span class="badge-pill bg-cyan-500/20 text-cyan-300 mt-1">🍭 Psychological Changeup</span>
+            <p class="text-[11px] text-slate-400 mt-1">Timing &amp; eye-level disruption</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5">
+            <div>
+              <span class="text-slate-400 text-[10px] block font-mono">MATCH G2:</span>
+              <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 275, 'Match G2 @ 04:35 - Aarav Lollipop Serve Deception')">04:35 (Lollipop Serve)</button>
+            </div>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 strength-accent">
+            <p><strong class="text-emerald-400">Eye-Level Timing Disruption:</strong> Tossing the ball with a high, looping arc completely disrupts the receiver's depth perception, timing, and strike height calculation, inducing mistimed shanks.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 vulnerability-accent">
+            <p><strong class="text-amber-400">Overuse Risk:</strong> High floater can be smashed if the receiver stays patient and lets it drop to comfortable strike height; best deployed as a 1-shot surprise per match.</p>
+          </td>
+          <td class="p-3.5 align-top space-y-1">
+            <a class="text-cyan-400 hover:text-cyan-300 font-semibold block flex items-center gap-1" href="https://www.youtube.com/watch?v=zbG6Ro5uc_E" rel="noopener noreferrer" target="_blank">
+              <span>Coach Brad Han: High Toss Serve Variations &amp; Timing Traps</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </a>
+          </td>
+          <td class="p-3.5 align-top space-y-1.5 text-[11px]">
+            <p><strong class="text-white">Clutch Situation Deployment:</strong> Practice deploying once at 9-9 or game point to completely disarm opponent's aggressive rhythm.</p>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
 </section>
