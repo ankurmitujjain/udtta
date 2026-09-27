@@ -224,15 +224,17 @@
             Match Action Video Review
           </h2>
         </div>
-        <div class="flex items-center gap-2 flex-shrink-0">
+        <div class="flex items-center gap-1.5 flex-shrink-0">
+          <button onclick="seekModalRelative(-2)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] font-mono font-bold text-slate-300 hover:text-white transition" title="Rewind 2 seconds (-2s Lead)">⟲ -2s</button>
           <span id="modalVideoTimeBadge" class="text-xs font-mono font-bold text-amber-300 bg-slate-950 px-2.5 py-1 rounded border border-amber-500/30">
-            00:00 (-2s Lead)
+            00:00
           </span>
-          <button id="modalLaunchExternalBtn" onclick="launchActiveModalVideo()" class="px-2.5 py-1 rounded-lg bg-red-600/90 hover:bg-red-500 text-white text-xs font-bold flex items-center gap-1.5 transition" title="Open directly on YouTube">
+          <button onclick="seekModalRelative(2)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] font-mono font-bold text-slate-300 hover:text-white transition" title="Skip forward 2 seconds">+2s ⟳</button>
+          <button id="modalLaunchExternalBtn" onclick="launchActiveModalVideo()" class="px-2.5 py-1 rounded-lg bg-red-600/90 hover:bg-red-500 text-white text-xs font-bold flex items-center gap-1.5 transition ml-1" title="Open directly on YouTube">
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
             <span class="hidden sm:inline">Open YouTube</span>
           </button>
-          <button onclick="closeLaunchModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition" title="Close video (Esc)">
+          <button onclick="closeLaunchModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition ml-1" title="Close video (Esc)">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         </div>
@@ -429,14 +431,14 @@
     // MODAL VIDEO CONTROLLER (DOES NOT SCROLL, RESTORES EXACT POSITION)
     // ==============================================================
     let activeModalVideoId = '';
-    let activeModalLeadSeconds = 0;
+    let activeModalCurrentSeconds = 0;
     let savedScrollPosition = 0;
 
     function openLaunchModal(videoId, targetSeconds, titleText) {
       // Remember scroll position before modal opens
       savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       activeModalVideoId = videoId;
-      activeModalLeadSeconds = Math.max(0, targetSeconds - 2);
+      activeModalCurrentSeconds = targetSeconds;
 
       const titleEl = document.getElementById('modalVideoTitle');
       const badgeEl = document.getElementById('modalVideoTimeBadge');
@@ -449,11 +451,11 @@
         return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
       };
 
-      if (titleEl) titleEl.innerText = titleText + ` @ ${formatTime(targetSeconds)} (Leads at ${formatTime(activeModalLeadSeconds)})`;
-      if (badgeEl) badgeEl.innerText = `${formatTime(activeModalLeadSeconds)} (-2s Lead)`;
+      if (titleEl) titleEl.innerText = titleText + ` @ ${formatTime(targetSeconds)}`;
+      if (badgeEl) badgeEl.innerText = `${formatTime(targetSeconds)}`;
       
       if (iframe) {
-        iframe.src = `https://www.youtube.com/embed/${videoId}?start=${activeModalLeadSeconds}&autoplay=1&rel=0&enablejsapi=1`;
+        iframe.src = `https://www.youtube.com/embed/${videoId}?start=${targetSeconds}&autoplay=1&rel=0&enablejsapi=1`;
       }
 
       if (overlay) {
@@ -462,6 +464,22 @@
 
       // Prevent background scrolling while modal is open
       document.body.style.overflow = 'hidden';
+    }
+
+    function seekModalRelative(delta) {
+      if (!activeModalVideoId) return;
+      activeModalCurrentSeconds = Math.max(0, activeModalCurrentSeconds + delta);
+      const badgeEl = document.getElementById('modalVideoTimeBadge');
+      const iframe = document.getElementById('modalVideoIframe');
+      const formatTime = (s) => {
+        const m = Math.floor(s / 60);
+        const sec = s % 60;
+        return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+      };
+      if (badgeEl) badgeEl.innerText = `${formatTime(activeModalCurrentSeconds)}`;
+      if (iframe) {
+        iframe.src = `https://www.youtube.com/embed/${activeModalVideoId}?start=${activeModalCurrentSeconds}&autoplay=1&rel=0&enablejsapi=1`;
+      }
     }
 
     function closeLaunchModal() {
@@ -493,7 +511,7 @@
 
     function launchActiveModalVideo() {
       if (!activeModalVideoId) return;
-      const url = `https://www.youtube.com/watch?v=${activeModalVideoId}&t=${activeModalLeadSeconds}s`;
+      const url = `https://www.youtube.com/watch?v=${activeModalVideoId}&t=${activeModalCurrentSeconds}s`;
       window.open(url, '_blank', 'noopener,noreferrer');
     }
 
