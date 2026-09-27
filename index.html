@@ -314,7 +314,7 @@
       // Fetch on demand
       try {
         if (spinner) spinner.classList.remove('hidden');
-        const res = await fetch(tabFiles[tabKey]);
+        const res = await fetch(tabFiles[tabKey] + '?v=' + Date.now());
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const html = await res.text();
         tabCache[tabKey] = html;
@@ -378,7 +378,7 @@
             Loading Match ${matchKey} commentary at runtime...
           </div>
         `;
-        const res = await fetch(commentaryFiles[matchKey]);
+        const res = await fetch(commentaryFiles[matchKey] + '?v=' + Date.now());
         if (!res.ok) throw new Error(`HTTP error ${res.status}`);
         const html = await res.text();
         commentaryCache[matchKey] = html;
