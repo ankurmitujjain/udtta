@@ -27,15 +27,10 @@
 </div>
 </div>
 <div class="flex items-center space-x-3 text-xs">
-<div class="hidden md:block text-right">
+<div class="text-right">
 <p class="text-slate-400 font-medium">Equipment Diagnostic</p>
 <p class="text-cyan-400 font-semibold font-mono">Viscaria + T05 / D05</p>
 </div>
-<div class="h-8 w-px bg-slate-800 hidden md:block"></div>
-<button class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/70 hover:border-slate-500 text-slate-300 hover:text-white transition flex items-center gap-1.5 font-medium" onclick="window.print()">
-<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-          Export Report
-        </button>
 </div>
 </div>
 </header>
@@ -77,16 +72,16 @@
 <svg class="w-4 h-4 text-red-500" fill="currentColor" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
           Match Video Records (Verified Timestamps with 2s Pre-roll &amp; Direct Launch)
         </h2>
-<span class="text-[11px] text-slate-500">Click any card or timestamp to open launcher</span>
+<span class="text-[11px] text-slate-500">Click any card or timestamp to play in video player</span>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 <!-- Video 1: Match Y -->
 <div class="glass-panel rounded-2xl overflow-hidden border-amber-500/30 hover:border-amber-400/60 transition group flex flex-col justify-between">
-<div class="relative cursor-pointer" onclick="openLaunchModal('3k_UEVPOYPM', 0, 'Match Y (Yellow Jersey) - Full 7:16 Match')">
-<img alt="Match Y - Yellow Jersey Match" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/3k_UEVPOYPM/hqdefault.jpg"/>
+<div class="relative cursor-pointer" onclick="openLaunchModal('3k_UEVPOYPM', 0, 'Match Y (Opponent in Yellow/Beige) - Full 7:16 Match')">
+<img alt="Match Y - Yellow Jersey Opponent Match" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/3k_UEVPOYPM/hqdefault.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
 <div class="absolute top-2 left-2">
-<span class="badge-pill bg-amber-500/90 text-slate-950 font-black">Match Y • Yellow Jersey</span>
+<span class="badge-pill bg-amber-500/90 text-slate-950 font-black">Match Y • Opponent in Yellow/Gold</span>
 </div>
 <div class="absolute bottom-2 right-2 bg-slate-950/90 text-amber-300 text-[11px] font-mono px-2 py-0.5 rounded font-bold">
               07:16
@@ -106,12 +101,13 @@
 </a>
 </div>
 <p class="text-[11px] text-slate-400 leading-snug">
-              Son in <strong class="text-amber-300">yellow/beige jersey</strong>. Highlights tall posture, flat speed clashes, post-serve freeze on crossover.
+              Son (Vivaan) in <strong class="text-blue-400">blue Butterfly jersey</strong> (starts near side). Opponent in <strong class="text-amber-300">yellow/gold jersey</strong>. Highlights wide reach counter-attacks, post-serve freeze on crossover, and high lob smash kill.
             </p>
 <div class="pt-2 flex flex-wrap gap-1">
 <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 15, 'Match Y @ 00:15 - Wide Reach Loop')">00:15 (00:13)</button>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 85, 'Match Y @ 01:25 - Reaching Receive')">01:25 (01:23)</button>
-<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 146, 'Match Y @ 02:26 - FH Winner &amp; Freeze')">02:26 (02:24)</button>
+<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace Counter Winner')">00:36 (00:34)</button>
+<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 85, 'Match Y @ 01:25 - Deep Drive Flat Miss')">01:25 (01:23)</button>
+<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 146, 'Match Y @ 02:26 - 2nd Ball Attack Winner')">02:26 (02:24)</button>
 <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 164, 'Match Y @ 02:44 - Elbow Jamming')">02:44 (02:42)</button>
 <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 248, 'Match Y @ 04:08 - Half-long Exploit')">04:08 (04:06)</button>
 <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 375, 'Match Y @ 06:15 - High Lob Smash')">06:15 (06:13)</button>
@@ -120,11 +116,11 @@
 </div>
 <!-- Video 2: Match G1 -->
 <div class="glass-panel rounded-2xl overflow-hidden border-emerald-500/30 hover:border-emerald-400/60 transition group flex flex-col justify-between">
-<div class="relative cursor-pointer" onclick="openLaunchModal('OQErsFxkN4I', 0, 'Match G1 (Green Jersey) - Rapid Rally Clip (1:32)')">
-<img alt="Match G1 - Green Jersey Match" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/OQErsFxkN4I/hqdefault.jpg"/>
+<div class="relative cursor-pointer" onclick="openLaunchModal('OQErsFxkN4I', 0, 'Match G1 (Opponent in Grey/Green STAG) - Rapid Rally Clip (1:32)')">
+<img alt="Match G1 - Green Jersey Opponent Match" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/OQErsFxkN4I/hqdefault.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
 <div class="absolute top-2 left-2">
-<span class="badge-pill bg-emerald-500/90 text-slate-950 font-black">Match G1 • Green Jersey</span>
+<span class="badge-pill bg-emerald-500/90 text-slate-950 font-black">Match G1 • Opponent in Grey/Green</span>
 </div>
 <div class="absolute bottom-2 right-2 bg-slate-950/90 text-emerald-300 text-[11px] font-mono px-2 py-0.5 rounded font-bold">
               01:32
@@ -144,23 +140,23 @@
 </a>
 </div>
 <p class="text-[11px] text-slate-400 leading-snug">
-              Son in <strong class="text-emerald-300">green shirt</strong>. Shows explosive hand-speed rips, standing tall between shots, and tight short touches.
+              Son (Vivaan) in <strong class="text-blue-400">blue Butterfly jersey</strong> (far side). Opponent in <strong class="text-emerald-300">dark grey/neon green STAG shirt</strong> (near side). Demonstrates blistering 3rd-ball forehand counters and soft-touch short drop pushes.
             </p>
 <div class="pt-2 flex flex-wrap gap-1">
 <button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 18, 'Match G1 @ 00:18 - Hand Speed Rip')">00:18 (00:16)</button>
 <button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 32, 'Match G1 @ 00:32 - Posture Lock')">00:32 (00:30)</button>
-<button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 44, 'Match G1 @ 00:44 - Fast Long Serve')">00:44 (00:42)</button>
-<button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 70, 'Match G1 @ 01:10 - Tight Short Graze')">01:10 (01:08)</button>
+<button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 44, 'Match G1 @ 00:44 - Fast Body Jam')">00:44 (00:42)</button>
+<button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 70, 'Match G1 @ 01:10 - Tight Short Drop Push')">01:10 (01:08)</button>
 </div>
 </div>
 </div>
 <!-- Video 3: Match G2 -->
 <div class="glass-panel rounded-2xl overflow-hidden border-cyan-500/30 hover:border-cyan-400/60 transition group flex flex-col justify-between">
-<div class="relative cursor-pointer" onclick="openLaunchModal('9m7GXdCuk0A', 0, 'Match G2 (Green Jersey) - Extended 5:02 Match')">
-<img alt="Match G2 - Green Jersey Full Match" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/9m7GXdCuk0A/hqdefault.jpg"/>
+<div class="relative cursor-pointer" onclick="openLaunchModal('9m7GXdCuk0A', 0, 'Match G2 (Opponent in Grey/Green STAG) - Extended 5:02 Match')">
+<img alt="Match G2 - Green Jersey Opponent Full Match" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/9m7GXdCuk0A/hqdefault.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
 <div class="absolute top-2 left-2">
-<span class="badge-pill bg-cyan-500/90 text-slate-950 font-black">Match G2 • Green Jersey</span>
+<span class="badge-pill bg-cyan-500/90 text-slate-950 font-black">Match G2 • Opponent in Grey/Green</span>
 </div>
 <div class="absolute bottom-2 right-2 bg-slate-950/90 text-cyan-300 text-[11px] font-mono px-2 py-0.5 rounded font-bold">
               05:02
@@ -180,7 +176,7 @@
 </a>
 </div>
 <p class="text-[11px] text-slate-400 leading-snug">
-              Son in <strong class="text-cyan-300">green shirt</strong>. Highlights fearless counter-attacks, deep corner defense, and backhand block stability issues.
+              Son (Vivaan) in <strong class="text-blue-400">blue Butterfly jersey</strong> (starts near side). Opponent in <strong class="text-cyan-300">grey/neon green STAG shirt</strong> (far side). Highlights fearless opening down-the-line counters, backhand corner block stability under pressure, and spin control.
             </p>
 <div class="pt-2 flex flex-wrap gap-1">
 <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 22, 'Match G2 @ 00:22 - Clutch Attack')">00:22 (00:20)</button>
@@ -267,10 +263,10 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">00:15 – 00:24</span>
-<span class="font-bold text-white text-sm">Opening Counter-Loop &amp; Wide Reach Coverage</span>
+<span class="font-bold text-white text-sm">Opening Receive Touch &amp; Wide Cross-Court Coverage</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Attack</span>
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Receive Attack</span>
 <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 15, 'Match Y @ 00:15 - Wide Reach Loop')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 00:13 (-2s)
@@ -280,29 +276,29 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Took advantage of his exceptional height and reach. Anticipated the opponent's deep cross-court ball, reached with a long lever, and accelerated his forearm on top of the bounce to place a deep loop into the opponent's body.</p>
+<p class="text-slate-300">Took advantage of his exceptional height and reach. Anticipated the opponent's serve, stepped into the table with a long reach, and placed a deep active touch across the table that forced an immediate opponent error off the endline to take a 0-1 lead.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Stood upright immediately after the loop. Left heel dropped completely flat; if the opponent had managed a quick block to his wide backhand, he would have been late.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Squat-Tunnel Recovery &amp; Split-Step: </strong>Absorb kinetic energy into thighs immediately upon contact, maintain a 110° knee bend, and execute a dynamic micro-hop split-step so both feet remain active coiled springs ready to cover the wide backhand counter.</p></div>
+<p class="text-slate-300">Stood upright immediately after contacting the ball. Left heel dropped completely flat; if the opponent had managed a quick block to his wide backhand, he would have been late to react.</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Squat-Tunnel Recovery &amp; Split-Step: </strong>Absorb kinetic energy into thighs immediately upon contact, maintain a 110° knee bend, and execute a dynamic micro-hop split-step so both feet remain active coiled springs ready to cover any quick counter.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Selection Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Half-long forehand pendulum sidespin into opponent's backhand. <strong class="text-cyan-300">Optimal Alternative:</strong> Tight <em>short pure underspin ghost serve</em> to the opponent's short forehand. <strong class="text-white">Why It Would Be Superior:</strong> The opponent likes stepping around to attack half-long balls with backhand punches. Bringing him forward to the short forehand denies all backhand counter-punch angles and draws a passive, floated push for an uncontested third-ball forehand kill.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Active cross-court push into opponent's backhand. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Effective Point Winner.</span> <strong class="text-cyan-300">Next Evolution:</strong> Add an over-the-table backhand banana flick off the bounce to accelerate the ball with topspin rather than relying on a passive push.</p>
 </div>
 </div>
 <!-- Point 2 -->
-<div class="commentary-card glass-panel rounded-xl p-4 sm:p-5 border-slate-800 hover:border-slate-700 transition space-y-3" data-category="error rally">
+<div class="commentary-card glass-panel rounded-xl p-4 sm:p-5 border-slate-800 hover:border-slate-700 transition space-y-3" data-category="winner rally">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">00:36 – 00:45</span>
-<span class="font-bold text-white text-sm">Wide Forehand Displacement &amp; Arm-Only Stretch</span>
+<span class="font-bold text-white text-sm">Wide Forehand Displacement &amp; Clutch Counter-Winner</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • Wide FH</span>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace')">
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Clutch Counter</span>
+<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace Counter Winner')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 00:34 (-2s)
               </button>
@@ -311,17 +307,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Quick reaction reading the opponent's aggressive backhand punch; tracked the ball line with his eyes.</p>
+<p class="text-slate-300">Tremendous fight and clutch hand-eye coordination under extreme displacement. Tracked the opponent's wide attack, reached out with his long lever, and placed a high-pressure counter back onto the table to win the exchange and lead 2-3.</p>
 </div>
-<div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
-<span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Classic "Frozen Feet" breakdown. Instead of a rapid side-step, his feet remained anchored. He reached with an outstretched right arm; without body weight behind the paddle, the ball flew 4 inches over the baseline.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Side-Chassé Step &amp; Body-Mass Drive: </strong>Push explosively off the left inside foot into a wide side-step chassé rather than reaching with an outstretched arm. Position the body core directly behind the ball and rotate the torso forward to drive through the stroke with complete stability.</p></div>
+<div class="p-3 rounded-lg bg-amber-950/20 border border-amber-500/30 vulnerability-accent space-y-1">
+<span class="font-bold text-amber-400 block text-[11px] uppercase tracking-wider">Technical Risk / Growth Area:</span>
+<p class="text-slate-300">Even though he won the point with grit, his footwork got locked into an emergency arm reach. Reaching with an arm-only stretch without a full chassé step leaves him vulnerable against faster national-level opponents.</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Side-Chassé Step &amp; Body-Mass Drive: </strong>Push explosively off the left inside foot into a wide side-step chassé rather than reaching with an outstretched arm. Position the body core directly behind the ball and rotate the torso forward so the stroke is played from balanced footing rather than an emergency reach.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
 <span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Passive mid-table backhand push right into the opponent's power slot. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Aggressive deep chop-push skidding to the opponent's extreme backhand white corner</em>. <strong class="text-white">Why It Would Be Superior:</strong> Pushing deep to the white sideline corner takes away the opponent's inside-out forehand angle and forces an awkward backhand lift against heavy backspin, giving him an easy counter-attack opportunity.</p>
+<p class="text-slate-300"><strong class="text-white">Executed Exchange:</strong> Clutched the point despite being stretched wide. <strong class="text-cyan-300">Proactive Tactical Choice:</strong> <em>Aggressive deep chop-push skidding to the opponent's extreme backhand white corner</em> on early balls. <strong class="text-white">Why It Would Be Superior:</strong> Pinning the opponent deep to the backhand prevents him from pulling your son wide to the forehand corner in the first place, allowing him to dominate on his own terms.</p>
 </div>
 </div>
 <!-- Point 3 -->
@@ -329,11 +325,11 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">01:25 – 01:34</span>
-<span class="font-bold text-white text-sm">"Reaching Receive" on Short Serve &amp; Flat Slap Miss</span>
+<span class="font-bold text-white text-sm">Deep Rally Exchange &amp; Flat Forehand Slap Miss</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Direct Error • Reaching Lean</span>
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 85, 'Match Y @ 01:25 - Reaching Receive')">
+<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • Flat Attack Miss</span>
+<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 85, 'Match Y @ 01:25 - Flat Drive Miss')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 01:23 (-2s)
               </button>
@@ -342,17 +338,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Recognized the short touch early and made immediate aggressive intent to put the ball on the opponent's side rather than backing off.</p>
+<p class="text-slate-300">Stood ground close to the table during a 4-shot rally; maintained proactive attacking mentality rather than backing off into passive defense.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300"><strong>The Reaching Receive Flaw:</strong> His feet stayed planted behind the white endline while he bent purely from the waist, stretching his paddle forward with an overextended arm. With no right-foot step-in under the table, he lacked touch; the ball floated high mid-table, inviting an immediate counter-kill.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Deep Right-Foot In-Table Entry: </strong>Step the right foot deep underneath the table before making contact. Bring the chest directly behind the paddle to execute a soft-hand stop push (producing a short double bounce) or an aggressive over-the-table banana flick.</p></div>
+<p class="text-slate-300"><strong>The Flat Slap / Open Blade Flaw:</strong> Impacted the ball with an open, flat paddle face (approx 85°) without brushing upward-forward. With Dignics 05's hard sponge, the flat impact launched the ball over the opponent's baseline (Score becomes 4-9).</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>50° Closed Paddle Brush &amp; Magnus Safety Arc: </strong>Close racket face to ~50° and accelerate forearm in a brush arc over the top equator of the ball. The Magnus topspin forces the ball to dip safely onto the table with high clearance over the net.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Waist-bending reaching poke that popped up mid-table. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Step-in short drop-push (Stop Push)</em> or <em>Backhand Banana Flick over the table</em>. <strong class="text-white">Why It Would Be Superior:</strong> Moving the right foot deep under the table brings his center of gravity directly behind the ball. A soft-hand stop push kills all kinetic rebound, creating a second bounce short on the opponent's side and neutralizing their third-ball loop completely.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Rally Decision Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Shot:</strong> High-risk flat slap looking for an immediate kill. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Heavy topspin loop with 70% power into the opponent's deep backhand corner</em>. <strong class="text-white">Why It Would Be Superior:</strong> A continuous heavy spin loop keeps the rally alive under high margin of safety while forcing a weak block for the next ball.</p>
 </div>
 </div>
 <!-- Point 4 -->
@@ -360,11 +356,11 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">02:26 – 02:35</span>
-<span class="font-bold text-white text-sm">Aggressive Pendulum Serve &amp; Explosive Forehand Winner</span>
+<span class="font-bold text-white text-sm">Aggressive Return Attack &amp; Clean Forehand Winner</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Direct Winner • 3rd Ball Kill</span>
-<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 146, 'Match Y @ 02:26 - Pendulum Serve Winner')">
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • 2nd Ball Attack</span>
+<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 146, 'Match Y @ 02:26 - 2nd Ball Attack Winner')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 02:24 (-2s)
               </button>
@@ -373,17 +369,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Clean wrist snap on the pendulum serve produced heavy sidespin. Receiver popped a loose return mid-table, and he executed a blistering forehand rip down the line with elite arm speed.</p>
+<p class="text-slate-300">Playing from far end in Game 2: Pounced on opponent's loose serve with elite fast-twitch arm acceleration. Smashed an explosive forehand winner straight down the line to take a 1-3 lead.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Notice the 0.5s freeze between serve contact and ready stance. Against a passive return, his hand speed saved him; against a fast flick, this freeze would have resulted in an immediate loss.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Serve + Hop Neutralization Routine: </strong>Treat ball contact as only the first 50% of the serve. Complete the delivery with an instantaneous hop-step into a low, square stance before the ball crosses the net, paddle held at neutral chest height.</p></div>
+<p class="text-slate-300">Stood tall and watched the shot after contact. While successful as a direct winner here, against higher-level defenders who can return lightning blocks, standing tall leaves him unprotected on the next ball.</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Zero-Second Reset Hop: </strong>Complete the stroke follow-through and instantaneously hop both feet into a balanced, low athletic stance before the ball crosses the net.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Selection Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Forehand pendulum sidespin to receiver's middle/backhand. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Optimal Choice.</span> The opponent's backhand push was vulnerable to heavy sidespin curvature. <strong class="text-cyan-300">Next Evolution:</strong> Add an identical-motion <em>No-Spin "Ghost" Pendulum</em>. If the opponent misreads it as backspin, the push pops up 6 inches higher, making the third-ball kill even safer.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Direct aggressive forehand rip off opponent's half-long serve. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">100% Correct Execution.</span> Punishing half-long serves immediately is the hallmark of modern aggressive table tennis.</p>
 </div>
 </div>
 <!-- Point 5 -->
@@ -391,10 +387,10 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">02:44 – 02:55</span>
-<span class="font-bold text-white text-sm">Post-Serve Freeze &amp; Crossover / Right Elbow Jamming</span>
+<span class="font-bold text-white text-sm">Deep Serve Return &amp; Crossover / Playing Elbow Jam</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Exploited • Hip Jam</span>
+<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • Hip Jam</span>
 <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 164, 'Match Y @ 02:44 - Elbow Jamming')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 02:42 (-2s)
@@ -404,17 +400,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Delivered a fast, flat serve attempting to push the opponent deep.</p>
+<p class="text-slate-300">Quick reaction getting his paddle in front of his torso under fast incoming pace.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300"><strong>The Severe Post-Serve Freeze:</strong> After contacting the ball, his body stayed tilted left, paddle hanging low. The opponent drove the return directly into his right hip (crossover point); he was trapped in his follow-through and pushed an off-balance error into the net.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Active Split-Hop &amp; Crossover Clearance: </strong>Do not admire the serve. Spring immediately off the left foot into a balanced ready posture facing the table center. This clears the right hip and gives ample reaction space to counter-punch any ball directed into the playing elbow.</p></div>
+<p class="text-slate-300"><strong>The Crossover / Hip Jam:</strong> Opponent fired a fast drive straight into Vivaan's right hip (playing elbow crossover). Vivaan did not take a backward step-hop to create hitting space; paddle got tucked against his hip, dumping the ball into the net (score 5-1).</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Active Backward Split-Hop &amp; Crossover Clearance: </strong>Spring immediately backward 4-6 inches off the balls of his feet to clear space around the playing elbow. This turns a jammed ball into a balanced backhand punch or forehand loop.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Selection Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Long flat serve into the receiver's backhand. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Fast speed serve fired straight down the line into the opponent's forehand pocket</em> or <em>Short heavy backspin into middle elbow</em>. <strong class="text-white">Why It Would Be Superior:</strong> Serving long into a taller player's backhand gave him an easy angle to punch deep into the son's right hip. A fast serve down the line changes the geometry of the table, forcing a defensive cross-court block directly into the son's forehand attack zone.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Positioning Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Position:</strong> Stood static at the table edge. <strong class="text-cyan-300">Proactive Adjustment:</strong> <em>Position ready stance 2-3 inches deeper against aggressive servers</em>. This extra foot of space neutralizes fast balls aimed directly at the body.</p>
 </div>
 </div>
 <!-- Point 6 -->
@@ -425,7 +421,7 @@
 <span class="font-bold text-white text-sm">"Half-Long" Serve Conceding Opponent Step-Around Loop</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Exploited • 2nd Bounce Drift</span>
+<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • 2nd Bounce Drift</span>
 <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 248, 'Match Y @ 04:08 - Half-long Exploit')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 04:06 (-2s)
@@ -439,8 +435,8 @@
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">First bounce was struck too close to the endline. The ball carried long, taking its second bounce 3 inches beyond the opponent's baseline. A strong opponent stepped around comfortably and fired a 3rd-ball loop winner.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>First-Bounce Precision &amp; Contact Trajectory: </strong>Strike the ball closer to your body with the first bounce landing within 10-15cm of your endline. This steepens the entry angle, ensuring the ball double-bounces and completely shuts down the opponent's step-around loop attack.</p></div>
+<p class="text-slate-300">First bounce of the pendulum serve was struck too close to the net. The ball carried long, taking its second bounce off the opponent's baseline. Opponent stepped around comfortably and fired a 3rd-ball loop winner (Score 0-1).</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>First-Bounce Precision &amp; Contact Trajectory: </strong>Strike the ball closer to your body with the first bounce landing within 10-15cm of your own endline. This steepens the entry angle, ensuring the ball double-bounces and completely shuts down the opponent's step-around loop attack.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
@@ -456,7 +452,7 @@
 <span class="font-bold text-white text-sm">Overhead High Lob Smash &amp; Kinetic Transfer</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Direct Winner • Overhead Smash</span>
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Overhead Smash</span>
 <button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 375, 'Match Y @ 06:15 - High Lob Smash')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 06:13 (-2s)
@@ -466,7 +462,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Clean execution where his Viscaria carbon blade shines. Planted his right leg, tracked the high floating ball, and smashed flat through the ball with full core acceleration for an unreturnable winner.</p>
+<p class="text-slate-300">Clean execution where his Viscaria carbon blade shines. Planted his right leg, tracked the opponent's high floating lob, and smashed flat through the ball with full core acceleration for an unreturnable winner down the line to tie the score 7-7!</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
@@ -475,23 +471,23 @@
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit (Preceding Setup):</span>
-<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Fast, skidding push into opponent's deep crossover. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Tactically Excellent.</span> Forcing the opponent onto the back foot induced the defensive lob that set up this winning smash.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Rally Setup Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Rally:</strong> Deep attacking pressure pushed opponent into defensive lobs. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Tactically Superb.</span> Opponent had no answer for the penetration depth and was forced back 10 feet off the table.</p>
 </div>
 </div>
 </div>
 <!-- MATCH G1 COMMENTARY TIMELINE -->
 <div class="match-log-panel hidden space-y-4" id="matchLog-G1">
 <!-- Point 1 -->
-<div class="commentary-card glass-panel rounded-xl p-4 sm:p-5 border-slate-800 hover:border-slate-700 transition space-y-3" data-category="good rally">
+<div class="commentary-card glass-panel rounded-xl p-4 sm:p-5 border-slate-800 hover:border-slate-700 transition space-y-3" data-category="winner rally">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">00:18 – 00:26</span>
-<span class="font-bold text-white text-sm">Blistering Hand Speed Forehand Rip</span>
+<span class="font-bold text-white text-sm">Serve Setup &amp; Blistering Forehand Down-the-Line Counter</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Direct Winner • Fast Counter</span>
-<button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 18, 'Match G1 @ 00:18 - Hand Speed Rip')">
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Forehand Winner (3-1)</span>
+<button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 18, 'Match G1 @ 00:18 - FH Counter Winner')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 00:16 (-2s)
               </button>
@@ -500,17 +496,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Elite fast-twitch muscle recruitment. Caught a fast ball right off the bounce and unleashed a lethal cross-court forehand winner that left the opponent frozen.</p>
+<p class="text-slate-300">Vivaan served pendulum from far side; opponent pushed deep to his forehand corner. Vivaan demonstrated elite fast-twitch arm acceleration, taking the ball right at the top of the bounce and driving a clean winner down the line to pull ahead 3-1.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Racket face was flat (approx 85°). On an incoming heavy topspin ball, this stroke would have sailed long; he needs a 50° closed brush to create a topspin safety arc.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>50° Closed Paddle Brush &amp; Magnus Safety Arc: </strong>Close the racket angle to approximately 45°-50° at contact. Accelerate the forearm over the ball to wrap heavy topspin around it, producing a curved safety arc that dips sharply onto the deep baseline.</p></div>
+<p class="text-slate-300">The stroke was executed primarily through elbow extension and shoulder snap with minimal right hip torque. While lethal on a float push, against heavier backspin this flat stroke risks clipping the net tape.</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Hip-Torque Drive with Magnus Arc: </strong>Engage the right hip by turning 30° back during preparation. Brush with a slightly closed blade angle (50°) through contact to add topspin rotation, providing a secure margin for error without sacrificing winner velocity.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Fast topspin drive off opponent's half-long serve. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">High Initiative.</span> <strong class="text-cyan-300">Tactical Refinement:</strong> Place the counter-loop down the line rather than cross-court. Cross-court gives the opponent their natural forehand angle if they react; down the line catches them shifting weight and creates a clean winner.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical 3rd-Ball Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Sequence:</strong> Pendulum Serve → Receiver Deep Push → Vivaan Down-The-Line Counter. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Flawless 3rd-Ball Execution.</span> Changing direction down the line completely froze the opponent who was anticipating a cross-court return.</p>
 </div>
 </div>
 <!-- Point 2 -->
@@ -518,10 +514,10 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">00:32 – 00:40</span>
-<span class="font-bold text-white text-sm">Posture Lock &amp; Center of Gravity Rise</span>
+<span class="font-bold text-white text-sm">Posture Lock &amp; High Center-of-Gravity Block Miss</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Unforced Error • Standing Up</span>
+<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • Block Long (3-3)</span>
 <button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 32, 'Match G1 @ 00:32 - Posture Lock')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 00:30 (-2s)
@@ -531,17 +527,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Stood close to table, maintaining table territory without retreating into passive defense.</p>
+<p class="text-slate-300">Held his ground right at the table baseline without retreating into passive deep defense against opponent's attack.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Knees straightened completely after ball 1. When the opponent returned a low topspin drive, his high center of gravity forced him to bend at the neck and waist, leading to a framed ball.</p>
-</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Constant Low Center of Gravity Athletic Stance: </strong>Keep thighs engaged and chest pitched 15° forward between shots. Never stand tall after an attack; staying compressed in the athletic tunnel allows smooth tracking of low topspin drives without bending at the neck.</p></div>
+<p class="text-slate-300">Knees straightened completely after his return. When the opponent drove a low topspin ball, Vivaan's locked upright posture forced him to bend awkwardly from his upper spine; his flat block sailed long past the endline (3-3).</p>
+</div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Constant Low Center of Gravity Athletic Stance: </strong>Keep thighs engaged and chest pitched 15° forward between shots. Never stand tall after striking; staying compressed in the athletic tunnel allows smooth tracking of low topspin drives without bending at the neck.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Selection Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Medium-paced sidespin into opponent's forehand. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Fast flat skid serve down the line to opponent's backhand</em>. <strong class="text-white">Why It Would Be Superior:</strong> Serving medium sidespin to a strong opponent's forehand invites a heavy topspin drive. A fast, skidding ball down the line handcuffs the opponent's backhand preparation, forcing a weak block.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Block Placement Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Shot:</strong> Upright flat block directed into opponent's strike zone. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Active punch block with closed racket face angled into opponent's wide backhand corner</em>. Taking pace off the ball and pushing it wide neutralizes the opponent's topspin power.</p>
 </div>
 </div>
 <!-- Point 3 -->
@@ -549,10 +545,10 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">01:10 – 01:20</span>
-<span class="font-bold text-white text-sm">Tight Short Backspin Graze &amp; 3rd Ball Setup</span>
+<span class="font-bold text-white text-sm">Tight Short Drop-Push Touch &amp; Forced Net Error</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Tactical Setup Won • Pure Touch</span>
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Short Touch Masterclass (7-3)</span>
 <button class="yt-btn-green" onclick="openLaunchModal('OQErsFxkN4I', 70, 'Match G1 @ 01:10 - Tight Short Graze')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 01:08 (-2s)
@@ -562,31 +558,31 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Contact made cleanly underneath the ball equator. The ball stayed very low over the net tape and double-bounced, preventing the receiver from attacking.</p>
+<p class="text-slate-300">Opponent served short to Vivaan's forehand. Vivaan stepped his right foot in under the table and played a soft-hands drop push right underneath the ball. The ball stayed razor-low and double-bounced, forcing the opponent to dump their push directly into the net (7-3).</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Did not step his right foot back fast enough to create space for an opening forehand loop on the third ball.</p>
+<p class="text-slate-300">Lingered inside the table on his right foot after contacting the drop push. Against a higher-rated player who anticipates the drop and counter-flicks, he would be caught out of position.</p>
 </div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Immediate Post-Touch Pushback Hop: </strong>The instant the short ball is grazed, push forcefully off the right foot backward into mid-distance space. This creates optimal hitting clearance to execute a dominant 3rd-ball forehand topspin winner.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Selection Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Short backspin ghost serve to middle/backhand. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Masterclass Execution.</span> <strong class="text-white">Tactical Follow-Through:</strong> The serve worked as intended, forcing a weak push. The only missing element was taking an immediate hop-step backward to unleash his third-ball forehand attack.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Short Touch Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Short drop-push touch with double-bounce depth. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Masterclass Execution.</span> Completely neutralized the opponent's serve advantage and yielded a direct unforced error into the net.</p>
 </div>
 </div>
 </div>
 <!-- MATCH G2 COMMENTARY TIMELINE -->
 <div class="match-log-panel hidden space-y-4" id="matchLog-G2">
 <!-- Point 1 -->
-<div class="commentary-card glass-panel rounded-xl p-4 sm:p-5 border-slate-800 hover:border-slate-700 transition space-y-3" data-category="good rally">
+<div class="commentary-card glass-panel rounded-xl p-4 sm:p-5 border-slate-800 hover:border-slate-700 transition space-y-3" data-category="winner rally">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">00:22 – 00:32</span>
-<span class="font-bold text-white text-sm">Fearless Clutch Counter-Drive Under Pressure</span>
+<span class="font-bold text-white text-sm">Fearless 3rd-Ball Counter-Drive Down the Line</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Direct Winner • Aggressive Mentality</span>
+<span class="badge-pill bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Point Won • Clean Counter Winner (1-0)</span>
 <button class="yt-btn-green" onclick="openLaunchModal('9m7GXdCuk0A', 22, 'Match G2 @ 00:22 - Clutch Attack')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 00:20 (-2s)
@@ -596,17 +592,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Demonstrated competitive grit. Stepped directly into a deep incoming ball and countered down the line without backing away from the table.</p>
+<p class="text-slate-300">Vivaan opened Game 1 on near side with a pendulum serve. When opponent pushed deep to his forehand, Vivaan stepped in aggressively without hesitation and ripped a flat counter-drive right down the line for a clean winner to lead 1-0.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Contact was pure arm drive; hips did not rotate into the stroke. High fatigue risk over long multi-game matches.</p>
+<p class="text-slate-300">Pure arm drive; core and hips remained square to the table. Relying solely on arm acceleration without torso rotation increases fatigue over 3-to-5 set matches and reduces margins on heavy topspin.</p>
 </div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Hip-Coil &amp; Torso-Assisted Drive: </strong>Rotate the right hip and core back 30° during preparation and uncoil forward through contact. Incorporating torso rotation generates more penetrating power with significantly less arm fatigue over long matches.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
-<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Flat counter-drive off opponent's deep topspin serve. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Courageous &amp; Successful.</span> <strong class="text-cyan-300">Safer High-Level Alternative:</strong> <em>Active Forehand Topspin Loop brushing at peak bounce into the opponent's playing elbow</em>. Brushing provides a Magnus safety arc, whereas flat counter-drives have a high risk of flying long under pressure.</p>
+<span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical 3rd-Ball Attack Audit:</span>
+<p class="text-slate-300"><strong class="text-white">Executed Sequence:</strong> Serve → Deep Return → Aggressive Down-the-Line Drive. <strong class="text-emerald-400">Verdict:</strong> <span class="text-emerald-400 font-bold">Courageous &amp; Decisive.</span> <strong class="text-cyan-300">High-Level Refinement:</strong> Add 20% more topspin brush to the stroke so that even if the opponent's return is low and heavy, the Magnus effect guarantees safety over the net.</p>
 </div>
 </div>
 <!-- Point 2 -->
@@ -614,10 +610,10 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">00:35 – 00:46</span>
-<span class="font-bold text-white text-sm">Backhand Corner Trap &amp; Tucked Elbow Block</span>
+<span class="font-bold text-white text-sm">Deep Backhand Corner Jam &amp; Tucked Elbow Block Miss</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Exploited • Deep Backhand</span>
+<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • Block Long (1-1)</span>
 <button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 35, 'Match G2 @ 00:35 - Backhand Block Trap')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 00:33 (-2s)
@@ -627,17 +623,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Quick reaction getting his paddle behind the ball in the deep backhand corner.</p>
+<p class="text-slate-300">Anticipated the deep serve trajectory quickly and got his body across behind the table to get the paddle in front of the ball.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300"><strong>The Tucked Elbow Flaw:</strong> Pinned his elbow against his ribcage and pushed like a passive shield. The ball floated mid-table with zero pace or spin, allowing the opponent to kill it down the line.</p>
+<p class="text-slate-300"><strong>The Tucked Elbow Flaw:</strong> Pinned his left/playing elbow against his ribcage and pushed like a passive flat shield. With no forward elbow extension or wrist cushioning, the incoming speed pushed his block flying long off the table (1-1).</p>
 </div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Forward Elbow Hinge &amp; Active Punch Block: </strong>Anchor the elbow 6 inches forward in front of the navel rather than pinning it to the ribs. Snap the forearm outward from 7 o'clock to 1 o'clock on the rise to drive an active punch block down the line.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
 <span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Receive Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Passive backhand push that sat up mid-court. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Early Backhand Banana Flick taking the ball off the bounce into opponent's wide backhand</em>. <strong class="text-white">Why It Would Be Superior:</strong> Initiating with a banana flick turns a defensive return into an offensive topspin rally. The heavy sidespin takes time away from the opponent and prevents them from setting their feet for a forehand kill.</p>
+<p class="text-slate-300"><strong class="text-white">Executed Receive:</strong> Passive backhand block with trapped elbow. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Active Backhand Punch or Banana Flick taking the ball off the bounce into opponent's wide backhand</em>. Initiating active forward contact prevents the opponent's incoming spin from popping the ball off the table.</p>
 </div>
 </div>
 <!-- Point 3 -->
@@ -645,10 +641,10 @@
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-2.5">
 <div class="flex items-center gap-2">
 <span class="badge-pill bg-cyan-500/20 text-cyan-300 font-mono">01:05 – 01:16</span>
-<span class="font-bold text-white text-sm">Float Serve Drift &amp; Opponent 2nd Ball Attack</span>
+<span class="font-bold text-white text-sm">Float Serve Drift &amp; Opponent 2nd-Ball Loop Winner</span>
 </div>
 <div class="flex items-center gap-2">
-<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Conceded Attack • Half-Long</span>
+<span class="badge-pill bg-rose-500/20 text-rose-300 border border-rose-500/30">Point Conceded • Serve Drifts Long (1-4)</span>
 <button class="yt-btn" onclick="openLaunchModal('9m7GXdCuk0A', 65, 'Match G2 @ 01:05 - Half-Long Exploit')">
 <svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                 Launch @ 01:03 (-2s)
@@ -658,17 +654,17 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
 <div class="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/30 strength-accent space-y-1">
 <span class="font-bold text-emerald-400 block text-[11px] uppercase tracking-wider">What He Did Good:</span>
-<p class="text-slate-300">Aggressive attempt at varying spin with a no-spin float serve variation.</p>
+<p class="text-slate-300">Tactically intentional change of pace; attempted a no-spin float serve variation to disrupt the receiver's timing.</p>
 </div>
 <div class="p-3 rounded-lg bg-rose-950/20 border border-rose-500/30 vulnerability-accent space-y-1">
 <span class="font-bold text-rose-400 block text-[11px] uppercase tracking-wider">Technical Flaw Identified:</span>
-<p class="text-slate-300">Ball was served slightly high (bounced 8 inches above net) and drifted over the endline. Opponent stepped around and attacked cleanly.</p>
+<p class="text-slate-300">Contacted the ball slightly high (6 inches above table level) and with excessive forward push. The float serve drifted past the opponent's baseline (half-long); the opponent easily stepped around and looped a clean winner down the line (1-4).</p>
 </div><div class="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 better-accent space-y-1"><span class="font-bold text-blue-400 block text-[11px] uppercase tracking-wider">What He Should Do Instead (Better Technique):</span><p class="text-slate-300"><strong>Low-Apex Contact &amp; Fast Hip-Jam Drive: </strong>Contact the ball at or below net height so the trajectory skids flat. Either keep it tightly short with a close first bounce, or drive a high-speed flat ball directly into the receiver's playing elbow to deny any wind-up.</p></div>
 </div>
 <!-- Tactical Option Callout -->
 <div class="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 tactical-accent text-xs space-y-1">
 <span class="font-bold text-cyan-400 block text-[11px] uppercase tracking-wider">Tactical Serve Selection Audit:</span>
-<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Floated half-long no-spin serve. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Fast flat deep serve aimed straight at the receiver's right hip/elbow</em>. <strong class="text-white">Why It Would Be Superior:</strong> A floating half-long ball without spin is the easiest ball for a strong junior to attack. In contrast, driving a fast no-spin ball directly into the opponent's body forces them to make an immediate split-second decision, often resulting in a jammed swing or mistimed push.</p>
+<p class="text-slate-300"><strong class="text-white">Selected Serve:</strong> Floated half-long no-spin serve drifting off baseline. <strong class="text-cyan-300">Optimal Alternative:</strong> <em>Fast flat deep serve aimed straight at the receiver's right hip/elbow</em>. A floating half-long ball without spin is the easiest ball for a strong junior to step around and kill. Driving it directly into the receiver's elbow handcuffs their footwork.</p>
 </div>
 </div>
 </div>
@@ -709,11 +705,9 @@
               </h3>
 <span class="badge-pill bg-rose-500/15 text-rose-300">How Opponent Won</span>
 </div>
-<div class="space-y-2 text-xs text-slate-300">
-<p><strong class="text-white">1. Deep BH Corner Pin:</strong> Forces his passive backhand block (<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 164, 'Match Y @ 02:44 - Elbow Jam')">02:44</button>), producing a floating mid-table ball.</p>
-<p><strong class="text-white">2. Sudden Wide FH Acceleration:</strong> Opponent redirects sharp cross-court. His feet freeze, forcing an arm-only reach (<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace')">00:36</button>).</p>
-<p><strong class="text-white">3. Post-Serve Crossover Traps:</strong> Attacks right into his playing hip while he is frozen in follow-through (<button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 32, 'Match G1 @ 00:32 - Posture Lock')">00:32</button>).</p>
-</div>
+<p><strong class="text-white">1. Deep BH Corner Pin:</strong> Attacks deep into Vivaan's elbow/crossover (<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 164, 'Match Y @ 02:44 - Elbow Jam')">02:44</button>), producing a jammed push into the net.</p>
+<p><strong class="text-white">2. Sudden Wide FH Displacement:</strong> Opponents test his lateral mobility out wide. Though he can hit clutch counters (<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace Winner')">00:36</button>), arm-only reaching leaves him vulnerable if the return comes back fast.</p>
+<p><strong class="text-white">3. Post-Serve Crossover Traps:</strong> Attacks directly into his playing hip while he stands tall in follow-through (<button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 32, 'Match G1 @ 00:32 - Posture Lock')">00:32</button>).</p>
 </div>
 <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] flex justify-between">
 <span class="text-slate-400">First Corner to Fail:</span>
@@ -1200,7 +1194,7 @@
                 FH Serve → Opponent Pushes Deep BH → Son BH Block → Opponent Accelerates Wide FH
               </td>
 <td class="p-3.5 align-top space-y-1">
-<button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace')">Match Y @ 00:36 (00:34)</button>
+<button class="yt-btn-green" onclick="openLaunchModal('3k_UEVPOYPM', 36, 'Match Y @ 00:36 - Wide Displace Counter Winner')">Match Y @ 00:36 (00:34)</button>
 <button class="yt-btn" onclick="openLaunchModal('3k_UEVPOYPM', 164, 'Match Y @ 02:44 - Elbow Jam')">Match Y @ 02:44 (02:42)</button>
 <button class="yt-btn" onclick="openLaunchModal('OQErsFxkN4I', 25, 'Match G1 @ 00:25 - Corner Breakdown')">Match G1 @ 00:25 (00:23)</button>
 </td>
@@ -1436,81 +1430,7 @@
 </div>
 </section>
 </main>
-<!-- ============================================================== -->
-<!-- VIDEO LAUNCH PAD & ERROR 153 BYPASS MODAL                      -->
-<!-- ============================================================== -->
-<div class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6" id="videoModal">
-<div class="relative w-full max-w-3xl bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-<!-- Modal Header -->
-<div class="px-5 py-3.5 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-<div class="flex items-center space-x-2">
-<span class="w-3 h-3 rounded-full bg-red-500 inline-block animate-pulse"></span>
-<h3 class="text-xs sm:text-sm font-bold text-white truncate max-w-md" id="modalTitle">Match Instance Video Review</h3>
-</div>
-<button class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition" onclick="closeLaunchModal()">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-<!-- Modal Body: Snapshot Preview & 1-Click Launch Pad -->
-<div class="p-5 sm:p-6 space-y-5 bg-gradient-to-b from-slate-950 to-slate-900">
-<!-- Snapshot Poster with Time Cue Overlay -->
-<div class="relative rounded-xl overflow-hidden border border-slate-800 shadow-xl group cursor-pointer" onclick="launchDirectYouTube()">
-<img alt="Video Frame Poster" class="w-full h-56 sm:h-72 object-cover" id="modalPosterImg" src=""/>
-<div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-<div class="absolute top-3 left-3 bg-red-600/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md flex items-center gap-1 shadow">
-<svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
-<span>Verified YouTube Match Timestamp</span>
-</div>
-<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-<div>
-<p class="text-xs sm:text-sm font-mono font-bold text-amber-300 bg-slate-950/80 px-2 py-1 rounded border border-amber-500/30 inline-block" id="modalTimeBadge"></p>
-<p class="text-[11px] text-slate-300 mt-1" id="modalSubCue">Pre-roll lead active: Starts 2 seconds before contact</p>
-</div>
-<div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition duration-200">
-<svg class="w-6 h-6 ml-0.5" fill="currentColor" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-</div>
-</div>
-</div>
-<!-- Primary 1-Click Launch Button (Completely Immune to Error 153) -->
-<div class="space-y-3">
-<button class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg shadow-red-600/30 transition transform hover:-translate-y-0.5" id="primaryLaunchBtn" onclick="launchDirectYouTube()">
-<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
-<span id="launchBtnText">Open Directly on YouTube at Exact Second (Bypass 153)</span>
-</button>
-<!-- Error 153 Explanation & Fallback Toggle -->
-<div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-slate-400 space-y-2">
-<div class="flex items-center justify-between text-slate-300">
-<span class="font-semibold text-emerald-400 flex items-center gap-1.5">
-<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                Why YouTube Error 153 Happens in Embedded Viewers
-              </span>
-<button class="text-cyan-400 hover:underline font-mono" id="toggleEmbedBtn" onclick="toggleEmbedTest()">
-                [Try Embedded Player]
-              </button>
-</div>
-<p>
-              YouTube's player policy blocks embedded iframes inside sandboxed blob environments when referrer origin headers are restricted. The red button above launches YouTube directly with the exact timestamp parameter (<span class="text-cyan-300 font-mono">&amp;t=Xs</span>) in a fresh tab, guaranteeing clean playback.
-            </p>
-</div>
-<!-- Collapsible Embedded Test Frame (Optional Sandbox Test) -->
-<div class="hidden space-y-2 pt-2" id="embedContainer">
-<div class="relative w-full bg-black rounded-xl overflow-hidden border border-slate-800" style="padding-top: 56.25%;">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute inset-0 w-full h-full border-0" id="modalIframe" referrerpolicy="strict-origin-when-cross-origin">
-</iframe>
-</div>
-<p class="text-[10px] text-slate-500 text-center">If the embedded player above shows "Error 153", use the red button above to view without restrictions.</p>
-</div>
-</div>
-</div>
-<!-- Modal Footer -->
-<div class="px-5 py-3 bg-slate-950 border-t border-slate-800/80 flex items-center justify-between text-xs">
-<span class="text-slate-400">Pre-roll offset: <strong class="text-cyan-400">-2.0 seconds</strong></span>
-<button class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition" onclick="closeLaunchModal()">
-          Close Preview
-        </button>
-</div>
-</div>
-</div>
+
 <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
 <p>High-Performance Table Tennis Technical Analysis • Designed for Under-11 Competitive Pathway</p>
 </footer>
@@ -1632,90 +1552,10 @@
       window.open(url, '_blank', 'noopener,noreferrer');
     }
 
-    // Modal state
-    let currentVideoId = '';
-    let currentLeadSeconds = 0;
-    let currentTargetSeconds = 0;
-
     function openLaunchModal(videoId, targetSeconds, titleText) {
-      currentVideoId = videoId;
-      currentTargetSeconds = targetSeconds;
-      currentLeadSeconds = Math.max(0, targetSeconds - 2);
-
-      // Sync theater player as well
+      // Play directly in integrated theater player without popup modal
       playInTheater(videoId, targetSeconds, titleText);
-
-      const modal = document.getElementById('videoModal');
-      const titleEl = document.getElementById('modalTitle');
-      const posterImg = document.getElementById('modalPosterImg');
-      const timeBadge = document.getElementById('modalTimeBadge');
-      const subCue = document.getElementById('modalSubCue');
-      const btnText = document.getElementById('launchBtnText');
-
-      // Update thumbnail image
-      posterImg.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-      titleEl.innerText = titleText || 'Match Video Review Instance';
-      
-      const formatTime = (s) => {
-        const m = Math.floor(s / 60);
-        const sec = s % 60;
-        return `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
-      };
-
-      timeBadge.innerText = `Action Moment: ${formatTime(targetSeconds)} | Pre-roll Starts: ${formatTime(currentLeadSeconds)}`;
-      subCue.innerText = `Starts at ${currentLeadSeconds}s to capture complete stance, ready hop, and wind-up cleanly`;
-      btnText.innerText = `Open Directly on YouTube at ${formatTime(currentLeadSeconds)} (Bypass 153)`;
-
-      // Reset embed state
-      const embedContainer = document.getElementById('embedContainer');
-      embedContainer.classList.add('hidden');
-      document.getElementById('toggleEmbedBtn').innerText = '[Try Embedded Player]';
-      document.getElementById('modalIframe').src = '';
-
-      modal.classList.remove('hidden');
     }
-
-    function launchDirectYouTube() {
-      if (!currentVideoId) return;
-      const url = `https://www.youtube.com/watch?v=${currentVideoId}&t=${currentLeadSeconds}s`;
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
-
-    function toggleEmbedTest() {
-      const embedContainer = document.getElementById('embedContainer');
-      const iframe = document.getElementById('modalIframe');
-      const toggleBtn = document.getElementById('toggleEmbedBtn');
-
-      if (embedContainer.classList.contains('hidden')) {
-        iframe.src = `https://www.youtube.com/embed/${currentVideoId}?start=${currentLeadSeconds}&autoplay=1&enablejsapi=1&rel=0`;
-        embedContainer.classList.remove('hidden');
-        toggleBtn.innerText = '[Hide Embedded Player]';
-      } else {
-        iframe.src = '';
-        embedContainer.classList.add('hidden');
-        toggleBtn.innerText = '[Try Embedded Player]';
-      }
-    }
-
-    function closeLaunchModal() {
-      const modal = document.getElementById('videoModal');
-      const iframe = document.getElementById('modalIframe');
-      iframe.src = '';
-      modal.classList.add('hidden');
-    }
-
-    // Modal key listeners
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeLaunchModal();
-      }
-    });
-
-    document.getElementById('videoModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeLaunchModal();
-      }
-    });
 
     // Table filtering
     function filterTable(tableId, query) {
